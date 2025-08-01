@@ -1,0 +1,27 @@
+/* Test styles to verify CSS loading */
+body {
+  background-color: #1e40af !important;
+  color: white !important;
+}
+
+h1 {
+  color: #10b981 !important;
+  font-size: 3rem !important;
+}
+
+.test-button {
+  background-color: #dc2626 !important;
+  color: white !important;
+  padding: 1rem 2rem !important;
+  border-radius: 0.5rem !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.test-container {
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+}

@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ONDI - Office for Nigerian Digital Innovation
+
+Official website for the Office for Nigerian Digital Innovation (ONDI), a special purpose vehicle of the National Information Technology Development Agency (NITDA).
+
+## Overview
+
+ONDI serves as Nigeria's central hub for digital innovation, empowering entrepreneurs, fostering partnerships, and accelerating the country's digital transformation through strategic programs and world-class support.
+
+## Features
+
+- **Modern Design**: 2025 web design trends with immersive experiences
+- **Government Compliance**: Adheres to NITDA's Standards and Guidelines
+- **Accessibility**: WCAG 2.1 AA compliant
+- **Responsive**: Optimized for all devices and screen sizes
+- **Performance**: Server-side rendering with Next.js
+- **Security**: HTTPS, OWASP guidelines, NDPR compliance
+
+## Architecture
+
+- **Framework**: Next.js 15+ with TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Components**: Reusable, accessible React components
+- **Animations**: Framer Motion for smooth interactions
+- **Icons**: Heroicons for consistent iconography
+
+## Pages Structure
+
+1. **Homepage** - Hero section, program showcase, impact stats
+2. **About ONDI** - Mandate, mission, vision, leadership
+3. **Programmes & Support** - Startup support, funding, talent development
+4. **Innovation Directory** - Filterable database of ecosystem players
+5. **Opportunities** - Open calls, partnerships, investor access
+6. **Impact & Success Stories** - Case studies and testimonials
+7. **News** - Blog, press releases, media gallery
+8. **Resources** - Policy documents, guides, toolkits
+9. **Contact** - Contact form, office information
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone [repository-url]
+
+# Navigate to project directory
+cd ondi-website
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Start development server
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Build for production
+npm run build
 
-## Learn More
+# Start production server
+npm start
 
-To learn more about Next.js, take a look at the following resources:
+# Run linting
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design System
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Colors
 
-## Deploy on Vercel
+- **Primary**: Blues (#1e40af, #3b82f6, #60a5fa)
+- **Secondary**: Greens (#059669, #10b981, #34d399)
+- **Accent**: Purples (#7c3aed, #8b5cf6, #a78bfa)
+- **Government**: Nigerian flag green (#006A4B)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Typography
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Primary Font**: Inter (sans-serif)
+- **Heading Font**: Poppins (display)
+- **Government Standard**: Arial, Verdana (fallbacks)
+
+### Responsive Breakpoints
+
+- **Mobile**: < 768px
+- **Tablet**: ≥ 768px
+- **Desktop**: ≥ 992px
+- **Large**: > 1200px
+
+## Accessibility
+
+- Semantic HTML structure
+- ARIA labels and roles
+- Keyboard navigation support
+- Screen reader compatibility
+- High contrast mode support
+- Focus management
+
+## Performance
+
+- Optimized images with Next.js Image component
+- Lazy loading for non-critical content
+- Server-side rendering (SSR)
+- Static site generation (SSG) where applicable
+- Code splitting and tree shaking
+
+## Security
+
+- HTTPS enforcement
+- OWASP security guidelines
+- Content Security Policy (CSP)
+- NDPR compliance for data protection
+- Secure environment variable handling
+
+## Contributing
+
+1. Follow TypeScript best practices
+2. Use semantic HTML elements
+3. Implement proper accessibility features
+4. Test across different devices and browsers
+5. Follow government design standards
+
+## Support
+
+For technical support or questions, contact:
+- Email: info@ondi.gov.ng
+- Phone: +234 (0) 9 461 0005
+
+## License
+
+© 2025 Office for Nigerian Digital Innovation (ONDI). All rights reserved.
+Federal Republic of Nigeria.
