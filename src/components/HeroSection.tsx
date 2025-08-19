@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  RocketLaunchIcon, 
-  UsersIcon, 
+import {
+  RocketLaunchIcon,
+  UsersIcon,
   CurrencyDollarIcon,
   BuildingOfficeIcon,
   ArrowRightIcon,
@@ -62,11 +62,11 @@ export default function HeroSection() {
       {/* Floating Elements */}
       <div className="absolute inset-0">
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, -20, 0],
             rotate: [0, 5, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
@@ -74,11 +74,11 @@ export default function HeroSection() {
           className="absolute top-20 left-10 w-20 h-20 bg-secondary-500/20 rounded-full blur-xl"
         />
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, 15, 0],
             rotate: [0, -3, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut",
@@ -87,11 +87,11 @@ export default function HeroSection() {
           className="absolute top-40 right-20 w-32 h-32 bg-accent-500/20 rounded-full blur-xl"
         />
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, -10, 0],
             x: [0, 10, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 5,
             repeat: Infinity,
             ease: "easeInOut",
@@ -145,7 +145,7 @@ export default function HeroSection() {
               variants={heroVariants}
               className="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl"
             >
-                              Empowering Nigeria&apos;s next generation of innovators and entrepreneurs through
+              Empowering Nigeria&apos;s next generation of innovators and entrepreneurs through
             </motion.p>
 
             {/* CTA Buttons */}
@@ -161,7 +161,7 @@ export default function HeroSection() {
                 Apply to Programs
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
-              
+
               <Link
                 href="/directory"
                 className="inline-flex items-center justify-center gap-3 border-2 border-white text-white hover:bg-white hover:text-primary-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300"
@@ -169,7 +169,7 @@ export default function HeroSection() {
                 <UsersIcon className="w-6 h-6" />
                 Explore Ecosystem
               </Link>
-              
+
               <button className="inline-flex items-center justify-center gap-3 text-gray-300 hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-300">
                 <PlayIcon className="w-6 h-6" />
                 Watch Story
@@ -187,7 +187,7 @@ export default function HeroSection() {
             {/* Main Stats Card */}
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
               <h3 className="text-2xl font-bold text-white mb-8 text-center">Our Impact</h3>
-              
+
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((stat, index) => (
                   <motion.div
@@ -234,7 +234,7 @@ export default function HeroSection() {
             >
               🚀 1,200+ Startups
             </motion.div>
-            
+
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}

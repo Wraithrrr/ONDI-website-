@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { 
+import {
   RocketLaunchIcon,
   UserGroupIcon,
   BuildingOffice2Icon,
@@ -175,12 +175,11 @@ export default function ProgrammesPage() {
                   <div className={`w-16 h-16 bg-${program.color} rounded-lg flex items-center justify-center`}>
                     <program.icon className="w-8 h-8 text-white" />
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    program.status === 'Open for Applications' ? 'bg-green-100 text-green-800' :
-                    program.status === 'Active' ? 'bg-blue-100 text-blue-800' :
-                    program.status === 'Ongoing' ? 'bg-purple-100 text-purple-800' :
-                    'bg-gray-100 text-gray-800'
-                  }`}>
+                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${program.status === 'Open for Applications' ? 'bg-green-100 text-green-800' :
+                      program.status === 'Active' ? 'bg-blue-100 text-blue-800' :
+                        program.status === 'Ongoing' ? 'bg-purple-100 text-purple-800' :
+                          'bg-gray-100 text-gray-800'
+                    }`}>
                     {program.status}
                   </span>
                 </div>
@@ -216,7 +215,7 @@ export default function ProgrammesPage() {
                   </ul>
                 </div>
 
-                <Link 
+                <Link
                   href={`/programmes/${program.id}`}
                   className="inline-flex items-center text-nitda-600 font-semibold hover:text-nitda-700 transition-colors"
                 >

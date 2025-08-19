@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -49,7 +50,7 @@ module.exports = {
       backgroundImage: {
         'gradient-green-blue': 'linear-gradient(135deg, #059669 0%, #16a34a 20%, #0d9488 50%, #0f766e 70%, #155e75 100%)',
         'gradient-green-blue-dark': 'linear-gradient(135deg, #047857 0%, #15803d 20%, #0f766e 50%, #134e4a 70%, #164e63 100%)',
-        'gradient-professional': 'linear-gradient(135deg, #16a34a 0%, #0d9488 30%, #0891b2 60%, #0369a1 100%)',
+        'gradient-professional': 'linear-gradient(135deg, #16a34a 0%, #15803d 50%, #166534 100%)',
         'gradient-elegant': 'linear-gradient(135deg, #22c55e 0%, #10b981 25%, #06b6d4 50%, #0284c7 75%, #0369a1 100%)',
       },
     },

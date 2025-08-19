@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { 
+import {
   ChartBarIcon,
   TrophyIcon,
   UserGroupIcon,
@@ -222,9 +222,8 @@ export default function ImpactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 ${
-                  story.featured ? 'ring-2 ring-nitda-400' : ''
-                }`}
+                className={`bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 ${story.featured ? 'ring-2 ring-nitda-400' : ''
+                  }`}
               >
                 {story.featured && (
                   <div className="bg-nitda-400 text-nitda-900 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">

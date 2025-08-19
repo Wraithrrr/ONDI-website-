@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { 
+import {
   UserIcon,
   FlagIcon,
   EyeIcon,
@@ -50,7 +50,7 @@ export default function AboutPage() {
               About <span className="text-nitda-400">ONDI</span>
             </h1>
             <p className="text-xl text-nitda-100 max-w-3xl mx-auto">
-              The Office for Nigerian Digital Innovation is Nigeria&apos;s innovation command center, 
+              The Office for Nigerian Digital Innovation is Nigeria&apos;s innovation command center,
               driving the country&apos;s digital transformation agenda.
             </p>
           </motion.div>
@@ -80,12 +80,12 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  &quot;Our mission at ONDI is to transform Nigeria into a global hub for digital innovation. 
-                  We are committed to nurturing homegrown talent, supporting breakthrough technologies, 
+                  &quot;Our mission at ONDI is to transform Nigeria into a global hub for digital innovation.
+                  We are committed to nurturing homegrown talent, supporting breakthrough technologies,
                   and creating an ecosystem where innovation thrives.&quot;
                 </p>
                 <p className="text-gray-600 text-sm">
-                  With over 15 years of experience in technology leadership and innovation management, 
+                  With over 15 years of experience in technology leadership and innovation management,
                   Dr. Hassan leads ONDI&apos;s strategic initiatives to accelerate Nigeria&apos;s digital economy.
                 </p>
               </div>
@@ -146,8 +146,8 @@ export default function AboutPage() {
               <FlagIcon className="w-12 h-12 text-nitda-600 mb-6" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Mission</h3>
               <p className="text-gray-700 leading-relaxed">
-                To foster a vibrant digital innovation ecosystem that empowers Nigerian entrepreneurs, 
-                startups, and innovators to create world-class solutions that drive economic growth 
+                To foster a vibrant digital innovation ecosystem that empowers Nigerian entrepreneurs,
+                startups, and innovators to create world-class solutions that drive economic growth
                 and social impact across Africa and beyond.
               </p>
             </motion.div>
@@ -161,8 +161,8 @@ export default function AboutPage() {
               <EyeIcon className="w-12 h-12 text-nitda-600 mb-6" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Vision</h3>
               <p className="text-gray-700 leading-relaxed">
-                To position Nigeria as the innovation hub of Africa, where breakthrough technologies 
-                are developed, scaled, and exported globally, contributing to a knowledge-based economy 
+                To position Nigeria as the innovation hub of Africa, where breakthrough technologies
+                are developed, scaled, and exported globally, contributing to a knowledge-based economy
                 and improved quality of life for all Nigerians.
               </p>
             </motion.div>

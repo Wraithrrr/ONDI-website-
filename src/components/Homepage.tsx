@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { 
+import {
   RocketLaunchIcon,
   UserGroupIcon,
   CurrencyDollarIcon,
@@ -99,22 +99,11 @@ export default function Homepage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4">
-              <div className="w-2 h-2 bg-nitda-400 rounded-full"></div>
-              <span className="text-nitda-100 text-sm font-medium">Federal Republic of Nigeria</span>
-            </div>
-            <h2 className="text-lg md:text-xl text-white/80 font-medium">
-              NITDA - National Information Technology Development Agency
-            </h2>
-          </motion.div>
-
-          {/* Main Headlines */}
+            {/* Main Headlines */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8 }}
             className="mb-8"
           >
             <h3 className="text-3xl md:text-4xl text-nitda-400 font-bold mb-4">
@@ -169,7 +158,7 @@ export default function Homepage() {
                 <ArrowRightIcon className="w-5 h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
-            
+
             <Link href="/partnerships" className="group">
               <button className="bg-white/10 hover:bg-white hover:text-nitda-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
                 Partner with Us
@@ -229,7 +218,7 @@ export default function Homepage() {
                 <div className="h-32 bg-gradient-to-r from-nitda-600 to-nitda-700 p-6 relative">
                   <program.icon className="w-12 h-12 text-white mb-4" />
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {program.title}
@@ -237,7 +226,7 @@ export default function Homepage() {
                   <p className="text-gray-600 mb-4">
                     {program.description}
                   </p>
-                  
+
                   <ul className="space-y-2 mb-6">
                     {program.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-600">
@@ -246,7 +235,7 @@ export default function Homepage() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link href={program.href}>
                     <button className="w-full bg-gray-100 hover:bg-nitda-600 text-gray-700 hover:text-white px-4 py-3 rounded-lg font-medium transition-all duration-300">
                       Learn More
@@ -322,7 +311,7 @@ export default function Homepage() {
           <p className="text-xl text-nitda-100 mb-8">
             Get the latest updates on innovation programs, funding opportunities, and success stories
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"

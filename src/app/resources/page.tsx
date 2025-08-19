@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
   DocumentTextIcon,
   BookOpenIcon,
   WrenchScrewdriverIcon,
@@ -162,12 +162,12 @@ export default function ResourcesPage() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const allResources = [...policyDocuments, ...guidesToolkits, ...researchReports];
-  
+
   const filteredResources = allResources.filter(resource => {
     const matchesCategory = selectedCategory === 'All' || resource.category === selectedCategory;
     const matchesSearch = resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         resource.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         resource.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      resource.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      resource.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
@@ -196,7 +196,7 @@ export default function ResourcesPage() {
             <p className="text-xl text-nitda-100 max-w-3xl mx-auto mb-8">
               Access comprehensive resources to accelerate your innovation journey
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="bg-white rounded-lg p-2 flex items-center">
@@ -219,44 +219,40 @@ export default function ResourcesPage() {
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-2 flex space-x-2">
                 <button
                   onClick={() => setActiveTab('documents')}
-                  className={`px-6 py-3 rounded-lg transition-colors ${
-                    activeTab === 'documents' 
-                      ? 'bg-white text-nitda-900' 
+                  className={`px-6 py-3 rounded-lg transition-colors ${activeTab === 'documents'
+                      ? 'bg-white text-nitda-900'
                       : 'text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   <DocumentTextIcon className="w-5 h-5 inline mr-2" />
                   Documents
                 </button>
                 <button
                   onClick={() => setActiveTab('guides')}
-                  className={`px-6 py-3 rounded-lg transition-colors ${
-                    activeTab === 'guides' 
-                      ? 'bg-white text-nitda-900' 
+                  className={`px-6 py-3 rounded-lg transition-colors ${activeTab === 'guides'
+                      ? 'bg-white text-nitda-900'
                       : 'text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   <BookOpenIcon className="w-5 h-5 inline mr-2" />
                   Guides
                 </button>
                 <button
                   onClick={() => setActiveTab('tools')}
-                  className={`px-6 py-3 rounded-lg transition-colors ${
-                    activeTab === 'tools' 
-                      ? 'bg-white text-nitda-900' 
+                  className={`px-6 py-3 rounded-lg transition-colors ${activeTab === 'tools'
+                      ? 'bg-white text-nitda-900'
                       : 'text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   <WrenchScrewdriverIcon className="w-5 h-5 inline mr-2" />
                   Tools
                 </button>
                 <button
                   onClick={() => setActiveTab('faqs')}
-                  className={`px-6 py-3 rounded-lg transition-colors ${
-                    activeTab === 'faqs' 
-                      ? 'bg-white text-nitda-900' 
+                  className={`px-6 py-3 rounded-lg transition-colors ${activeTab === 'faqs'
+                      ? 'bg-white text-nitda-900'
                       : 'text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   <QuestionMarkCircleIcon className="w-5 h-5 inline mr-2" />
                   FAQs
@@ -277,11 +273,10 @@ export default function ResourcesPage() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-lg transition-colors ${
-                    selectedCategory === category
+                  className={`px-4 py-2 rounded-lg transition-colors ${selectedCategory === category
                       ? 'bg-nitda-600 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                    }`}
                 >
                   {category}
                 </button>
@@ -304,9 +299,8 @@ export default function ResourcesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className={`bg-white border-2 rounded-lg p-6 hover:shadow-xl transition-all duration-300 ${
-                    resource.featured ? 'border-nitda-400 ring-2 ring-nitda-400 ring-opacity-20' : 'border-gray-200'
-                  }`}
+                  className={`bg-white border-2 rounded-lg p-6 hover:shadow-xl transition-all duration-300 ${resource.featured ? 'border-nitda-400 ring-2 ring-nitda-400 ring-opacity-20' : 'border-gray-200'
+                    }`}
                 >
                   {resource.featured && (
                     <div className="bg-nitda-400 text-nitda-900 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
@@ -418,9 +412,8 @@ export default function ResourcesPage() {
                       </span>
                       <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
                     </div>
-                    <div className={`transform transition-transform ${
-                      expandedFaq === faq.id ? 'rotate-180' : ''
-                    }`}>
+                    <div className={`transform transition-transform ${expandedFaq === faq.id ? 'rotate-180' : ''
+                      }`}>
                       ⌄
                     </div>
                   </button>

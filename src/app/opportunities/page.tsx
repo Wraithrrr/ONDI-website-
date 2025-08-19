@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { 
+import {
   MegaphoneIcon,
   HandshakeIcon,
   CalendarDaysIcon,
@@ -190,9 +190,8 @@ export default function OpportunitiesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`bg-white border-2 rounded-lg p-6 hover:shadow-xl transition-all duration-300 ${
-                  call.featured ? 'border-nitda-400 ring-2 ring-nitda-400 ring-opacity-20' : 'border-gray-200'
-                }`}
+                className={`bg-white border-2 rounded-lg p-6 hover:shadow-xl transition-all duration-300 ${call.featured ? 'border-nitda-400 ring-2 ring-nitda-400 ring-opacity-20' : 'border-gray-200'
+                  }`}
               >
                 {call.featured && (
                   <div className="bg-nitda-400 text-nitda-900 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
@@ -360,7 +359,7 @@ export default function OpportunitiesPage() {
                 </div>
 
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{event.title}</h3>
-                
+
                 <div className="space-y-2 mb-6 text-sm text-gray-600">
                   <div className="flex items-center">
                     <CalendarDaysIcon className="w-4 h-4 mr-2" />

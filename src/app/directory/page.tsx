@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
   MagnifyingGlassIcon,
   FunnelIcon,
   MapPinIcon,
@@ -113,8 +113,8 @@ export default function DirectoryPage() {
 
   const filteredInnovations = innovationData.filter(innovation => {
     const matchesSearch = innovation.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         innovation.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         innovation.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      innovation.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      innovation.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'All' || innovation.category === selectedCategory;
     const matchesStage = selectedStage === 'All' || innovation.stage === selectedStage;
     const matchesLocation = selectedLocation === 'All' || innovation.location === selectedLocation;
@@ -157,7 +157,7 @@ export default function DirectoryPage() {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <button 
+                <button
                   onClick={() => setShowFilters(!showFilters)}
                   className="bg-nitda-600 text-white px-6 py-3 rounded-lg hover:bg-nitda-700 transition-colors flex items-center"
                 >
@@ -246,16 +246,15 @@ export default function DirectoryPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 ${
-                  innovation.featured ? 'ring-2 ring-nitda-400' : ''
-                }`}
+                className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 ${innovation.featured ? 'ring-2 ring-nitda-400' : ''
+                  }`}
               >
                 {innovation.featured && (
                   <div className="bg-nitda-400 text-nitda-900 px-4 py-2 text-sm font-semibold">
                     ⭐ Featured Innovation
                   </div>
                 )}
-                
+
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">

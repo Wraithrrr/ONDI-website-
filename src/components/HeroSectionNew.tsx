@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  RocketLaunchIcon, 
-  UsersIcon, 
+import {
+  RocketLaunchIcon,
+  UsersIcon,
   CurrencyDollarIcon,
   BuildingOfficeIcon,
   ArrowRightIcon,
@@ -35,37 +35,37 @@ export default function HeroSection() {
       {/* Floating Elements */}
       <div className="absolute inset-0">
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, -20, 0],
             rotate: [0, 5, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
           }}
           className="absolute top-20 left-20 w-20 h-20 bg-blue-500/20 rounded-full"
         />
-        
+
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, 15, 0],
             rotate: [0, -3, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut"
           }}
           className="absolute top-40 right-32 w-16 h-16 bg-emerald-500/20 rounded-lg"
         />
-        
+
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, -10, 0],
             rotate: [0, 2, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 5,
             repeat: Infinity,
             ease: "easeInOut"
@@ -77,21 +77,6 @@ export default function HeroSection() {
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Government Header */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={heroVariants}
-          className="mb-8"
-        >
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4">
-            <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-            <span className="text-emerald-100 text-sm font-medium">Federal Republic of Nigeria</span>
-          </div>
-          <h2 className="text-lg md:text-xl text-blue-100 font-medium">
-            NITDA - National Information Technology Development Agency
-          </h2>
-        </motion.div>
-
         {/* Main Headlines */}
         <motion.div
           initial="hidden"
@@ -151,7 +136,7 @@ export default function HeroSection() {
               <ArrowRightIcon className="w-5 h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
           </Link>
-          
+
           <Link href="/about" className="group">
             <button className="border-2 border-white/30 hover:bg-white hover:text-blue-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 backdrop-blur-sm">
               <PlayIcon className="w-5 h-5 inline-block mr-2" />

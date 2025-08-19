@@ -1,5 +1,5 @@
-import Homepage from '@/components/Homepage';
+import HomepageClean from '@/components/HomepageClean';
 
 export default function Home() {
-  return <Homepage />;
+  return <HomepageClean />;
 }

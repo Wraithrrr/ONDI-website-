@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { 
+import {
   RocketLaunchIcon,
   BeakerIcon,
   CurrencyDollarIcon,
@@ -20,7 +20,7 @@ const programs = [
     subtitle: 'Accelerate Your Innovation Journey',
     description: 'Comprehensive support ecosystem designed to accelerate innovation at every stage of your startup journey.',
     icon: RocketLaunchIcon,
-    color: 'from-primary-500 to-primary-600',
+    color: 'from-nitda-600 to-nitda-800',
     features: [
       'iHatch Accelerator Program',
       'Mentorship & Coaching',
@@ -36,7 +36,7 @@ const programs = [
     subtitle: 'Safe Innovation Environment',
     description: 'Test innovative solutions with regulatory support and fast-track approval processes in a controlled environment.',
     icon: BeakerIcon,
-    color: 'from-secondary-500 to-secondary-600',
+    color: 'from-nitda-500 to-nitda-700',
     features: [
       'Regulatory Framework Testing',
       'Compliance Guidance',
@@ -52,7 +52,7 @@ const programs = [
     subtitle: 'Financial Support Ecosystem',
     description: 'Access grants, investment opportunities, and financial incentives to fuel your innovation and growth.',
     icon: CurrencyDollarIcon,
-    color: 'from-accent-500 to-accent-600',
+    color: 'from-nitda-500 to-nitda-700',
     features: [
       'Startup Grants & Funding',
       'Investment Readiness Programs',
@@ -68,7 +68,7 @@ const programs = [
     subtitle: 'Building Digital Workforce',
     description: 'Comprehensive training programs, fellowships, and bootcamps to build Nigeria\'s digital workforce of the future.',
     icon: AcademicCapIcon,
-    color: 'from-orange-500 to-orange-600',
+    color: 'from-nitda-500 to-nitda-700',
     features: [
       'Tech Fellowships',
       'Coding Bootcamps',
@@ -84,7 +84,7 @@ const programs = [
     subtitle: 'Physical & Digital Infrastructure',
     description: 'Access world-class innovation hubs, labs, and digital platforms to accelerate your innovation journey.',
     icon: BuildingOfficeIcon,
-    color: 'from-teal-500 to-teal-600',
+    color: 'from-nitda-600 to-nitda-800',
     features: [
       'Innovation Hubs Network',
       'Research Labs Access',
@@ -100,7 +100,7 @@ const programs = [
     subtitle: 'Collaborative Innovation',
     description: 'Connect with strategic partners, corporates, and international organizations to scale your innovation globally.',
     icon: UserGroupIcon,
-    color: 'from-pink-500 to-pink-600',
+    color: 'from-nitda-500 to-nitda-700',
     features: [
       'Corporate Partnerships',
       'International Collaborations',
@@ -124,13 +124,13 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { 
-    opacity: 0, 
+  hidden: {
+    opacity: 0,
     y: 50,
     scale: 0.9
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     scale: 1
   }
@@ -138,7 +138,7 @@ const cardVariants = {
 
 export default function ProgramCards() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -150,7 +150,7 @@ export default function ProgramCards() {
         >
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">
             Our
-            <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent"> Programs </span>
+            <span className="bg-gradient-to-r from-nitda-600 to-nitda-800 bg-clip-text text-transparent"> Programs </span>
             & Support
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -170,7 +170,7 @@ export default function ProgramCards() {
             <motion.div
               key={program.id}
               variants={cardVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -8,
                 transition: { duration: 0.3 }
               }}
@@ -184,7 +184,7 @@ export default function ProgramCards() {
                     <program.icon className="w-12 h-12 mb-4 text-white/90" />
                     <h3 className="text-xl font-bold mb-2">{program.title}</h3>
                     <p className="text-white/90 text-sm font-medium">{program.subtitle}</p>
-                    
+
                     {/* Stats Badge */}
                     <div className="mt-4 inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
                       <span className="text-sm font-bold">{program.stats.value}</span>
@@ -203,7 +203,7 @@ export default function ProgramCards() {
                   <ul className="space-y-3 mb-6">
                     {program.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircleIcon className="w-5 h-5 text-secondary-500 flex-shrink-0" />
+                        <CheckCircleIcon className="w-5 h-5 text-nitda-500 flex-shrink-0" />
                         <span className="text-gray-700 text-sm">{feature}</span>
                       </li>
                     ))}
@@ -212,9 +212,9 @@ export default function ProgramCards() {
                   {/* Learn More Button */}
                   <Link
                     href={program.href}
-                    className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold group-hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center gap-2 text-nitda-600 hover:text-nitda-700 font-semibold group-hover:gap-3 transition-all duration-300"
                   >
-                    Learn More
+                    Learn Mori 
                     <ArrowRightIcon className="w-4 h-4" />
                   </Link>
                 </div>
@@ -233,13 +233,13 @@ export default function ProgramCards() {
         >
           <Link
             href="/programmes"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-primary-700 hover:to-secondary-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-nitda-600 to-nitda-800 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-nitda-700 hover:to-nitda-900 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group"
           >
             <RocketLaunchIcon className="w-6 h-6" />
             View All Programs
             <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
-          
+
           <p className="mt-4 text-gray-600">
             Discover how ONDI can accelerate your innovation journey
           </p>

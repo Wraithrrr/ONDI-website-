@@ -55,6 +55,7 @@ body {
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
+
   .bg-gradient-to-r,
   .bg-gradient-to-br {
     background: #000000 !important;
@@ -64,6 +65,7 @@ body {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -78,7 +80,7 @@ body {
   .no-print {
     display: none !important;
   }
-  
+
   body {
     background: white !important;
     color: black !important;

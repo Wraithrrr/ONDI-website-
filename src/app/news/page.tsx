@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
   NewspaperIcon,
   MegaphoneIcon,
   PhotoIcon,
@@ -125,7 +125,7 @@ export default function NewsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeTab, setActiveTab] = useState('blog');
 
-  const filteredNews = newsArticles.filter(article => 
+  const filteredNews = newsArticles.filter(article =>
     selectedCategory === 'All' || article.category === selectedCategory
   );
 
@@ -145,50 +145,46 @@ export default function NewsPage() {
             <p className="text-xl text-nitda-100 max-w-3xl mx-auto mb-8">
               Stay updated with the latest developments in Nigeria&apos;s innovation ecosystem
             </p>
-            
+
             {/* Tab Navigation */}
             <div className="flex justify-center mb-8">
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-2 flex space-x-2">
                 <button
                   onClick={() => setActiveTab('blog')}
-                  className={`px-6 py-3 rounded-lg transition-colors ${
-                    activeTab === 'blog' 
-                      ? 'bg-white text-nitda-900' 
+                  className={`px-6 py-3 rounded-lg transition-colors ${activeTab === 'blog'
+                      ? 'bg-white text-nitda-900'
                       : 'text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   <NewspaperIcon className="w-5 h-5 inline mr-2" />
                   Blog
                 </button>
                 <button
                   onClick={() => setActiveTab('press')}
-                  className={`px-6 py-3 rounded-lg transition-colors ${
-                    activeTab === 'press' 
-                      ? 'bg-white text-nitda-900' 
+                  className={`px-6 py-3 rounded-lg transition-colors ${activeTab === 'press'
+                      ? 'bg-white text-nitda-900'
                       : 'text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   <MegaphoneIcon className="w-5 h-5 inline mr-2" />
                   Press
                 </button>
                 <button
                   onClick={() => setActiveTab('media')}
-                  className={`px-6 py-3 rounded-lg transition-colors ${
-                    activeTab === 'media' 
-                      ? 'bg-white text-nitda-900' 
+                  className={`px-6 py-3 rounded-lg transition-colors ${activeTab === 'media'
+                      ? 'bg-white text-nitda-900'
                       : 'text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   <PhotoIcon className="w-5 h-5 inline mr-2" />
                   Media
                 </button>
                 <button
                   onClick={() => setActiveTab('newsletter')}
-                  className={`px-6 py-3 rounded-lg transition-colors ${
-                    activeTab === 'newsletter' 
-                      ? 'bg-white text-nitda-900' 
+                  className={`px-6 py-3 rounded-lg transition-colors ${activeTab === 'newsletter'
+                      ? 'bg-white text-nitda-900'
                       : 'text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   <EnvelopeIcon className="w-5 h-5 inline mr-2" />
                   Newsletter
@@ -249,11 +245,10 @@ export default function NewsPage() {
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg transition-colors ${
-                      selectedCategory === category
+                    className={`px-4 py-2 rounded-lg transition-colors ${selectedCategory === category
                         ? 'bg-nitda-600 text-white'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
+                      }`}
                   >
                     {category}
                   </button>
@@ -278,12 +273,12 @@ export default function NewsPage() {
                         </span>
                         <div className="text-3xl">{article.image}</div>
                       </div>
-                      
+
                       <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                         {article.title}
                       </h3>
                       <p className="text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
-                      
+
                       <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                         <div className="flex items-center">
                           <CalendarDaysIcon className="w-4 h-4 mr-1" />
@@ -297,7 +292,7 @@ export default function NewsPage() {
                           </div>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <button className="text-nitda-600 font-semibold hover:text-nitda-700 transition-colors flex items-center">
                           Read More <ArrowRightIcon className="w-4 h-4 ml-1" />
@@ -344,11 +339,10 @@ export default function NewsPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
                       <div className="flex items-center mb-2">
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold mr-4 ${
-                          release.type === 'Partnership' ? 'bg-blue-100 text-blue-800' :
-                          release.type === 'Report' ? 'bg-green-100 text-green-800' :
-                          'bg-purple-100 text-purple-800'
-                        }`}>
+                        <span className={`px-3 py-1 rounded-full text-sm font-semibold mr-4 ${release.type === 'Partnership' ? 'bg-blue-100 text-blue-800' :
+                            release.type === 'Report' ? 'bg-green-100 text-green-800' :
+                              'bg-purple-100 text-purple-800'
+                          }`}>
                           {release.type}
                         </span>
                         <span className="text-sm text-gray-500">
@@ -430,7 +424,7 @@ export default function NewsPage() {
               <p className="text-xl text-gray-600 mb-8">
                 Get the latest updates on innovation opportunities, events, and success stories
               </p>
-              
+
               <div className="bg-nitda-50 rounded-lg p-8 mb-8">
                 <div className="max-w-lg mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">

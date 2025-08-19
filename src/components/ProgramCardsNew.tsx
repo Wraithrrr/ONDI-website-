@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { 
+import {
   RocketLaunchIcon,
   BeakerIcon,
   CurrencyDollarIcon,
@@ -107,13 +107,13 @@ const programs = [
 ];
 
 const cardVariants = {
-  hidden: { 
-    opacity: 0, 
+  hidden: {
+    opacity: 0,
     y: 50,
     scale: 0.9
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     scale: 1
   }
@@ -145,7 +145,7 @@ export default function ProgramCards() {
             <motion.div
               key={program.id}
               variants={cardVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -8,
                 transition: { duration: 0.3 }
               }}
