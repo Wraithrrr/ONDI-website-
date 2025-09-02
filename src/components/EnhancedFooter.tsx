@@ -100,7 +100,7 @@ export default function EnhancedFooter() {
                 Stay Updated with Nigerian Innovation
               </h3>
               <p className="text-gray-300 text-lg">
-                Get the latest news, opportunities, and insights from Nigeria's digital innovation ecosystem delivered to your inbox.
+                Get the latest news, opportunities, and insights from Nigeria&apos;s digital innovation ecosystem delivered to your inbox.
               </p>
             </div>
             <div>
@@ -157,8 +157,8 @@ export default function EnhancedFooter() {
             </div>
 
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Empowering Nigeria's digital future through innovation, entrepreneurship, and strategic partnerships.
-              We are building Africa's largest digital economy, one startup at a time.
+              Empowering Nigeria&apos;s digital future through innovation, entrepreneurship, and strategic partnerships.
+              We are building Africa&apos;s largest digital economy, one startup at a time.
             </p>
 
             <div className="space-y-3">
@@ -292,7 +292,7 @@ export default function EnhancedFooter() {
             </div>
 
             <div className="text-sm text-gray-400">
-              Built with ❤️ for Nigeria's Digital Future
+              Built with ❤️ for Nigeria&apos;s Digital Future
             </div>
           </div>
         </div>

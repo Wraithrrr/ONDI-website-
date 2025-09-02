@@ -82,7 +82,7 @@ export default function VisitONDISection() {
             Visit ONDI
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Experience innovation firsthand at our world-class facility in Nigeria's capital
+            Experience innovation firsthand at our world-class facility in Nigeria&apos;s capital
           </p>
         </motion.div>
 
@@ -129,7 +129,7 @@ export default function VisitONDISection() {
                   <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                     Our headquarters is strategically located in the prestigious National Centre for Artificial Intelligence
                     and Robotics (NCAIR) in Wuye District, Abuja. This state-of-the-art facility serves as the epicenter
-                    of Nigeria's digital innovation ecosystem.
+                    of Nigeria&apos;s digital innovation ecosystem.
                   </p>
 
                   <div className="space-y-4">
