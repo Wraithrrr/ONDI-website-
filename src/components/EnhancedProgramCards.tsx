@@ -266,7 +266,8 @@ function ProgramCard({ program, index }: { program: ProgramCard; index: number }
   const [isHovered, setIsHovered] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.1 });
+  // Removed unsupported 'threshold' option (not in current UseInViewOptions type) to fix build error.
+  const isInView = useInView(ref, { once: true });
 
   const IconComponent = program.icon;
 

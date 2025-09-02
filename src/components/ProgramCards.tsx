@@ -214,7 +214,7 @@ export default function ProgramCards() {
                     href={program.href}
                     className="inline-flex items-center gap-2 text-nitda-600 hover:text-nitda-700 font-semibold group-hover:gap-3 transition-all duration-300"
                   >
-                    Learn Mori 
+                    Learn Mori
                     <ArrowRightIcon className="w-4 h-4" />
                   </Link>
                 </div>

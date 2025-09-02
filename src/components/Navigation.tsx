@@ -162,8 +162,8 @@ export default function Navigation() {
                   <div>
                     <button
                       className={`flex items-center space-x-1 font-medium transition-all duration-300 transform hover:scale-105 ${scrolled
-                          ? 'text-gray-700 hover:text-nitda-600'
-                          : 'text-white/90 hover:text-white'
+                        ? 'text-gray-700 hover:text-nitda-600'
+                        : 'text-white/90 hover:text-white'
                         } relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full`}
                       onClick={() => handleDropdownToggle(item.name)}
                       onKeyDown={(e) => {
@@ -210,8 +210,8 @@ export default function Navigation() {
                   <Link
                     href={item.href}
                     className={`font-medium transition-all duration-300 transform hover:scale-105 ${scrolled
-                        ? 'text-gray-700 hover:text-nitda-600'
-                        : 'text-white/90 hover:text-white'
+                      ? 'text-gray-700 hover:text-nitda-600'
+                      : 'text-white/90 hover:text-white'
                       } relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full`}
                     aria-label={item.description}
                   >
@@ -229,8 +229,8 @@ export default function Navigation() {
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
                 className={`p-2 rounded-lg transition-all duration-200 transform hover:scale-110 ${scrolled
-                    ? 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
-                    : 'text-white/80 hover:text-white hover:bg-white/10'
+                  ? 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
+                  : 'text-white/80 hover:text-white hover:bg-white/10'
                   }`}
                 aria-label="Search"
               >
@@ -290,8 +290,8 @@ export default function Navigation() {
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={`p-2 rounded-lg transition-all duration-200 transform hover:scale-110 ${scrolled
-                  ? 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
-                  : 'text-white/80 hover:text-white hover:bg-white/10'
+                ? 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
+                : 'text-white/80 hover:text-white hover:bg-white/10'
                 }`}
               aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
@@ -308,8 +308,8 @@ export default function Navigation() {
             <button
               type="button"
               className={`p-2 rounded-md transition-colors duration-200 ${scrolled
-                  ? 'text-gray-400 hover:text-gray-500 hover:bg-gray-100'
-                  : 'text-white/80 hover:text-white hover:bg-white/10'
+                ? 'text-gray-400 hover:text-gray-500 hover:bg-gray-100'
+                : 'text-white/80 hover:text-white hover:bg-white/10'
                 }`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >

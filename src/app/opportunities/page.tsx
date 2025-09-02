@@ -3,14 +3,14 @@
 import { motion } from 'framer-motion';
 import {
   MegaphoneIcon,
-  HandshakeIcon,
   CalendarDaysIcon,
   MapPinIcon,
   CurrencyDollarIcon,
   ClockIcon,
   UserGroupIcon,
   ArrowRightIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  BuildingOfficeIcon
 } from '@heroicons/react/24/outline';
 
 const openCalls = [
@@ -287,7 +287,7 @@ export default function OpportunitiesPage() {
                 className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  <HandshakeIcon className="w-8 h-8 text-nitda-600 mr-3" />
+                  <BuildingOfficeIcon className="w-8 h-8 text-nitda-600 mr-3" />
                   <span className="text-sm font-semibold text-nitda-600 bg-nitda-50 px-3 py-1 rounded-full">
                     {partnership.type}
                   </span>
