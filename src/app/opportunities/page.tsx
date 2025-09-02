@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-// NOTE: Previously imported HandshakeIcon (not available in @heroicons/react@2.2.0) caused Vercel build warning.
-// It has been removed/replaced with existing icons (e.g., BuildingOfficeIcon, UserGroupIcon) to resolve the issue.
 import {
   MegaphoneIcon,
   CalendarDaysIcon,
