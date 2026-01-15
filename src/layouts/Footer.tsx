@@ -41,7 +41,6 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="#" className="hover:text-[#E8B923] transition-colors">Innovation Directory</a></li>
-              <li><a href="#" className="hover:text-[#E8B923] transition-colors">Opportunities</a></li>
               <li><a href="#" className="hover:text-[#E8B923] transition-colors">Impact Stories</a></li>
               <li><a href="#" className="hover:text-[#E8B923] transition-colors">Resources</a></li>
             </ul>
@@ -54,7 +53,7 @@ export function Footer() {
               <li>
                 4th Floor, National Center for Artificial Intelligence and Robotics Building, Wuye, Ankuru <br /> Abuja, Nigeria
               </li>
-              <li>+234 800 000 0000</li>
+              <li>+234 813 738 37890</li>
               <li>info@ondi.gov.ng</li>
             </ul>
           </div>

@@ -39,7 +39,7 @@ export function ResourcesPage() {
       count: 35,
       color: "#284A26",
       filterKey: "Toolkit",
-    },
+    },/*
     {
       icon: HelpCircle,
       title: "FAQs",
@@ -47,7 +47,7 @@ export function ResourcesPage() {
       count: 50,
       color: "#A52422",
       filterKey: "FAQ", // no direct mapping in featuredResources yet, but kept for future use
-    },
+    },*/
   ];
 
   const featuredResources = [
@@ -267,16 +267,26 @@ export function ResourcesPage() {
         </h2>
 
         {activeCategory && activeCategory !== "FAQ" && (
-          <p className="text-center text-xs md:text-sm text-[#628B35] mb-8">
-            Showing resources in{" "}
-            <span className="font-semibold">
-              {
-                resourceCategories.find((c) => c.filterKey === activeCategory)
-                  ?.title
-              }
-            </span>{" "}
-            category.
-          </p>
+          <>
+            {(activeCategory === "Toolkit" || activeCategory === "Guide") ? (
+              <div className="max-w-3xl mx-auto mb-8 p-6 bg-[#FFF9E6] border-l-4 border-[#E8B923] rounded-lg">
+                <p className="text-center text-sm text-[#134C28] leading-relaxed">
+                  All ONDI resources are being developed in alignment with national digital economy policies and global best practices. This page will be updated as new tools and templates are approved for public release.
+                </p>
+              </div>
+            ) : (
+              <p className="text-center text-xs md:text-sm text-[#628B35] mb-8">
+                Showing resources in{" "}
+                <span className="font-semibold">
+                  {
+                    resourceCategories.find((c) => c.filterKey === activeCategory)
+                      ?.title
+                  }
+                </span>{" "}
+                category.
+              </p>
+            )}
+          </>
         )}
 
         {!activeCategory && (

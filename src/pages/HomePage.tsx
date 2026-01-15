@@ -37,7 +37,7 @@ export function HomePage() {
   }, []);
 
 
-  
+
 
   const carouselImages = [
     'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
@@ -85,11 +85,11 @@ export function HomePage() {
     }
   ];
   const SOCIAL_LINKS = {
-  twitter: 'https://twitter.com/ONDINigeria',
-  facebook: 'https://facebook.com/ONDINigeria',
-  linkedin: 'https://www.linkedin.com/company/ondi-nigeria',
-  instagram: 'https://www.instagram.com/ondinigeria',
-};
+    twitter: 'https://twitter.com/ONDINigeria',
+    facebook: 'https://facebook.com/ONDINigeria',
+    linkedin: 'https://www.linkedin.com/company/ondi-nigeria',
+    instagram: 'https://www.instagram.com/ondinigeria',
+  };
 
   return (
     <>
@@ -136,7 +136,7 @@ export function HomePage() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
-           
+
               {/* Explore Programs → scroll to programs section */}
               <a
                 href="#programs"
@@ -326,25 +326,25 @@ export function HomePage() {
               {[
                 {
                   label: 'Startups Supported',
-                  value: '500+',
+                  value: '1000+',
                   icon: Users,
                   accent: 'from-[#3EBF75] to-[#277D49]'
                 },
                 {
                   label: 'Active Partnerships',
-                  value: '150+',
+                  value: '100+',
                   icon: Briefcase,
                   accent: 'from-[#F59E0B] to-[#E08A00]'
                 },
-                {
+                /*{
                   label: 'Funding Facilitated',
                   value: '₦2.5B',
                   icon: TrendingUp,
                   accent: 'from-[#2563EB] to-[#1D4ED8]'
-                },
+                },*/
                 {
-                  label: 'Success Rate',
-                  value: '85%',
+                  label: 'SCF Members Onboarded',
+                  value: '200+',
                   icon: Rocket,
                   accent: 'from-[#EC4899] to-[#DB2777]'
                 }
@@ -426,7 +426,7 @@ export function HomePage() {
                 title: 'We-Elevate',
                 tag: 'Early-stage Support',
                 description:
-                  'Empowering early-stage startups with mentorship, resources and curated opportunities to turn bold ideas into sustainable ventures.',
+                  'A capacity-building and growth program designed to support entrepreneurs—especially women-led startups—with skills, mentorship, and access to opportunities that help scale sustainable businesses.',
                 image:
                   'https://images.unsplash.com/photo-1759395162739-84190996783c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
                 href: 'https://programs.startup.gov.ng/we-elevate/'
@@ -435,16 +435,16 @@ export function HomePage() {
                 title: 'iHatch',
                 tag: 'Incubation',
                 description:
-                  'A structured innovation incubator that provides workspaces, guidance and ecosystem linkages to help startups grow with confidence.',
+                  'A startup incubation and acceleration program focused on early-stage tech founders, providing training, mentorship, and ecosystem support to transform ideas into viable products and businesses.',
                 image:
                   'https://images.unsplash.com/photo-1728044849242-516700295875?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
                 href: 'https://programs.startup.gov.ng/ihatch/'
               },
               {
-                title: 'Nigeria Digital Innovation Centre',
+                title: 'NITDA Digital Innovation Centre(NDIC)',
                 tag: 'National Facility',
                 description:
-                  'A state-of-the-art centre designed to host collaboration, research and cutting-edge digital innovation initiatives across Nigeria.',
+                  'A national competition that identifies, nurtures, and rewards innovative digital solutions addressing priority national and sector-specific challenges through technology.',
                 image:
                   'https://images.unsplash.com/photo-1664943861653-609134fb6b3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
                 href: 'https://programs.startup.gov.ng/ndic/'
@@ -503,15 +503,15 @@ export function HomePage() {
           {/* View all button */}
           <div className="text-center">
             <button
-                className="inline-flex items-center gap-2 px-10 py-4 rounded-lg border border-[#134C28] text-[#134C28] 
+              className="inline-flex items-center gap-2 px-10 py-4 rounded-lg border border-[#134C28] text-[#134C28] 
               hover:bg-[#134C28] hover:text-white transition-all font-semibold text-sm md:text-base"
-                onClick={() => {
-                  window.location.hash = '#/programs';
-                }}
-              >
-                View Our Programs
-                <ArrowRight className="w-4 h-4" />
-              </button>
+              onClick={() => {
+                window.location.hash = '#/programs';
+              }}
+            >
+              View Our Programs
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </section>
@@ -609,7 +609,7 @@ export function HomePage() {
                         {item.title}
                       </h3>
                       <div className="mt-auto flex items-center justify-between pt-2 text-xs text-[#134C28]">
-                        
+
                         <span className="text-[10px] text-gray-500">From ONDI News Desk</span>
                       </div>
                     </div>
@@ -674,7 +674,7 @@ export function HomePage() {
                 <div className="flex flex-col md:flex-row md:items.end md:justify-between gap-4 mb-6">
                   <div>
                     <p className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-[#134C28] mb-2">
-                      
+
                     </p>
                     <h3 className="text-2xl md:text-3xl font-bold text-[#081F11]">
                       Contact Us.
@@ -717,43 +717,43 @@ export function HomePage() {
                         Social
                       </span>
                       <div className="flex gap-2">
-                      <a
-                        href={SOCIAL_LINKS.twitter}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full bg-[#0F172A] flex items-center justify-center hover:scale-105 transition-transform"
-                        aria-label="ONDI on X (Twitter)"
-                      >
-                        <Twitter className="w-4 h-4 text-white" />
-                      </a>
-                      <a
-                        href={SOCIAL_LINKS.facebook}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full bg-[#1D4ED8] flex items-center justify-center hover:scale-105 transition-transform"
-                        aria-label="ONDI on Facebook"
-                      >
-                        <Facebook className="w-4 h-4 text-white" />
-                      </a>
-                      <a
-                        href={SOCIAL_LINKS.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full bg-[#0A66C2] flex items-center justify-center hover:scale-105 transition-transform"
-                        aria-label="ONDI on LinkedIn"
-                      >
-                        <Linkedin className="w-4 h-4 text-white" />
-                      </a>
-                      <a
-                        href={SOCIAL_LINKS.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full bg-gradient-to-br from-[#F97316] via-[#DB2777] to-[#2563EB] flex items-center justify-center hover:scale-105 transition-transform"
-                        aria-label="ONDI on Instagram"
-                      >
-                        <Instagram className="w-4 h-4 text-white" />
-                      </a>
-                    </div>
+                        <a
+                          href={SOCIAL_LINKS.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 rounded-full bg-[#0F172A] flex items-center justify-center hover:scale-105 transition-transform"
+                          aria-label="ONDI on X (Twitter)"
+                        >
+                          <Twitter className="w-4 h-4 text-white" />
+                        </a>
+                        <a
+                          href={SOCIAL_LINKS.facebook}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 rounded-full bg-[#1D4ED8] flex items-center justify-center hover:scale-105 transition-transform"
+                          aria-label="ONDI on Facebook"
+                        >
+                          <Facebook className="w-4 h-4 text-white" />
+                        </a>
+                        <a
+                          href={SOCIAL_LINKS.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 rounded-full bg-[#0A66C2] flex items-center justify-center hover:scale-105 transition-transform"
+                          aria-label="ONDI on LinkedIn"
+                        >
+                          <Linkedin className="w-4 h-4 text-white" />
+                        </a>
+                        <a
+                          href={SOCIAL_LINKS.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 rounded-full bg-gradient-to-br from-[#F97316] via-[#DB2777] to-[#2563EB] flex items-center justify-center hover:scale-105 transition-transform"
+                          aria-label="ONDI on Instagram"
+                        >
+                          <Instagram className="w-4 h-4 text-white" />
+                        </a>
+                      </div>
                     </div>
                   </div>
 
