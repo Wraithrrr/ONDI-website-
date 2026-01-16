@@ -40,10 +40,10 @@ export function HomePage() {
 
 
   const carouselImages = [
-    'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
-    'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80',
-    'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80',
-    'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80'
+    '/assets/hero-1.jpeg',
+    '/assets/hero-2.jpeg',
+    '/assets/hero-3.jpeg',
+    '/assets/hero-4.jpeg'
   ];
 
   const newsItems = [
@@ -278,7 +278,7 @@ export function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* LEFT: Mission / Vision / Core Values */}
             <div className="space-y-6">
               {/* Mission */}
@@ -456,7 +456,7 @@ export function HomePage() {
                 hover:border-[#134C28] shadow-[0_18px_45px_rgba(15,58,32,0.12)] 
                 hover:shadow-[0_22px_55px_rgba(15,58,32,0.18)] transition-all duration-300 flex flex-col"
               >
-                {/* Image */}
+                {/* Images */}
                 <div className="relative h-56 overflow-hidden">
                   <img
                     src={program.image}
@@ -707,7 +707,7 @@ export function HomePage() {
                       </div>
                       <div>
                         <h4 className="text-sm font-semibold text-[#081F11] mb-1">Phone</h4>
-                        <p className="text-sm text-gray-700">+234 800 000 0000</p>
+                        <p className="text-sm text-gray-700">+234 813 738 37890</p>
                       </div>
                     </div>
 

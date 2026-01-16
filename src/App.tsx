@@ -10,6 +10,9 @@ import { NewsPage } from './pages/NewsPage';
 import { OpportunitiesPage } from './pages/OpportunitiesPage';
 import { ProgramsPage } from './pages/ProgramsPage';
 import { ResourcesPage } from './pages/ResourcesPage';
+import { IHatchPage } from './pages/programs/IHatchPage';
+import { NDICPage } from './pages/programs/NDICPage';
+import { WeElevatePage } from './pages/programs/WeElevatePage';
 
 
 
@@ -53,7 +56,16 @@ export default function App() {
     return <ProgramsPage />;  
     }
     if (hash === '#/resources') {
-    return <ResourcesPage />;  
+    return <ResourcesPage />;
+    }
+    if (hash === '#/ihatch') {
+    return <IHatchPage />;
+    }
+    if (hash === '#/ndic') {
+    return <NDICPage />;
+    }
+    if (hash === '#/we-elevate') {
+    return <WeElevatePage />;
     }
     // Default → home
     return <HomePage />;

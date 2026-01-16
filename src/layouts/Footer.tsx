@@ -12,17 +12,9 @@ export function Footer() {
               <img src={ondiLogo} alt="ONDI Logo" className="h-10 w-auto" />
             </div>
             <p className="text-gray-400 text-sm mb-6 text-justify">
-              Office for Nigerian Digital Innovation - Empowering Nigeria's digital future 
+              Office for Nigerian Digital Innovation - Empowering Nigeria's digital future
               through innovation, collaboration, and excellence.
             </p>
-            <div className="flex gap-2">
-              <div className="w-10 h-10 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-gray-700 transition-all cursor-pointer">
-                <span className="text-sm text-white">X</span>
-              </div>
-              <div className="w-10 h-10 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center hover:bg-gray-700 transition-all cursor-pointer">
-                <span className="text-sm text-white">in</span>
-              </div>
-            </div>
           </div>
 
           {/* Quick Links */}

@@ -25,7 +25,7 @@ const programs = [
     focus: ['Startup incubation', 'Workspace & community', 'Investor readiness'],
   },
   {
-    title: 'Nigeria Digital Innovation Centre',
+    title: 'NITDA Digital Innovation Centre',
     tag: 'National Facility',
     description:
       'A state-of-the-art centre designed to host collaboration, research and cutting-edge digital innovation initiatives across Nigeria.',

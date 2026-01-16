@@ -196,7 +196,7 @@ export function ResourcesPage() {
         </motion.div>
 
         {/* Resource Categories – clickable for filtering */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 max-w-5xl mx-auto">
           {resourceCategories.map((category, i) => {
             const isActive = activeCategory === category.filterKey;
             return (

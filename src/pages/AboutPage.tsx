@@ -73,7 +73,7 @@ export function AboutPage() {
             {/* Image */}
             <div className="relative h-80 md:h-full">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1FNmy-tkckfbrTJVaj3NT0gPgw_HrF1GqqA&s"
+                src="/assets/nc-picture.jpeg"
                 alt="National Coordinator"
                 className="w-full h-full object-cover"
               />
