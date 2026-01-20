@@ -62,35 +62,35 @@ export function ProgramsPage() {
       </section>
 
       {/* OVERVIEW STRIP */}
-      <section className="bg-white border-b border-[#E5E7EB] py-8 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 items-center">
+      <section className="bg-white border-b border-[#E5E7EB] py-10 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
           <div>
-            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#134C28] mb-2">
+            <p className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-[#134C28] mb-3">
               How ONDI supports you
             </p>
-            <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
               Whether you&apos;re just starting, validating your product, or scaling across Nigeria,
               ONDI programs provide a clear pathway of support.
             </p>
           </div>
-          <div className="flex items-center gap-3 text-sm text-gray-700">
-            <div className="w-10 h-10 rounded-xl bg-[#134C28]/8 flex items-center justify-center">
-              <Users className="w-5 h-5 text-[#134C28]" />
+          <div className="flex items-center gap-4 text-base text-gray-700">
+            <div className="w-12 h-12 rounded-xl bg-[#134C28]/8 flex items-center justify-center">
+              <Users className="w-6 h-6 text-[#134C28]" />
             </div>
             <div>
-              <p className="font-semibold text-gray-900">Founder-focused design</p>
-              <p className="text-xs text-gray-600">
+              <p className="font-bold text-lg text-gray-900">Founder-focused design</p>
+              <p className="text-sm text-gray-600">
                 Programs tailored to real startup needs: skills, networks, capital and policy support.
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-3 text-sm text-gray-700">
-            <div className="w-10 h-10 rounded-xl bg-[#134C28]/8 flex items-center justify-center">
-              <Calendar className="w-5 h-5 text-[#134C28]" />
+          <div className="flex items-center gap-4 text-base text-gray-700">
+            <div className="w-12 h-12 rounded-xl bg-[#134C28]/8 flex items-center justify-center">
+              <Calendar className="w-6 h-6 text-[#134C28]" />
             </div>
             <div>
-              <p className="font-semibold text-gray-900">Cohorts &amp; open calls</p>
-              <p className="text-xs text-gray-600">
+              <p className="font-bold text-lg text-gray-900">Cohorts &amp; open calls</p>
+              <p className="text-sm text-gray-600">
                 Competitive selection through nationwide calls, ensuring transparent access to opportunity.
               </p>
             </div>

@@ -37,7 +37,7 @@ export function Navigation() {
             onClick={() => goToHash('#/')}
             className="flex items-center gap-3"
           >
-            <div className="h-10 w-10 md:h-11 md:w-11 rounded-xl overflow-hidden border border-[#E2E5E0] bg-white shadow-sm flex items-center justify-center">
+            <div className="h-12 w-12 md:h-14 md:w-14 rounded-xl overflow-hidden border border-[#E2E5E0] bg-white shadow-sm flex items-center justify-center">
               <img
                 src={ONDI_LOGO_SRC}
                 alt="ONDI Logo"
@@ -47,7 +47,7 @@ export function Navigation() {
           </button>
 
           {/* Desktop Navigation (centered group) */}
-          <div className="hidden lg:flex flex-1 ml-auto items-center justify-center gap-8 text-sm">
+          <div className="hidden lg:flex flex-1 ml-auto items-center justify-center gap-10 text-base">
             <button
               type="button"
               onClick={() => goToHash('#/')}
@@ -124,7 +124,7 @@ export function Navigation() {
           mobileOpen ? 'max-h-[480px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
-        <div className="px-6 py-4 space-y-3 text-sm">
+        <div className="px-6 py-4 space-y-3 text-base">
           <button
             type="button"
             onClick={() => goToHash('#/')}
