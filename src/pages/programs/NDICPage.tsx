@@ -52,9 +52,9 @@ export function NDICPage() {
   ];
 
   const eligibility = [
-    { title: 'Teams', description: 'Teams of 2-5 people, combining tech and business skillsets.', image: '/assets/hero-1.jpeg' },
-    { title: 'Nationality', description: 'Must represent a Nigerian state based on familiarity or affiliation.', image: '/assets/hero-2.jpeg' },
-    { title: 'Age', description: 'All team members must be 18 years or older.', image: '/assets/hero-3.jpeg' },
+    { title: 'Teams', description: 'Teams of 2-5 people, combining tech and business skillsets.', image: '/assets/ndic-2.jpeg' },
+    { title: 'Nationality', description: 'Must represent a Nigerian state based on familiarity or affiliation.', image: '/assets/ndic-1.jpeg' },
+    { title: 'Age', description: 'All team members must be 18 years or older.', image: '/assets/hero-4.jpeg' },
   ];
 
   return (
@@ -121,7 +121,7 @@ export function NDICPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/assets/hero-4.jpeg"
+                src="/assets/ndic-1.jpeg"
                 alt="Focus Area"
                 className="rounded-3xl object-cover w-full h-[400px] lg:h-[500px] shadow-xl"
               />

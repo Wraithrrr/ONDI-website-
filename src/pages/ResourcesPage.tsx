@@ -20,7 +20,7 @@ export function ResourcesPage() {
       icon: FileText,
       title: "Policy Documents",
       description: "Access official policies, frameworks, and regulatory guidelines",
-      count: 12,
+      count: 0,
       color: "#628B35",
       filterKey: "Policy",
     },
@@ -28,7 +28,7 @@ export function ResourcesPage() {
       icon: BookOpen,
       title: "Innovation Guides",
       description: "Comprehensive how-to manuals and best practices for startups",
-      count: 28,
+      count: 0,
       color: "#EC9A29",
       filterKey: "Guide",
     },
@@ -36,7 +36,7 @@ export function ResourcesPage() {
       icon: Wrench,
       title: "Toolkits & Templates",
       description: "Ready-to-use pitch decks, business plans, and proposal templates",
-      count: 35,
+      count: 0,
       color: "#284A26",
       filterKey: "Toolkit",
     },/*
@@ -267,26 +267,11 @@ export function ResourcesPage() {
         </h2>
 
         {activeCategory && activeCategory !== "FAQ" && (
-          <>
-            {(activeCategory === "Toolkit" || activeCategory === "Guide") ? (
-              <div className="max-w-3xl mx-auto mb-8 p-6 bg-[#FFF9E6] border-l-4 border-[#E8B923] rounded-lg">
-                <p className="text-center text-sm text-[#134C28] leading-relaxed">
-                  All ONDI resources are being developed in alignment with national digital economy policies and global best practices. This page will be updated as new tools and templates are approved for public release.
-                </p>
-              </div>
-            ) : (
-              <p className="text-center text-xs md:text-sm text-[#628B35] mb-8">
-                Showing resources in{" "}
-                <span className="font-semibold">
-                  {
-                    resourceCategories.find((c) => c.filterKey === activeCategory)
-                      ?.title
-                  }
-                </span>{" "}
-                category.
-              </p>
-            )}
-          </>
+          <div className="max-w-3xl mx-auto mb-8 p-6 bg-[#FFF9E6] border-l-4 border-[#E8B923] rounded-lg">
+            <p className="text-center text-sm text-[#134C28] leading-relaxed">
+              All ONDI resources are being developed in alignment with national digital economy policies and global best practices. This page will be updated as new tools and templates are approved for public release.
+            </p>
+          </div>
         )}
 
         {!activeCategory && (

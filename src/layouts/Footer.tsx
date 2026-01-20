@@ -21,10 +21,10 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-[#E8B923] transition-colors">About</a></li>
-              <li><a href="#programs" className="hover:text-[#E8B923] transition-colors">Programs</a></li>
-              <li><a href="#" className="hover:text-[#E8B923] transition-colors">News</a></li>
-              <li><a href="#contact" className="hover:text-[#E8B923] transition-colors">Contact</a></li>
+              <li><a href="#/about" className="hover:text-[#E8B923] transition-colors">About</a></li>
+              <li><a href="#/programs" className="hover:text-[#E8B923] transition-colors">Programs</a></li>
+              <li><a href="#/news" className="hover:text-[#E8B923] transition-colors">News</a></li>
+              <li><a href="#/contact" className="hover:text-[#E8B923] transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -32,9 +32,9 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-[#E8B923] transition-colors">Innovation Directory</a></li>
-              <li><a href="#" className="hover:text-[#E8B923] transition-colors">Impact Stories</a></li>
-              <li><a href="#" className="hover:text-[#E8B923] transition-colors">Resources</a></li>
+              <li><a href="#/directory" className="hover:text-[#E8B923] transition-colors">Innovation Directory</a></li>
+              <li><a href="#/impact" className="hover:text-[#E8B923] transition-colors">Impact Stories</a></li>
+              <li><a href="#/resources" className="hover:text-[#E8B923] transition-colors">Resources</a></li>
             </ul>
           </div>
 
@@ -45,7 +45,7 @@ export function Footer() {
               <li>
                 4th Floor, National Center for Artificial Intelligence and Robotics Building, Wuye, Ankuru <br /> Abuja, Nigeria
               </li>
-              <li>+234 813 738 37890</li>
+              <li>+234 813 738 3780</li>
               <li>info@ondi.gov.ng</li>
             </ul>
           </div>

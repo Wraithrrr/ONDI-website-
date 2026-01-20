@@ -1,38 +1,35 @@
 // src/components/ProgramsPage.tsx
 import { WaveBackground } from '../components/WaveBackground';
-import { ArrowRight, ExternalLink, Users, Calendar, MapPin } from 'lucide-react';
+import { ArrowRight, Users, Calendar } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const programs = [
   {
     title: 'We-Elevate',
-    tag: 'Early-stage Support',
+    tag: 'Women Empowerment',
     description:
-      'Empowering early-stage startups with mentorship, resources and curated opportunities to turn bold ideas into sustainable ventures.',
-    image:
-      'https://images.unsplash.com/photo-1759395162739-84190996783c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    href: 'https://programs.startup.gov.ng/we-elevate/',
-    focus: ['Idea-stage founders', 'Mentorship & coaching', 'Access to opportunities'],
+      'A capacity-building programme equipping female entrepreneurs with digital, financial, and entrepreneurial skills to help women-led MSMEs transition from offline to online operations and scale globally.',
+    image: '/assets/hero-3.jpeg',
+    href: '#/we-elevate',
+    focus: ['Digital & financial skills training', 'Global market access', 'Mentorship from industry leaders'],
   },
   {
     title: 'iHatch',
-    tag: 'Incubation',
+    tag: 'Startup Incubation',
     description:
-      'A structured innovation incubator that provides workspaces, guidance and ecosystem linkages to help startups grow with confidence.',
-    image:
-      'https://images.unsplash.com/photo-1728044849242-516700295875?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    href: 'https://programs.startup.gov.ng/ihatch/',
-    focus: ['Startup incubation', 'Workspace & community', 'Investor readiness'],
+      'A 5-month free intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models through coaching, mentorship, and networking.',
+    image: '/assets/hero-1.jpeg',
+    href: '#/ihatch',
+    focus: ['Free training & coworking space', 'Mentorship from tech specialists', 'Access to funding opportunities'],
   },
   {
-    title: 'NITDA Digital Innovation Centre',
-    tag: 'National Facility',
+    title: 'NITDA Digital Innovation Challenge',
+    tag: 'Innovation Challenge',
     description:
-      'A state-of-the-art centre designed to host collaboration, research and cutting-edge digital innovation initiatives across Nigeria.',
-    image:
-      'https://images.unsplash.com/photo-1664943861653-609134fb6b3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    href: 'https://programs.startup.gov.ng/ndic/',
-    focus: ['National-scale projects', 'Collaboration hub', 'Research & experimentation'],
+      'A national competition inviting innovators to build bold, practical solutions that solve challenges for Nigeria\'s micro, small, and medium enterprises (MSMEs) using emerging technology.',
+    image: '/assets/ndic-1.jpeg',
+    href: '#/ndic',
+    focus: ['MSME-focused solutions', 'Expert mentorship sprints', 'Funding for winning teams'],
   },
 ];
 
@@ -156,15 +153,13 @@ export function ProgramsPage() {
                   <div className="mt-auto flex items-center justify-start">
                     <a
                       href={program.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg 
-                        bg-gradient-to-br from-[#F5F5F5] via-[#E5E5E5] to-[#D4D4D4] 
-                        text-xs md:text-sm font-semibold text-[#134C28] shadow-sm hover:shadow-md 
+                      className="group/btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg
+                        bg-gradient-to-br from-[#F5F5F5] via-[#E5E5E5] to-[#D4D4D4]
+                        text-xs md:text-sm font-semibold text-[#134C28] shadow-sm hover:shadow-md
                         hover:from-[#FFFFFF] hover:via-[#EDEDED] hover:to-[#D4D4D4] transition-all"
                     >
-                      Visit program page
-                      <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                      Learn More
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </a>
                   </div>
                 </div>

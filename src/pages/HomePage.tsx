@@ -24,8 +24,6 @@ import { motion, AnimatePresence } from 'motion/react';
 export function HomePage() {
   // rotating hero word
   const [currentWord, setCurrentWord] = useState(0);
-  // start index of the first visible news card
-  const [newsPage, setNewsPage] = useState(0);
 
   const words = ['Command Centre', 'Growth Hub', 'Launch Pad', 'Success Engine', 'Digital Gateway'];
 
@@ -36,9 +34,6 @@ export function HomePage() {
     return () => clearInterval(interval);
   }, []);
 
-
-
-
   const carouselImages = [
     '/assets/hero-1.jpeg',
     '/assets/hero-2.jpeg',
@@ -46,44 +41,6 @@ export function HomePage() {
     '/assets/hero-4.jpeg'
   ];
 
-  const newsItems = [
-    {
-      title: 'ONDI Launches ₦500M Innovation Fund for Nigerian Startups',
-      date: 'November 2025',
-      tag: 'Funding & Investment',
-      img: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=900&q=80'
-    },
-    {
-      title: '10,000 Developers to Be Trained Through New Capacity Program',
-      date: 'October 2025',
-      tag: 'Capacity Building',
-      img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80'
-    },
-    {
-      title: 'Regulatory Sandbox Opens for AI & Fintech Innovation',
-      date: 'October 2025',
-      tag: 'Regulatory Sandbox',
-      img: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=900&q=80'
-    },
-    {
-      title: 'ONDI Hosts National Digital Innovation Policy Roundtable',
-      date: 'September 2025',
-      tag: 'Policy & Ecosystem',
-      img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=80'
-    },
-    {
-      title: 'Quarterly Impact Report: 200+ Startups Supported',
-      date: 'September 2025',
-      tag: 'Impact & Results',
-      img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80'
-    },
-    {
-      title: "Nigeria's Innovation Ecosystem Records Strong Growth",
-      date: 'August 2025',
-      tag: 'Ecosystem Insight',
-      img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&q=80'
-    }
-  ];
   const SOCIAL_LINKS = {
     twitter: 'https://twitter.com/ONDINigeria',
     facebook: 'https://facebook.com/ONDINigeria',
@@ -424,36 +381,33 @@ export function HomePage() {
             {[
               {
                 title: 'We-Elevate',
-                tag: 'Early-stage Support',
+                tag: 'Women Empowerment',
                 description:
-                  'A capacity-building and growth program designed to support entrepreneurs—especially women-led startups—with skills, mentorship, and access to opportunities that help scale sustainable businesses.',
-                image:
-                  'https://images.unsplash.com/photo-1759395162739-84190996783c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-                href: 'https://programs.startup.gov.ng/we-elevate/'
+                  'A capacity-building programme equipping female entrepreneurs with digital, financial, and entrepreneurial skills to help women-led MSMEs transition from offline to online operations and scale globally.',
+                image: '/assets/hero-3.jpeg',
+                href: '#/we-elevate'
               },
               {
                 title: 'iHatch',
-                tag: 'Incubation',
+                tag: 'Startup Incubation',
                 description:
-                  'A startup incubation and acceleration program focused on early-stage tech founders, providing training, mentorship, and ecosystem support to transform ideas into viable products and businesses.',
-                image:
-                  'https://images.unsplash.com/photo-1728044849242-516700295875?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-                href: 'https://programs.startup.gov.ng/ihatch/'
+                  'A 5-month free intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models through coaching, mentorship, and networking.',
+                image: '/assets/hero-1.jpeg',
+                href: '#/ihatch'
               },
               {
-                title: 'NITDA Digital Innovation Centre(NDIC)',
-                tag: 'National Facility',
+                title: 'NITDA Digital Innovation Challenge',
+                tag: 'Innovation Challenge',
                 description:
-                  'A national competition that identifies, nurtures, and rewards innovative digital solutions addressing priority national and sector-specific challenges through technology.',
-                image:
-                  'https://images.unsplash.com/photo-1664943861653-609134fb6b3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-                href: 'https://programs.startup.gov.ng/ndic/'
+                  'A national competition inviting innovators to build bold, practical solutions that solve challenges for Nigeria\'s micro, small, and medium enterprises (MSMEs) using emerging technology.',
+                image: '/assets/ndic-1.jpeg',
+                href: '#/ndic'
               }
             ].map((program) => (
               <div
                 key={program.title}
-                className="group relative bg-white rounded-2xl overflow-hidden border border-[#E5E7EB] 
-                hover:border-[#134C28] shadow-[0_18px_45px_rgba(15,58,32,0.12)] 
+                className="group relative bg-white rounded-2xl overflow-hidden border border-[#E5E7EB]
+                hover:border-[#134C28] shadow-[0_18px_45px_rgba(15,58,32,0.12)]
                 hover:shadow-[0_22px_55px_rgba(15,58,32,0.18)] transition-all duration-300 flex flex-col"
               >
                 {/* Images */}
@@ -484,11 +438,9 @@ export function HomePage() {
                   <div className="flex items-center justify-start">
                     <a
                       href={program.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg 
-                      bg-gradient-to-br from-[#F5F5F5] via-[#E5E5E5] to-[#D4D4D4] 
-                      text-xs md:text-sm font-semibold text-[#134C28] shadow-sm hover:shadow-md 
+                      className="group/btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg
+                      bg-gradient-to-br from-[#F5F5F5] via-[#E5E5E5] to-[#D4D4D4]
+                      text-xs md:text-sm font-semibold text-[#134C28] shadow-sm hover:shadow-md
                       hover:from-[#FFFFFF] hover:via-[#EDEDED] hover:to-[#D4D4D4] transition-all"
                     >
                       Learn More
@@ -516,118 +468,37 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* NEWS SECTION – homepage preview */}
+      {/* NEWS SECTION – Coming Soon */}
       <section id="news" className="py-24 px-6 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto">
-          {/* Header + arrows */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#134C28]/10 border border-[#134C28]/20 mb-3">
-                <span className="text-xs font-semibold tracking-[0.22em] uppercase text-[#134C28]">
-                  News &amp; Updates
-                </span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-2">
-                Latest from the ONDI ecosystem
-              </h2>
-              <p className="text-sm md:text-base text-gray-600 max-w-xl leading-relaxed">
-                Headlines from programs, policy and ecosystem activity across Nigeria&apos;s digital
-                innovation landscape.
-              </p>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#134C28]/10 border border-[#134C28]/20 mb-3">
+              <span className="text-xs font-semibold tracking-[0.22em] uppercase text-[#134C28]">
+                News &amp; Updates
+              </span>
             </div>
-
-            {/* Left & Right arrows – slide one card at a time */}
-            <div className="hidden md:flex items-center gap-3">
-              <button
-                type="button"
-                onClick={() => {
-                  const visibleCount = 3;
-                  const maxIndex = Math.max(0, newsItems.length - visibleCount);
-                  setNewsPage((prev) => (prev <= 0 ? maxIndex : prev - 1));
-                }}
-                className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-[#D1D5DB] bg-white hover:bg-[#F3F4F6] hover:border-[#134C28] shadow-sm hover:shadow-md transition-all"
-                aria-label="Previous news"
-              >
-                <ArrowRight className="w-5 h-5 text-[#134C28] rotate-180" />
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  const visibleCount = 3;
-                  const maxIndex = Math.max(0, newsItems.length - visibleCount);
-                  setNewsPage((prev) => (prev >= maxIndex ? 0 : prev + 1));
-                }}
-                className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-[#D1D5DB] bg-white hover:bg-[#F3F4F6] hover:border-[#134C28] shadow-sm hover:shadow-md transition-all"
-                aria-label="Next news"
-              >
-                <ArrowRight className="w-5 h-5 text-[#134C28]" />
-              </button>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
+              Latest from the ONDI ecosystem
+            </h2>
+            <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto leading-relaxed">
+              Headlines from programs, policy and ecosystem activity across Nigeria&apos;s digital
+              innovation landscape.
+            </p>
           </div>
 
-          {/* Sliding news window – 3 cards visible, slide by 1 */}
-          {(() => {
-            const visibleCount = 3;
-            const maxIndex = Math.max(0, newsItems.length - visibleCount);
-            const startIndex = Math.min(newsPage, maxIndex);
-            const pageItems = newsItems.slice(startIndex, startIndex + visibleCount);
-
-            return (
-              <motion.div
-                key={startIndex}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{ duration: 0.45, ease: 'easeOut' }}
-                className="grid md:grid-cols-3 gap-8 mb-12"
-              >
-                {pageItems.map((item) => (
-                  <article
-                    key={item.title}
-                    className="group bg-white rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer flex flex-col"
-                  >
-                    {/* Image */}
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={item.img}
-                        alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/30 to-transparent" />
-                      <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/90 text-[11px] font-semibold text-[#134C28]">
-                          {item.tag}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Text */}
-                    <div className="p-6 flex flex-col flex-1">
-                      <p className="text-xs text-gray-500 mb-2">{item.date}</p>
-                      <h3 className="text-base md:text-lg font-semibold text-[#111827] mb-3 leading-snug group-hover:text-[#134C28] transition-colors">
-                        {item.title}
-                      </h3>
-                      <div className="mt-auto flex items-center justify-between pt-2 text-xs text-[#134C28]">
-
-                        <span className="text-[10px] text-gray-500">From ONDI News Desk</span>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </motion.div>
-            );
-          })()}
-
-          {/* “Show more” → go to News page */}
-          <div className="flex justify-center">
-            <a
-              href="#/news"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-white border border-[#D1D5DB] hover:border-[#134C28] hover:bg-[#F3F4F6] transition-all text-sm font-semibold text-[#134C28]"
-            >
-              Show more news &amp; updates
-              <ArrowRight className="w-4 h-4" />
-            </a>
+          {/* Coming Soon Placeholder */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl p-12 text-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[#134C28]/10 flex items-center justify-center">
+                <Sparkles className="w-8 h-8 text-[#134C28]" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-[#111827] mb-3">
+                Coming Soon
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                We&apos;re working on bringing you the latest news and updates from Nigeria&apos;s digital innovation ecosystem. Check back soon for exciting announcements, program updates, and success stories.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -707,7 +578,7 @@ export function HomePage() {
                       </div>
                       <div>
                         <h4 className="text-sm font-semibold text-[#081F11] mb-1">Phone</h4>
-                        <p className="text-sm text-gray-700">+234 813 738 37890</p>
+                        <p className="text-sm text-gray-700">+234 813 738 3780</p>
                       </div>
                     </div>
 

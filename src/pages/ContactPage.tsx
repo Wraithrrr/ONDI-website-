@@ -166,7 +166,7 @@ export function ContactPage() {
                         </div>
                         <div>
                           <h4 className="text-xs font-semibold text-[#081F11] mb-0.5">Phone</h4>
-                          <p className="text-xs text-gray-700">+234 813 738 37890</p>
+                          <p className="text-xs text-gray-700">+234 813 738 3780</p>
                         </div>
                       </div>
                     </div>
