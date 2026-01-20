@@ -2,15 +2,12 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Card } from "../components/ui/card";
-import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import {
   FileText,
-  Download,
   BookOpen,
-  HelpCircle,
   Wrench,
-  FileCheck,
+  HelpCircle,
 } from "lucide-react";
 
 export function ResourcesPage() {
@@ -50,75 +47,6 @@ export function ResourcesPage() {
     },*/
   ];
 
-  const featuredResources = [
-    {
-      id: 1,
-      title: "Nigeria Startup Act 2025 - Complete Guide",
-      type: "Policy Document",
-      description:
-        "Comprehensive overview of the NSA including benefits, eligibility criteria, and application process.",
-      fileType: "PDF",
-      fileSize: "2.5 MB",
-      downloads: 12500,
-      category: "Policy",
-    },
-    {
-      id: 2,
-      title: "Startup Pitch Deck Template",
-      type: "Template",
-      description:
-        "Professional pitch deck template used by successful ONDI-supported startups to raise funding.",
-      fileType: "PPTX",
-      fileSize: "8.2 MB",
-      downloads: 8900,
-      category: "Toolkit",
-    },
-    {
-      id: 3,
-      title: "Blockchain Policy Framework 2025",
-      type: "Policy Document",
-      description:
-        "Official framework for blockchain technology adoption and regulation in Nigeria.",
-      fileType: "PDF",
-      fileSize: "1.8 MB",
-      downloads: 6200,
-      category: "Policy",
-    },
-    {
-      id: 4,
-      title: "Fundraising Strategy Guide",
-      type: "Guide",
-      description:
-        "Step-by-step guide to preparing for and executing successful fundraising campaigns.",
-      fileType: "PDF",
-      fileSize: "3.1 MB",
-      downloads: 9800,
-      category: "Guide",
-    },
-    {
-      id: 5,
-      title: "Business Plan Template 2025",
-      type: "Template",
-      description:
-        "Comprehensive business plan template with financial projections and market analysis sections.",
-      fileType: "DOCX",
-      fileSize: "1.2 MB",
-      downloads: 11200,
-      category: "Toolkit",
-    },
-    {
-      id: 6,
-      title: "Investment Readiness Checklist",
-      type: "Guide",
-      description:
-        "Essential checklist to ensure your startup is ready to approach investors.",
-      fileType: "PDF",
-      fileSize: "850 KB",
-      downloads: 7500,
-      category: "Guide",
-    },
-  ];
-
   const faqs = [
     {
       question: "How do I apply for ONDI programs?",
@@ -142,28 +70,12 @@ export function ResourcesPage() {
     },
   ];
 
-  // --- STATE FOR FILTERING + SHOW MORE ---
+  // --- STATE FOR FILTERING ---
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [showAll, setShowAll] = useState(false);
-
-  const filteredResources =
-    activeCategory && activeCategory !== "FAQ"
-      ? featuredResources.filter((res) => res.category === activeCategory)
-      : featuredResources;
-
-  const VISIBLE_COUNT = 3;
-  const visibleResources = showAll
-    ? filteredResources
-    : filteredResources.slice(0, VISIBLE_COUNT);
 
   const handleCategoryClick = (filterKey: string) => {
     // If same category clicked again → clear filter
-    setShowAll(false);
     setActiveCategory((prev) => (prev === filterKey ? null : filterKey));
-  };
-
-  const handleShowMore = () => {
-    setShowAll(true);
   };
 
   return (
@@ -278,78 +190,6 @@ export function ResourcesPage() {
           <p className="text-center text-xs md:text-sm text-[#628B35] mb-8">
             Browse key documents, templates and guides from the ONDI ecosystem.
           </p>
-        )}
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-          {visibleResources.map((res, i) => (
-            <motion.div
-              key={res.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="p-6 h-full bg-white hover:shadow-xl transition-shadow border border-[#E5E7EB]">
-                {/* Top Row */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#ECF3E6]">
-                    <FileCheck className="w-6 h-6 text-[#628B35]" />
-                  </div>
-
-                  <Badge
-                    variant="outline"
-                    style={{ borderColor: "#628B35", color: "#628B35" }}
-                  >
-                    {res.fileType}
-                  </Badge>
-                </div>
-
-                {/* Type */}
-                <p className="text-sm font-medium text-[#D4A520] mb-1">
-                  {res.type}
-                </p>
-
-                {/* Title */}
-                <h3 className="text-lg font-semibold text-[#134C28] mb-3">
-                  {res.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm text-black mb-4">{res.description}</p>
-
-                {/* File details */}
-                <div className="flex items-center justify-between mb-4 text-sm text-[#628B35]">
-                  <span>{res.fileSize}</span>
-                  <span>{res.downloads.toLocaleString()} downloads</span>
-                </div>
-
-                {/* Download button */}
-                <Button
-                  className="w-full text-white hover:opacity-90"
-                  style={{
-                    backgroundColor: "#034524",
-                    borderRadius: "10px",
-                  }}
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download
-                </Button>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Show more button */}
-        {filteredResources.length > VISIBLE_COUNT && !showAll && (
-          <div className="flex justify-center mb-20">
-            <Button
-              variant="outline"
-              onClick={handleShowMore}
-              className="px-8 py-3 border-[#134C28] text-[#134C28] hover:bg-[#134C28] hover:text-white text-sm font-semibold rounded-lg"
-            >
-              Show more resources
-            </Button>
-          </div>
         )}
 
         {/* FAQ Section */}
