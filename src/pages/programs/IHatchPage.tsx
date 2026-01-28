@@ -1,314 +1,358 @@
 // pages/programs/IHatchPage.tsx
 import { motion } from 'motion/react';
-import { ArrowRight, Target, Users, Briefcase, GraduationCap, Rocket, Building2, ChevronDown, ChevronUp } from 'lucide-react';
+import { Check, Clock, ClipboardCheck, Handshake, Presentation, BookOpen, Users, Briefcase } from 'lucide-react';
 import { useState } from 'react';
 
+// Cohort data
+const cohorts = [
+  {
+    year: 2021,
+    startups: 10,
+    logos: [
+      { name: 'Easorn', logo: '/images/cohorts/easorn.png' },
+      { name: 'Dantop', logo: '/images/cohorts/dantop.png' },
+      { name: 'Qompass', logo: '/images/cohorts/qompass.png' },
+      { name: 'GICED', logo: '/images/cohorts/giced.png' },
+      { name: 'Dartmark', logo: '/images/cohorts/dartmark.png' },
+      { name: 'AIA', logo: '/images/cohorts/aia.png' },
+    ],
+  },
+  {
+    year: 2022,
+    startups: 12,
+    logos: [
+      { name: 'Saft', logo: '/images/cohorts/saft.png' },
+      { name: 'Cassorn', logo: '/images/cohorts/cassorn.png' },
+      { name: 'PIGO', logo: '/images/cohorts/pigo.png' },
+      { name: 'Gccors', logo: '/images/cohorts/gccors.png' },
+      { name: 'Oasis', logo: '/images/cohorts/oasis.png' },
+      { name: 'Morisan', logo: '/images/cohorts/morisan.png' },
+    ],
+  },
+  {
+    year: 2023,
+    startups: 15,
+    logos: [
+      { name: 'Crisarts', logo: '/images/cohorts/crisarts.png' },
+      { name: 'Bravefields', logo: '/images/cohorts/bravefields.png' },
+      { name: 'Yeb', logo: '/images/cohorts/yeb.png' },
+      { name: 'Morlisa', logo: '/images/cohorts/morlisa.png' },
+      { name: 'Gcpajo', logo: '/images/cohorts/gcpajo.png' },
+      { name: 'Inoknits', logo: '/images/cohorts/inoknits.png' },
+    ],
+  },
+];
+
+const programStructure = [
+  {
+    icon: Clock,
+    title: '12 Weeks',
+    description: 'Intensive Incubation Period',
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'Onboarding',
+    description: 'Orientation & Planning',
+  },
+  {
+    icon: Handshake,
+    title: 'Mentorship',
+    description: 'Expert Guidance & Support',
+  },
+  {
+    icon: Presentation,
+    title: 'Demo Day',
+    description: 'Pitch to Investors',
+  },
+];
+
+const whoCanApply = [
+  'Early-stage Startups',
+  'Innovative Entrepreneurs',
+  'Committed Teams Ready to Scale',
+];
+
+const whatYouGain = [
+  {
+    icon: BookOpen,
+    title: 'Hands-On Training',
+    description: 'Business & Skills Workshops',
+  },
+  {
+    icon: Users,
+    title: 'Mentorship & Networking',
+    description: 'Guidance from Industry Experts',
+  },
+  {
+    icon: Briefcase,
+    title: 'Access to Resources',
+    description: 'Funding & Market Opportunities',
+  },
+];
+
 export function IHatchPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const benefits = [
-    {
-      title: 'Free Interactive Training',
-      description: 'Free offline/online interactive trainings',
-      icon: GraduationCap,
-    },
-    {
-      title: 'Free Coworking Space',
-      description: 'Access to free coworking space at assigned hubs',
-      icon: Building2,
-    },
-    {
-      title: 'Mentorship Sessions',
-      description: 'Mentorship sessions with tech specialists',
-      icon: Users,
-    },
-    {
-      title: 'Funding Opportunities',
-      description: 'Access to funding opportunities through investor connections',
-      icon: Rocket,
-    },
-  ];
-
-  const requirements = [
-    'Individuals/groups with an innovative business plan with a product or prototype that would aid in developing the Nigerian economy',
-    'Individuals/groups willing to establish a legal company and begin business operations in Nigeria',
-    'Participants must be at least 18 years old',
-    'All sectors include: Education Technology (Edtech), Agricultural Technology (Agritech), Health Technology (Healthtech), Financial Technology (Fintech), Logistics, Security, Government Technology (Govtech)',
-  ];
-
-  const objectives = [
-    'Support entrepreneurs that use creative commercial services and products to address social challenges.',
-    'Assist entrepreneurs in developing viable and scalable business models through a 5-month intensive incubation program involving coaching, lectures, and boot camps.',
-    'Focus support on key IT sectors such as FinTech, AgriTech, HealthTech, EdTech, and GovTech to enhance Nigeria\'s digital innovation landscape.',
-    'Create opportunities for startups to network with peers, industry experts, and potential partners through the program\'s events and coworking spaces.',
-  ];
-
-  const faqs = [
-    {
-      question: 'What is the iHatch Startup Incubation Programme?',
-      answer: 'iHatch is a 5-month free intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models. It includes coaching, lectures, boot camps, mentorship, and networking opportunities, focusing on youth, innovation, entrepreneurship, and technology.',
-    },
-    {
-      question: 'Who is eligible to apply for the iHatch for Startups?',
-      answer: 'Eligible applicants include individuals or groups with innovative business plans or prototypes that contribute to Nigeria\'s economy, are willing to establish a legal company and operate in Nigeria, and are at least 18 years old. The program is open to all sectors, with a focus on EdTech, AgriTech, HealthTech, FinTech, Logistics, Security, and GovTech.',
-    },
-    {
-      question: 'Is there a cost to join the iHatch programme?',
-      answer: 'No, the program is completely free. Participants receive free offline/online training, access to a free coworking space at assigned hubs, mentorship from tech specialists, networking opportunities with peers and industry experts, and access to funding opportunities through investor connections.',
-    },
-    {
-      question: 'What is the application process for the iHatch for Startups?',
-      answer: 'Interested applicants should visit the official application portal to apply. They must submit details of their innovative business plan or prototype and meet eligibility criteria. Specific application steps and deadlines are available on the official website.',
-    },
-    {
-      question: 'What kind of support do startups receive during the iHatch programme?',
-      answer: 'Startups receive comprehensive support, including coaching to refine business ideas, lectures on entrepreneurship and technology, boot camps for hands-on learning, mentorship from tech specialists, and access to a free coworking space.',
-    },
-  ];
-
-  const partners = [
-    { name: 'NITDA', logo: '/images/logos/nitda-logo.webp' },
-    { name: 'Startup Nigeria', logo: '/images/logos/startup-nigeria-logo.webp' },
-    { name: 'ONDI', logo: '/f6991c91763ebb8cb799949ee0cb356bdb7928ad.png' },
-  ];
+  const [showCohortDetail, setShowCohortDetail] = useState<number | null>(null);
 
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[600px] bg-black text-white overflow-hidden flex items-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/assets/hero-1.jpeg)',
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-black/40" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
+      <section className="bg-[#134C28] text-white py-16 md:py-24">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="max-w-2xl"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Introducing iHatch for Startups: Cohort 4
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 italic">
+              Empowering Startups to Succeed
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-8">
-              Apply for iHatch's intensive incubation programme designed to help Nigerian innovators incubate their business venture
+            <p className="text-base md:text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
+              iHatch is a startup incubation program designed to support early-stage entrepreneurs
+              with the tools and mentorship they need med to thrive.
             </p>
-            <a
-              href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#628B35] hover:bg-[#4a6a28] text-white font-semibold rounded-lg transition-colors"
-            >
-              Apply Now
-              <ArrowRight className="w-5 h-5" />
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
+              >
+                Apply for iHatch
+              </a>
+              <button
+                onClick={() => document.getElementById('past-cohorts')?.scrollIntoView({ behavior: 'smooth' })}
+                className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
+              >
+                View Past Cohorts
+              </button>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="bg-[#F8F8F8] py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap items-center justify-center gap-12">
-            {partners.map((partner) => (
-              <img
-                key={partner.name}
-                src={partner.logo}
-                alt={partner.name}
-                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
-              />
-            ))}
-          </div>
+      {/* About Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-[#134C28] mb-6">
+              About the iHatch Program
+            </h2>
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+              iHatch is designed to nurture innovative startups through mentorship, training,
+              and access to a thriving entrepreneurial ecosystem.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-[#F0FAF7]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold tracking-widest uppercase text-[#628B35] mb-2">
-              Benefits
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Why you should apply
+      {/* Program Structure Section */}
+      <section className="py-16 md:py-20 bg-[#134C28]">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              Program Structure & Duration
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {programStructure.map((item, index) => (
               <motion.div
-                key={benefit.title}
+                key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl p-6 text-center shadow-lg"
               >
-                <div className="w-14 h-14 rounded-xl bg-[#628B35]/10 flex items-center justify-center mb-4">
-                  <benefit.icon className="w-7 h-7 text-[#628B35]" />
+                <div className="w-16 h-16 mx-auto mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
+                  <item.icon className="w-8 h-8 text-[#134C28]" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {benefit.title}
+                <h3 className="text-lg md:text-xl font-bold text-[#D4A74A] mb-2">
+                  {item.title}
                 </h3>
-                <p className="text-sm text-gray-600">{benefit.description}</p>
+                <p className="text-sm text-gray-600">{item.description}</p>
               </motion.div>
             ))}
-          </div>
-
-          <div className="flex justify-center mt-12">
-            <a
-              href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#628B35] hover:bg-[#4a6a28] text-white font-semibold rounded-lg transition-colors"
-            >
-              Apply Now
-              <ArrowRight className="w-5 h-5" />
-            </a>
           </div>
         </div>
       </section>
 
       {/* Who Can Apply Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-sm font-semibold tracking-widest uppercase text-[#628B35] mb-2">
-                Application
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                Who can apply?
-              </h2>
-
-              <ul className="space-y-6">
-                {requirements.map((req, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-start gap-4"
-                  >
-                    <div className="w-10 h-10 rounded-full bg-[#628B35]/10 flex items-center justify-center flex-shrink-0">
-                      <Target className="w-5 h-5 text-[#628B35]" />
-                    </div>
-                    <p className="text-gray-700">{req}</p>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="relative">
-              <img
-                src="/assets/hero-2.jpeg"
-                alt="Application"
-                className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Objectives Section */}
-      <section className="py-20 bg-[#F8F8F8]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <img
-                src="/assets/hero-3.jpeg"
-                alt="Objectives"
-                className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
-              />
-            </div>
-
-            <div className="order-1 md:order-2">
-              <p className="text-sm font-semibold tracking-widest uppercase text-[#628B35] mb-2">
-                Objectives
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                What are our objectives?
-              </h2>
-
-              <ul className="space-y-4">
-                {objectives.map((obj, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-xl px-6 py-4 shadow-md text-gray-700"
-                  >
-                    {obj}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex justify-center mt-12">
-            <a
-              href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#628B35] hover:bg-[#4a6a28] text-white font-semibold rounded-lg transition-colors"
-            >
-              Apply Now
-              <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold tracking-widest uppercase text-[#628B35] mb-2">
-              FAQs
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Frequently Asked Questions
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-[#134C28] mb-8">
+              Who Can Apply?
             </h2>
-          </div>
+            <div className="space-y-4 max-w-md mx-auto">
+              {whoCanApply.map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-center gap-3 text-left"
+                >
+                  <div className="w-6 h-6 rounded-full bg-[#134C28] flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-gray-700 text-base md:text-lg">{item}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
+      {/* What You Gain Section */}
+      <section className="py-16 md:py-20 bg-[#134C28]">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              What You Gain
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {whatYouGain.map((item, index) => (
               <motion.div
-                key={index}
+                key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="border border-gray-200 rounded-xl overflow-hidden"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-6 text-center shadow-lg"
               >
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors"
-                >
-                  <span className="font-semibold text-gray-900">{faq.question}</span>
-                  {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-[#628B35]" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-[#628B35]" />
-                  )}
-                </button>
-                {openFaq === index && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-700">{faq.answer}</p>
-                  </div>
-                )}
+                <div className="w-16 h-16 mx-auto mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
+                  <item.icon className="w-8 h-8 text-[#134C28]" />
+                </div>
+                <h3 className="text-lg font-bold text-[#134C28] mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-600">{item.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Past Cohorts Section */}
+      <section id="past-cohorts" className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
+              Our Past Cohorts
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {cohorts.map((cohort, index) => (
+              <motion.div
+                key={cohort.year}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-[#134C28] rounded-2xl p-6 text-center cursor-pointer hover:bg-[#1a5f33] transition-colors"
+                onClick={() => setShowCohortDetail(showCohortDetail === cohort.year ? null : cohort.year)}
+              >
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Cohort <span className="text-[#D4A74A]">{cohort.year}</span>
+                </h3>
+                <p className="text-[#D4A74A] font-semibold mb-4">
+                  {cohort.startups} Startups Graduated
+                </p>
+                <div className="grid grid-cols-3 gap-2">
+                  {cohort.logos.map((startup) => (
+                    <div
+                      key={startup.name}
+                      className="bg-white rounded-lg p-2 h-12 flex items-center justify-center"
+                    >
+                      <span className="text-xs font-semibold text-[#134C28] truncate px-1">
+                        {startup.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-20 bg-[#134C28]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Ready to Launch Your Startup Journey?
+            </h2>
+            <p className="text-gray-200 mb-8">
+              Apply now and join the iHatch program today!
+            </p>
+            <a
+              href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
+            >
+              Apply Now
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#0d3a1e] py-8">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">About</a>
+            <span className="hidden md:inline text-gray-500">|</span>
+            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">Program</a>
+            <span className="hidden md:inline text-gray-500">|</span>
+            <a href="#past-cohorts" className="text-white hover:text-[#D4A74A] transition-colors">Cohorts</a>
+            <span className="hidden md:inline text-gray-500">|</span>
+            <a href="#/contact" className="text-white hover:text-[#D4A74A] transition-colors">Contact</a>
+          </div>
+          <p className="text-center text-gray-400 text-sm">
+            © 2024 iHatch. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
