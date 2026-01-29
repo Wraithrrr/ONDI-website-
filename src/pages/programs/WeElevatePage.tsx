@@ -1,165 +1,242 @@
 // pages/programs/WeElevatePage.tsx
 import { motion } from 'motion/react';
-import { ArrowRight, Mail, Phone } from 'lucide-react';
+import { Check, Users, Rocket, Target, ClipboardList, GraduationCap, TrendingUp } from 'lucide-react';
+
+const aboutFeatures = [
+  {
+    icon: Target,
+    title: 'Equip & Empower',
+    description: 'Submit your application to kickstart your entrepreneurial journey.',
+  },
+  {
+    icon: Users,
+    title: 'Create Community',
+    description: 'Participate in workshops, mentorship sessions and peer networking.',
+  },
+  {
+    icon: Rocket,
+    title: 'Scale Startups',
+    description: 'Leverage resources and connections to scale your business successfully.',
+  },
+];
+
+const howItWorks = [
+  {
+    icon: ClipboardList,
+    step: '1',
+    title: 'Apply & Join',
+    description: 'Submit your application to kickstart your entrepreneurial journey.',
+  },
+  {
+    icon: GraduationCap,
+    step: '2',
+    title: 'Learn & Grow',
+    description: 'Participate in workshops, mentorship sessions, and peer networking.',
+  },
+  {
+    icon: TrendingUp,
+    step: '3',
+    title: 'Scale & Elevate',
+    description: 'Leverage resources and connections to scale your business successfully.',
+  },
+];
+
+const whoShouldApply = [
+  'Ambitious Women Entrepreneurs',
+  'Startups with a Scalable Business Model',
+  'Women-Led Teams Focused on Growth',
+];
 
 export function WeElevatePage() {
-  const benefits = [
-    {
-      title: 'Digital Skills Training',
-      description: 'Learn practical, hands-on digital tools, from social media marketing to online payments and e-commerce operations, so you can confidently run your business in today\'s digital-first world.',
-      icon: '&#128187;',
-    },
-    {
-      title: 'Global Market Access',
-      description: 'Go beyond local sales. Gain exposure to global e-commerce platforms that connect you with customers across Africa and beyond, opening doors to new markets and bigger opportunities.',
-      icon: '&#127758;',
-    },
-    {
-      title: 'Business Growth',
-      description: 'Turn knowledge into results. Expand your customer base, build stronger revenue streams, and create sustainable jobs that impact your community while securing your financial independence.',
-      icon: '&#128200;',
-    },
-    {
-      title: 'Mentorship',
-      description: 'Get guidance from seasoned entrepreneurs, business experts and industry leaders who will share real-world insights to help you avoid mistakes and scale faster.',
-      icon: '&#127891;',
-    },
-  ];
-
-  const sponsors = [
-    { name: 'ONDI', logo: '/f6991c91763ebb8cb799949ee0cb356bdb7928ad.png' },
-    { name: 'NITDA', logo: '/images/logos/nitda-logo.webp' },
-    { name: 'Startup Nigeria', logo: '/images/logos/startup-nigeria-logo.webp' },
-  ];
-
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section
-        className="min-h-[500px] md:min-h-[600px] relative text-white overflow-hidden flex items-center justify-center"
-        style={{ backgroundColor: '#628B35' }}
-      >
-        <div className="max-w-4xl mx-auto text-center py-16 md:py-24 px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <h1 className="mb-1 font-bold text-2xl md:text-3xl lg:text-4xl">
-              WE-Elevate is here in
-            </h1>
-            <h1 className="mb-6 font-bold text-4xl md:text-5xl lg:text-6xl text-[#E8B923]">
-              Nigeria
-            </h1>
-            <p className="mb-8 text-sm md:text-base max-w-2xl mx-auto">
-              Empowering opportunities to women-led MSMEs to scale globally. Applications now open. Limited slots available.
-            </p>
-
-            {/* Images Grid */}
-            <div className="flex items-center justify-center gap-4 md:gap-6 mb-8">
-              <div className="w-32 h-44 sm:w-40 sm:h-52 md:w-48 md:h-64 lg:w-56 lg:h-72 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform">
-                <img src="/assets/hero-1.jpeg" alt="Woman entrepreneur" className="w-full h-full object-cover" />
-              </div>
-              <div className="w-32 h-44 sm:w-40 sm:h-52 md:w-48 md:h-64 lg:w-56 lg:h-72 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform mt-8">
-                <img src="/assets/hero-2.jpeg" alt="Woman entrepreneur" className="w-full h-full object-cover" />
-              </div>
-              <div className="w-32 h-44 sm:w-40 sm:h-52 md:w-48 md:h-64 lg:w-56 lg:h-72 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform">
-                <img src="/assets/hero-3.jpeg" alt="Woman entrepreneur" className="w-full h-full object-cover" />
-              </div>
-            </div>
-          </motion.div>
+      <section className="relative bg-gradient-to-br from-[#134C28] via-[#1a5f33] to-[#134C28] text-white overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-[#D4A74A]/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-white/5 rounded-full blur-2xl" />
         </div>
-      </section>
 
-      {/* Sponsors Section */}
-      <section className="bg-white py-12 md:py-14">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-center text-gray-700 text-sm md:text-base font-medium mb-8">
-            Proudly sponsored by
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
-            {sponsors.map((sponsor) => (
-              <img
-                key={sponsor.name}
-                src={sponsor.logo}
-                alt={sponsor.name}
-                className="h-10 md:h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
-              />
-            ))}
+        <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                Empowering Women Entrepreneurs to Soar
+              </h1>
+              <p className="text-gray-200 text-base md:text-lg mb-8 leading-relaxed">
+                We-Elevate is designed to support and uplift women entrepreneurs by providing the resources, mentorship, and community needed to scale their startups and turn their visions into growth-focused businesses.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="http://forms.gle/nwhrookiz3xywSC46"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
+                >
+                  Apply for We-Elevate
+                </a>
+                <button
+                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="inline-flex items-center justify-center px-8 py-3 bg-[#1a3d20] hover:bg-[#0d2a14] text-white font-semibold rounded-full transition-colors border border-white/20"
+                >
+                  View Past Cohorts
+                </button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="hidden md:flex justify-center"
+            >
+              <div className="relative w-full max-w-md">
+                {/* Illustration placeholder - women working with growth chart */}
+                <div className="bg-gradient-to-br from-[#D4A74A]/20 to-transparent rounded-3xl p-8">
+                  <img
+                    src="/assets/hero-2.jpeg"
+                    alt="Women entrepreneurs"
+                    className="w-full h-64 object-cover rounded-2xl shadow-xl"
+                  />
+                  {/* Growth chart decoration */}
+                  <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm rounded-xl p-3">
+                    <TrendingUp className="w-8 h-8 text-[#D4A74A]" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-14 sm:py-20 bg-[#F5F5F5]" id="about">
-        <div className="max-w-3xl mx-auto px-6">
+      {/* About We-Elevate Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#134C28] text-white rounded-2xl p-8 md:p-12 text-center"
+            className="text-center mb-12"
           >
-            <h2 className="text-xl md:text-2xl font-bold mb-6">
-              What you need to know about this program
-            </h2>
-
-            <div className="space-y-4 text-sm md:text-base leading-relaxed">
-              <p>
-                WE-Elevate is a capacity-building programme equipping female entrepreneurs with
-                digital, financial, and entrepreneurial skills. It combines online learning modules,
-                mentorship, and access to global e-commerce trading platforms to help women-led MSMEs transition
-                from offline to online operations.
-              </p>
-
-              <p>
-                Through tailored, step-by-step training, participants progress from being
-                e-commerce aware to e-commerce scalable, ultimately formalising their businesses, expanding their
-                customer bases, and creating sustainable jobs.
-              </p>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-[#134C28]" />
+              <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
+                About We-Elevate
+              </h2>
+              <div className="h-px w-16 bg-[#134C28]" />
             </div>
-
-            <div className="mt-8">
-              <a
-                href="http://forms.gle/nwhrookiz3xywSC46"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#134C28] hover:bg-gray-100 font-semibold rounded-lg px-6 py-3 text-sm md:text-base transition-colors"
-              >
-                Apply Now
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+              Nurturing the Next Wave of Women Leaders
+            </h3>
+            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We-Elevate is committed to bridging the gap for women in the entrepreneurial world. Through tailored support and a robust network, we're helping women-led startups overcome challenges and achieve sustainable growth. Learn more.
+            </p>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Benefits Section */}
-      <section className="bg-white py-14 sm:py-20" id="benefits">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-12">
-            What you'll gain
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {benefits.map((benefit, index) => (
+          <div className="grid md:grid-cols-3 gap-6">
+            {aboutFeatures.map((feature, index) => (
               <motion.div
-                key={benefit.title}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#F0FAF7] border-2 border-[#628B35]/30 rounded-xl p-6 md:p-8 hover:border-[#628B35]/50 transition-colors"
+                className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <span className="text-3xl" dangerouslySetInnerHTML={{ __html: benefit.icon }} />
-                  <h3 className="text-base md:text-lg font-bold text-gray-900 flex-1">
-                    {benefit.title}
-                  </h3>
+                <div className="w-16 h-16 mx-auto mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
+                  <feature.icon className="w-8 h-8 text-[#134C28]" />
                 </div>
-                <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
-                  {benefit.description}
-                </p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-16 md:py-20 bg-[#F5F5F5]">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-[#134C28]" />
+              <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
+                How It Works
+              </h2>
+              <div className="h-px w-16 bg-[#134C28]" />
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {howItWorks.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow"
+              >
+                <div className="w-16 h-16 mx-auto mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
+                  <item.icon className="w-8 h-8 text-[#134C28]" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {item.step}. {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who Should Apply Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-[#134C28]" />
+              <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
+                Who Should Apply?
+              </h2>
+              <div className="h-px w-16 bg-[#134C28]" />
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {whoShouldApply.map((item, index) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-start gap-3"
+              >
+                <div className="w-6 h-6 rounded-full bg-[#134C28] flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-gray-700 text-base md:text-lg font-medium">{item}</span>
               </motion.div>
             ))}
           </div>
@@ -167,99 +244,49 @@ export function WeElevatePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-black text-white">
-        <div className="max-w-4xl mx-auto text-center px-6">
+      <section className="py-16 md:py-20 bg-[#134C28]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 leading-tight">
-              Your business deserves more
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Ready to Elevate Your Startup?
             </h2>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 leading-tight">
-              than survival, it deserves
-            </h2>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 leading-tight">
-              visibility, growth, and <span className="text-[#628B35]">global</span>
-            </h2>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-10 leading-tight">
-              <span className="text-[#628B35]">opportunities</span>
-            </h2>
-
+            <p className="text-gray-200 mb-8">
+              Apply now and join the We-Elevate program to grow and scale your business!
+            </p>
             <a
               href="http://forms.gle/nwhrookiz3xywSC46"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#628B35] hover:bg-[#4a6a28] text-white font-semibold rounded-lg px-6 md:px-8 py-3 text-sm md:text-base transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
             >
               Apply Now
-              <ArrowRight className="w-4 h-4" />
             </a>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-14 sm:py-20 bg-white" id="contact">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-12">
-            Reach out to us
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {/* Email Address */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-[#F0FAF7] rounded-xl p-6 md:p-8 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-[#134C28] flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
-                  Email Address
-                </h3>
-              </div>
-              <p className="text-gray-600 text-sm md:text-base mb-2">
-                Send us an email at{' '}
-                <a href="mailto:info@startup.gov.ng" className="text-[#134C28] hover:underline font-medium">
-                  info@startup.gov.ng
-                </a>
-                . Response time is approximately 2 hours.
-              </p>
-            </motion.div>
-
-            {/* Phone */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-[#F0FAF7] rounded-xl p-6 md:p-8 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-[#134C28] flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
-                  Phone
-                </h3>
-              </div>
-              <p className="text-gray-600 text-sm md:text-base mb-2">
-                Estimated response time is less than 1 hour.
-              </p>
-              <a href="tel:+2348182887766" className="text-lg md:text-xl font-semibold text-[#134C28] hover:underline">
-                +234 818 2887 766
-              </a>
-            </motion.div>
+      {/* Footer */}
+      <footer className="bg-[#0d3a1e] py-8">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">About</a>
+            <span className="hidden md:inline text-gray-500">|</span>
+            <a href="#how-it-works" className="text-white hover:text-[#D4A74A] transition-colors">Program</a>
+            <span className="hidden md:inline text-gray-500">|</span>
+            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">Cohorts</a>
+            <span className="hidden md:inline text-gray-500">|</span>
+            <a href="#/contact" className="text-white hover:text-[#D4A74A] transition-colors">Contact</a>
           </div>
+          <p className="text-center text-gray-400 text-sm">
+            © 2024 We-Elevate. All rights reserved.
+          </p>
         </div>
-      </section>
+      </footer>
     </main>
   );
 }
