@@ -1,258 +1,445 @@
 // pages/programs/NDICPage.tsx
 import { motion } from 'motion/react';
-import { ArrowRight, Search, Monitor, Users, Presentation, Package, FileCheck, DollarSign, Database, Store, UserCircle } from 'lucide-react';
+import { Search, Users, TrendingUp, Lightbulb, GraduationCap, Handshake, DollarSign, Award, Package, ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
+
+const aboutFeatures = [
+  {
+    icon: Lightbulb,
+    title: 'Identify Innovative Solutions',
+    description: 'Tech innovation programs: collaborative programs that drive solutions to major life challenges.',
+  },
+  {
+    icon: Users,
+    title: 'Support Tech Entrepreneurs',
+    description: 'Host for bringing show tech startups around big ideas, backed with opportunity mentors.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Drive Socio-Economic Growth',
+    description: 'Provide the groundwork. Challenge and recognize emerging sustainable business models.',
+  },
+];
+
+const whoShouldApply = [
+  {
+    icon: Search,
+    title: 'Tech Startups & Innovators',
+    description: 'Lorem ipsum digita to a platformer resourceful digital innovation reach.',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Researchers & Academics',
+    description: 'Please see them as academic, textbook the respective narrative. Offering insights to Nigeria\'s.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Solution-Oriented Startups',
+    description: 'With innovative forward focused, collaborative sit they to innovation with the essentials.',
+  },
+];
+
+const whatParticipantsGain = [
+  {
+    icon: DollarSign,
+    title: 'Funding & Grants',
+    description: 'Lorem ipsum/opportunity, government funding network innovate they. Escalating perspectives at innovations.',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Mentorship & Training',
+    description: 'Lorem ipsum insurance transit. Retailers, government to go that tech-notching, participants technology digital innovative for investors.',
+  },
+  {
+    icon: Handshake,
+    title: 'Government Partnerships',
+    description: 'Add the career opportunities on Quotes and Pauses.',
+  },
+];
+
+// Cohort data
+const cohorts = [
+  {
+    year: 2023,
+    fundingSecured: '$300K',
+    sectorsImpacted: 3,
+    productsLaunched: 8,
+    highlights: [
+      { name: 'Alqat', description: 'Convex icy. Crvrate strampo earnelesa Eaccers.', fundingSecured: '$72k', industry: 'Fintech' },
+      { name: 'Agrodomain', description: 'Startups. Laernet digites soun tilt xociety wast miet.', fundingSecured: '$0.006 Fermnut Bnactet', industry: 'Agritech' },
+      { name: 'Medicity', description: 'Egnreeovs. Techwrimes os io a digital fontasy.', fundingSecured: 'Partnust with 16 Clafes', industry: 'Healthtech' },
+    ],
+  },
+  {
+    year: 2022,
+    fundingSecured: '$220K',
+    sectorsImpacted: 2,
+    productsLaunched: 6,
+    highlights: [
+      { name: 'Vtrack', description: 'Responsivity. Save eyemony to streets territy dreamblex.', fundingSecured: '$22k', industry: 'Logistics' },
+      { name: 'FundEase', description: 'Agoeronics. Tenor digiert ax anth xelt apptygivenees.', fundingSecured: '$6,006 Fermnut Reacbed', industry: 'Fintech' },
+      { name: 'E-Learn+', description: 'Auxiliattoss. Sceremamita ad digital tacont oprutes.', fundingSecured: 'Partnust with 16 Clahtes', industry: 'Edtech' },
+    ],
+  },
+];
 
 export function NDICPage() {
-  const focusAreas = [
-    { title: 'Inventory and logistics optimization', icon: Package },
-    { title: 'Business compliance automation', icon: FileCheck },
-    { title: 'Access to finance and credit for MSMEs', icon: DollarSign },
-    { title: 'MSME data collection & decision-making', icon: Database },
-    { title: 'Digital storefronts & marketplace platforms', icon: Store },
-    { title: 'Women-led or informal MSME digitization', icon: UserCircle },
-  ];
+  const [showPastCohorts, setShowPastCohorts] = useState(false);
 
-  const howItWorks = [
-    {
-      step: 1,
-      title: 'Identify a core MSME pain point in your state',
-      description: 'Pinpoint a pressing problem faced by MSMEs in your state that needs an innovative solution.',
-      icon: Search,
-      highlighted: true,
-    },
-    {
-      step: 2,
-      title: 'Build a simple tech-driven product idea',
-      description: 'Build a simple tech-driven product idea that addresses the problem you\'ve identified.',
-      icon: Monitor,
-      highlighted: false,
-    },
-    {
-      step: 3,
-      title: 'Participate in a sprint with expert mentors',
-      description: 'Join a fast-paced sprint with expert mentors who\'ll help you refine and improve your solution.',
-      icon: Users,
-      highlighted: true,
-    },
-    {
-      step: 4,
-      title: 'Present your solution to a panel of judges',
-      description: 'Present your refined solution to a panel of expert judges who will evaluate your innovation.',
-      icon: Presentation,
-      highlighted: false,
-    },
-  ];
+  // Past Cohorts View
+  if (showPastCohorts) {
+    return (
+      <main className="bg-white min-h-screen">
+        {/* Header */}
+        <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <img src="/images/logos/nitda-logo.webp" alt="NITDA" className="h-8" />
+            </div>
+            <nav className="hidden md:flex items-center gap-8">
+              <button onClick={() => setShowPastCohorts(false)} className="text-gray-600 hover:text-[#134C28]">About Challenge</button>
+              <span className="text-[#134C28] font-medium">Past Cohorts</span>
+              <a href="#/contact" className="text-gray-600 hover:text-[#134C28]">Contact</a>
+            </nav>
+            <a
+              href="#"
+              className="px-6 py-2 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors text-sm"
+            >
+              Apply Now
+            </a>
+          </div>
+        </header>
 
-  const timeline = [
-    { dates: '26 - 15', month: 'May - June', year: '2025', title: 'Application window (State-Level)', description: 'State level applications open' },
-    { dates: '16 - 22', month: 'June', year: '2025', title: 'State Evaluation', description: 'Evaluation of competing teams start at the state level' },
-    { dates: '30 - 06', month: 'June - July', year: '2025', title: 'Regional Hackathons', description: 'Regional hackathons across the country' },
-    { dates: '21 - 27', month: 'July', year: '2025', title: 'National Demo Day', description: 'Top teams present at the national demo day' },
-    { dates: '28 - 03', month: 'July - Aug', year: '2025', title: 'Post Program Support', description: 'Continued support for winning teams' },
-  ];
+        {/* Past Cohorts Hero */}
+        <section className="bg-[#134C28] text-white py-12 md:py-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <button
+              onClick={() => setShowPastCohorts(false)}
+              className="flex items-center gap-2 text-gray-300 hover:text-white mb-6 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to About the Challenge
+            </button>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+                Past Cohorts
+              </h1>
+            </motion.div>
+          </div>
+        </section>
 
-  const eligibility = [
-    { title: 'Teams', description: 'Teams of 2-5 people, combining tech and business skillsets.', image: '/assets/ndic-2.jpeg' },
-    { title: 'Nationality', description: 'Must represent a Nigerian state based on familiarity or affiliation.', image: '/assets/ndic-1.jpeg' },
-    { title: 'Age', description: 'All team members must be 18 years or older.', image: '/assets/hero-4.jpeg' },
-  ];
+        {/* Discover Impact Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-[#134C28] mb-4">
+                Discover the Impact of Past Winners
+              </h2>
+              <p className="text-gray-600 max-w-2xl">
+                Explore the solutions that innovators who were sponsored and achieved challenges in previous editions of the NITDA Digital Innovation Challenge.
+              </p>
+            </motion.div>
 
+            {/* Cohorts */}
+            {cohorts.map((cohort, cohortIndex) => (
+              <div key={cohort.year} className="mb-16">
+                {/* Cohort Stats */}
+                <div className="bg-[#F5F5F5] rounded-2xl p-6 mb-8">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <h3 className="text-2xl font-bold text-[#134C28]">Cohort {cohort.year}</h3>
+                    <div className="flex flex-wrap gap-6">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-[#134C28]/10 rounded-lg flex items-center justify-center">
+                          <DollarSign className="w-5 h-5 text-[#134C28]" />
+                        </div>
+                        <div>
+                          <p className="text-xl font-bold text-[#134C28]">{cohort.fundingSecured}</p>
+                          <p className="text-xs text-gray-600">Funding Secured</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-[#134C28]/10 rounded-lg flex items-center justify-center">
+                          <Award className="w-5 h-5 text-[#134C28]" />
+                        </div>
+                        <div>
+                          <p className="text-xl font-bold text-[#134C28]">{cohort.sectorsImpacted}</p>
+                          <p className="text-xs text-gray-600">Sectors Impacted</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-[#134C28]/10 rounded-lg flex items-center justify-center">
+                          <Package className="w-5 h-5 text-[#134C28]" />
+                        </div>
+                        <div>
+                          <p className="text-xl font-bold text-[#134C28]">{cohort.productsLaunched}</p>
+                          <p className="text-xs text-gray-600">Products Launched</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Cohort Highlights */}
+                <h4 className="text-xl font-bold text-[#134C28] mb-6">
+                  Cohort {cohortIndex === 0 ? '12' : '11'} Highlights
+                </h4>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {cohort.highlights.map((startup, index) => (
+                    <motion.div
+                      key={startup.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+                    >
+                      <div className="w-12 h-12 bg-[#134C28]/10 rounded-xl flex items-center justify-center mb-4">
+                        <span className="text-[#134C28] font-bold text-lg">{startup.name.charAt(0)}</span>
+                      </div>
+                      <h5 className="text-lg font-bold text-[#134C28] mb-1">{startup.name}</h5>
+                      <p className="text-xs text-[#D4A74A] font-medium mb-2">{startup.industry}</p>
+                      <p className="text-gray-600 text-sm mb-3">{startup.description}</p>
+                      <p className="text-xs text-gray-500 mb-4">{startup.fundingSecured} Funding Secured</p>
+                      <button className="px-4 py-2 bg-[#D4A74A] hover:bg-[#c49a3d] text-white text-sm font-medium rounded-lg transition-colors">
+                        View Details
+                      </button>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-16 bg-[#134C28]">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Become a Catalyst for Nigeria's Digital Future!
+            </h2>
+            <p className="text-gray-300 mb-8">
+              Apply now to the NITDA Digital Innovation Challenge and make your mark!
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
+            >
+              Apply Now
+            </a>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-[#0d3a1e] py-8">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+              <button onClick={() => setShowPastCohorts(false)} className="text-white hover:text-[#D4A74A] transition-colors">About Challenge</button>
+              <span className="hidden md:inline text-gray-500">|</span>
+              <span className="text-[#D4A74A]">Past Cohorts</span>
+              <span className="hidden md:inline text-gray-500">|</span>
+              <a href="#/contact" className="text-white hover:text-[#D4A74A] transition-colors">Contact</a>
+            </div>
+            <p className="text-center text-gray-400 text-sm">
+              © 2024 NITDA. All rights reserved.
+            </p>
+          </div>
+        </footer>
+      </main>
+    );
+  }
+
+  // Main NDIC Page
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="min-h-[80vh] flex flex-col items-center justify-center text-center py-20 bg-white">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto px-6"
-        >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#2D1B69] mb-8 leading-tight">
-            2025 NITDA
-            <br />
-            Digital Innovation
-            <br />
-            Challenge
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-12">
-            Empowering MSMEs through Emerging Technology
-          </p>
-          <button className="px-10 py-4 bg-[#2D7A2D] text-white rounded-xl text-lg font-semibold hover:bg-[#245A24] transition-colors">
-            Apply
-          </button>
-        </motion.div>
+      <section className="relative bg-gradient-to-br from-[#134C28] via-[#1a5f33] to-[#134C28] text-white overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-[#D4A74A]/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-white/5 rounded-full blur-2xl" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                <span className="text-sm font-medium">About the NITDA Digital Innovation Challenge</span>
+              </div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                Driving Tech Innovation for Nigeria's Development
+              </h1>
+              <p className="text-gray-200 text-base md:text-lg mb-8 leading-relaxed">
+                The NITDA Digital Innovation Challenge is an initiative aimed at harnessing the innovative capabilities of Nigerians to create digital solutions that address challenges in various sectors of the economy.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
+                >
+                  Apply Now
+                </a>
+                <button
+                  onClick={() => setShowPastCohorts(true)}
+                  className="inline-flex items-center justify-center px-8 py-3 bg-[#1a3d20] hover:bg-[#0d2a14] text-white font-semibold rounded-full transition-colors border border-white/20"
+                >
+                  View Past Cohorts
+                </button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="hidden md:flex justify-center"
+            >
+              <div className="relative w-full max-w-md">
+                <div className="bg-gradient-to-br from-[#D4A74A]/20 to-transparent rounded-3xl p-8">
+                  <img
+                    src="/assets/ndic-1.jpeg"
+                    alt="Tech Innovation"
+                    className="w-full h-64 object-cover rounded-2xl shadow-xl"
+                  />
+                  <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm rounded-xl p-3">
+                    <TrendingUp className="w-8 h-8 text-[#D4A74A]" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
-      {/* Solutions Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+      {/* About the Challenge Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-8 flex items-center justify-center gap-4 flex-wrap">
-              <span>Solutions That</span>
-              <div className="inline-flex w-20 h-20 md:w-24 md:h-24 bg-black rounded-full items-center justify-center">
-                <span className="text-white text-2xl">&#9650;</span>
-              </div>
-              <span>Move The Needle</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#134C28] mb-4">
+              About the Challenge
+            </h2>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+              Changing the Game with Digital Solutions
+            </h3>
+            <p className="text-gray-600 max-w-3xl leading-relaxed">
+              The NITDA Digital Innovation Challenge aims to identify and nurture the most promising tech-driven solutions that can propel Nigeria forward. Startups, innovators, and researchers are invited to submit solutions that leverage technology to solve critical national issues.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {aboutFeatures.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+              >
+                <div className="w-16 h-16 mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
+                  <feature.icon className="w-8 h-8 text-[#134C28]" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who Should Apply Section */}
+      <section className="py-16 md:py-20 bg-[#F5F5F5]">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
+              Who Should Apply?
             </h2>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed">
-            <p>
-              This edition of the NDIC invites innovators to build bold, practical solutions that solve
-              challenges for Nigeria's micro, small, and medium enterprises (MSMEs).
-            </p>
-            <p>
-              From automating business processes to improving market access, teams will apply
-              emerging tech to enable growth, resilience, and digital inclusion for MSMEs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Focus Areas Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src="/assets/ndic-1.jpeg"
-                alt="Focus Area"
-                className="rounded-3xl object-cover w-full h-[400px] lg:h-[500px] shadow-xl"
-              />
-            </div>
-
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2D174D] mb-4">Focus Areas</h2>
-              <p className="text-xl text-[#2D174D] mb-8">
-                Tackle real challenges MSMEs face by building a solution in one of these key impact areas.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {focusAreas.map((area, index) => (
-                  <motion.div
-                    key={area.title}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-center gap-3"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-[#2D174D]/10 flex items-center justify-center flex-shrink-0">
-                      <area.icon className="w-5 h-5 text-[#2D174D]" />
-                    </div>
-                    <span className="font-semibold text-[#181028]">{area.title}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2D174D] mb-4">
-              How the Challenge Works
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700">
-              From problem to pitch, here's what you'll do, step by step.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            {howItWorks.map((item, index) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="w-24 h-24 bg-white rounded-3xl flex items-center justify-center mb-6 shadow-lg border border-gray-100">
-                  <item.icon className="w-10 h-10 text-[#2D174D]" />
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="text-6xl font-bold text-black flex-shrink-0">{item.step}</div>
-                  <div className="text-left">
-                    <h3 className="text-xl font-bold text-black mb-3">
-                      {item.highlighted ? (
-                        <span className="bg-[#C6E045] px-1">{item.title}</span>
-                      ) : (
-                        item.title
-                      )}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2D174D]">Competition Timeline</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            {timeline.map((event, index) => (
-              <motion.div
-                key={event.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start gap-8"
-              >
-                <div className="flex flex-col items-end min-w-[80px]">
-                  <div className="text-2xl md:text-3xl font-bold text-[#181028] leading-none">{event.dates}</div>
-                  <div className="text-sm md:text-base text-[#181028]/80">{event.month}</div>
-                  <div className="text-xs text-[#181028]/60">{event.year}</div>
-                </div>
-                <div>
-                  <div className="text-xl md:text-2xl font-bold mb-2">
-                    <span className="bg-[#C6E045] px-2">{event.title}</span>
-                  </div>
-                  <div className="text-lg text-[#181028]">{event.description}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Eligibility Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-[#2D174D]">Eligibility Criteria</h2>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            {eligibility.map((item, index) => (
+          <div className="grid md:grid-cols-3 gap-6">
+            {whoShouldApply.map((item, index) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col items-center"
+                className="flex items-start gap-4"
               >
-                <div className="rounded-2xl overflow-hidden mb-4 shadow-lg w-full">
-                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                <div className="w-12 h-12 bg-[#134C28]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-6 h-6 text-[#134C28]" />
                 </div>
-                <h3 className="font-bold text-xl mb-2">{item.title}</h3>
-                <p className="text-gray-700">{item.description}</p>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600 text-sm">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What Participants Gain Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
+              What Participants Gain
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {whatParticipantsGain.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+              >
+                <div className="w-16 h-16 mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
+                  <item.icon className="w-8 h-8 text-[#134C28]" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">{item.description}</p>
+                <button className="px-4 py-2 bg-[#D4A74A] hover:bg-[#c49a3d] text-white text-sm font-medium rounded-lg transition-colors">
+                  View Details
+                </button>
               </motion.div>
             ))}
           </div>
@@ -260,23 +447,45 @@ export function NDICPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#fdf6ea] flex flex-col items-center justify-center text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto px-6"
-        >
-          <div className="text-5xl mb-6">&#10024;</div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2D174D] mb-8 leading-tight">
-            Join 500 teams building products that shape the country
-          </h2>
-          <button className="px-16 py-4 bg-black text-white rounded-xl text-xl font-semibold hover:bg-[#2D174D] transition-colors">
-            Apply
-          </button>
-        </motion.div>
+      <section className="py-16 md:py-20 bg-[#134C28]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Become a Catalyst for Nigeria's Digital Future!
+            </h2>
+            <p className="text-gray-200 mb-8">
+              Apply now to the NITDA Digital Innovation Challenge and make your mark!
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
+            >
+              Apply Now
+            </a>
+          </motion.div>
+        </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-[#0d3a1e] py-8">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">About Challenge</a>
+            <span className="hidden md:inline text-gray-500">|</span>
+            <button onClick={() => setShowPastCohorts(true)} className="text-white hover:text-[#D4A74A] transition-colors">Past Cohorts</button>
+            <span className="hidden md:inline text-gray-500">|</span>
+            <a href="#/contact" className="text-white hover:text-[#D4A74A] transition-colors">Contact</a>
+          </div>
+          <p className="text-center text-gray-400 text-sm">
+            © 2024 NITDA. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
