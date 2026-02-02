@@ -6,54 +6,54 @@ import { useState } from 'react';
 const aboutFeatures = [
   {
     icon: Lightbulb,
-    title: 'Identify Innovative Solutions',
-    description: 'Tech innovation programs: collaborative programs that drive solutions to major life challenges.',
+    title: 'Identify Scalable Solutions',
+    description: 'Discover high-impact digital solutions that address Nigeria\'s most pressing socio-economic challenges.',
   },
   {
     icon: Users,
     title: 'Support Tech Entrepreneurs',
-    description: 'Host for bringing show tech startups around big ideas, backed with opportunity mentors.',
+    description: 'Provide startups with visibility, mentorship, and institutional backing to accelerate growth.',
   },
   {
     icon: TrendingUp,
-    title: 'Drive Socio-Economic Growth',
-    description: 'Provide the groundwork. Challenge and recognize emerging sustainable business models.',
+    title: 'Drive Digital Transformation',
+    description: 'Promote emerging technologies like AI, blockchain, and data analytics across key sectors.',
   },
 ];
 
 const whoShouldApply = [
   {
     icon: Search,
-    title: 'Tech Startups & Innovators',
-    description: 'Lorem ipsum digita to a platformer resourceful digital innovation reach.',
+    title: 'Nigerian Startups',
+    description: 'Innovation-driven enterprises with technology-enabled solutions addressing real challenges.',
   },
   {
     icon: GraduationCap,
-    title: 'Researchers & Academics',
-    description: 'Please see them as academic, textbook the respective narrative. Offering insights to Nigeria\'s.',
+    title: 'Tech-Enabled Founders',
+    description: 'Teams building sector-focused innovations for public or private-sector challenges.',
   },
   {
     icon: Lightbulb,
-    title: 'Solution-Oriented Startups',
-    description: 'With innovative forward focused, collaborative sit they to innovation with the essentials.',
+    title: 'Early to Growth-Stage Ventures',
+    description: 'Startups with deployable solutions ready for scaling and market access.',
   },
 ];
 
 const whatParticipantsGain = [
   {
     icon: DollarSign,
-    title: 'Funding & Grants',
-    description: 'Lorem ipsum/opportunity, government funding network innovate they. Escalating perspectives at innovations.',
+    title: 'Funding & Visibility',
+    description: 'National recognition and exposure to investors and ecosystem stakeholders.',
   },
   {
     icon: GraduationCap,
     title: 'Mentorship & Training',
-    description: 'Lorem ipsum insurance transit. Retailers, government to go that tech-notching, participants technology digital innovative for investors.',
+    description: 'Access to expert feedback and guidance from industry leaders.',
   },
   {
     icon: Handshake,
-    title: 'Government Partnerships',
-    description: 'Add the career opportunities on Quotes and Pauses.',
+    title: 'Partnerships & Pilots',
+    description: 'Opportunities for pilot deployments with public and private institutions.',
   },
 ];
 
@@ -62,23 +62,23 @@ const cohorts = [
   {
     year: 2023,
     fundingSecured: '$300K',
-    sectorsImpacted: 3,
-    productsLaunched: 8,
+    sectorsImpacted: 5,
+    productsLaunched: 12,
     highlights: [
-      { name: 'Alqat', description: 'Convex icy. Crvrate strampo earnelesa Eaccers.', fundingSecured: '$72k', industry: 'Fintech' },
-      { name: 'Agrodomain', description: 'Startups. Laernet digites soun tilt xociety wast miet.', fundingSecured: '$0.006 Fermnut Bnactet', industry: 'Agritech' },
-      { name: 'Medicity', description: 'Egnreeovs. Techwrimes os io a digital fontasy.', fundingSecured: 'Partnust with 16 Clafes', industry: 'Healthtech' },
+      { name: 'PayStack+', description: 'Digital payment infrastructure for underserved communities.', fundingSecured: '$85k', industry: 'FinTech' },
+      { name: 'FarmConnect', description: 'AgriTech platform connecting farmers to markets and resources.', fundingSecured: '$60k', industry: 'AgriTech' },
+      { name: 'HealthSync', description: 'Digital health records and telemedicine platform.', fundingSecured: '$55k', industry: 'HealthTech' },
     ],
   },
   {
     year: 2022,
     fundingSecured: '$220K',
-    sectorsImpacted: 2,
-    productsLaunched: 6,
+    sectorsImpacted: 4,
+    productsLaunched: 8,
     highlights: [
-      { name: 'Vtrack', description: 'Responsivity. Save eyemony to streets territy dreamblex.', fundingSecured: '$22k', industry: 'Logistics' },
-      { name: 'FundEase', description: 'Agoeronics. Tenor digiert ax anth xelt apptygivenees.', fundingSecured: '$6,006 Fermnut Reacbed', industry: 'Fintech' },
-      { name: 'E-Learn+', description: 'Auxiliattoss. Sceremamita ad digital tacont oprutes.', fundingSecured: 'Partnust with 16 Clahtes', industry: 'Edtech' },
+      { name: 'GovPortal', description: 'Digital public infrastructure for citizen services.', fundingSecured: '$45k', industry: 'GovTech' },
+      { name: 'EduBridge', description: 'EdTech platform for skills development and learning.', fundingSecured: '$40k', industry: 'EdTech' },
+      { name: 'SecureNet', description: 'Cybersecurity and data protection solutions.', fundingSecured: '$35k', industry: 'Cybersecurity' },
     ],
   },
 ];
@@ -145,7 +145,7 @@ export function NDICPage() {
                 Discover the Impact of Past Winners
               </h2>
               <p className="text-gray-600 max-w-2xl">
-                Explore the solutions that innovators who were sponsored and achieved challenges in previous editions of the NITDA Digital Innovation Challenge.
+                Each cohort reflects Nigeria's evolving digital priorities with innovations spanning GovTech, FinTech, HealthTech, AgriTech, EdTech, and Cybersecurity.
               </p>
             </motion.div>
 
@@ -282,7 +282,7 @@ export function NDICPage() {
                 Driving Tech Innovation for Nigeria's Development
               </h1>
               <p className="text-gray-200 text-base md:text-lg mb-8 leading-relaxed">
-                The NITDA Digital Innovation Challenge is an initiative aimed at harnessing the innovative capabilities of Nigerians to create digital solutions that address challenges in various sectors of the economy.
+                A flagship national initiative designed to identify, nurture, and scale high-impact digital solutions that address Nigeria's most pressing socio-economic challenges.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -337,10 +337,10 @@ export function NDICPage() {
               About the Challenge
             </h2>
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-              Changing the Game with Digital Solutions
+              Strengthening Nigeria's Digital Economy
             </h3>
             <p className="text-gray-600 max-w-3xl leading-relaxed">
-              The NITDA Digital Innovation Challenge aims to identify and nurture the most promising tech-driven solutions that can propel Nigeria forward. Startups, innovators, and researchers are invited to submit solutions that leverage technology to solve critical national issues.
+              NDIC brings together innovators, startups, ecosystem partners, and stakeholders in a structured process that rewards creativity, feasibility, and real-world impact. Through NDIC, NITDA drives inclusive digital transformation and positions Nigeria as a leading digital economy in Africa.
             </p>
           </motion.div>
 
