@@ -104,18 +104,13 @@ export function AboutPage() {
                 className="text-sm md:text-base leading-relaxed mb-3 text-justify"
                 style={{ color: '#e4f2e9' }}
               >
-                &quot;At ONDI, we believe that innovation is the cornerstone of Nigeria&apos;s
-                digital future. Our commitment is to create an enabling environment where every
-                entrepreneur, regardless of background, can access the tools, mentorship and
-                funding needed to succeed.&quot;
+                &quot;At the Office for Nigerian Digital Innovation (ONDI), we believe innovation is central to Nigeria’s digital and economic future. Our mandate is to enable Nigerian startups and innovators to access the support, partnerships, and platforms needed to build and scale globally competitive solutions. We coordinate across government, industry, academia, and global partners to align policy with the realities of entrepreneurship.&quot;
               </p>
               <p
                 className="text-sm md:text-base leading-relaxed mb-5 text-justify"
                 style={{ color: '#e4f2e9' }}
               >
-                &quot;We are not just building startups; we are building a nation of innovators
-                who will lead Africa&apos;s digital revolution. Together, we will transform
-                Nigeria into a global technology powerhouse.&quot;
+                &quot;Beyond individual startups, ONDI focuses on strengthening Nigeria’s innovation ecosystem as a whole. Through public-private collaboration, international partnerships, and the implementation of the Nigeria Startup Act, we are institutionalising innovation as a driver of inclusive growth. We are shaping a nation of innovators and positioning Nigeria to lead Africa’s digital transformation.&quot;
               </p>
               <div>
                 <p className="text-sm md:text-base font-semibold" style={{ color: '#D4A520' }}>
