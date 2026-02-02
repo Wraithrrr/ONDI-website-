@@ -9,7 +9,7 @@ const cohorts = [
     id: 3,
     name: 'Cohort 3',
 
-    startups: 43,
+    startups: 45,
     fundingSecured: '$250K',
     marketReadyProducts: 4,
     jobsCreated: '20+',
@@ -57,14 +57,19 @@ const cohorts = [
 
 const programStructure = [
   {
-    icon: Clock,
-    title: '12 Weeks',
-    description: 'Intensive Incubation Period',
+    icon: ClipboardCheck,
+    title: 'Call for Applications',
+    description: 'Open Application Period',
   },
   {
-    icon: ClipboardCheck,
+    icon: Users,
     title: 'Onboarding',
     description: 'Orientation & Planning',
+  },
+  {
+    icon: Clock,
+    title: '1 Year',
+    description: 'Hub and startup upskilling period',
   },
   {
     icon: Handshake,
@@ -345,7 +350,7 @@ export function IHatchPage() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="bg-[#134C28] text-white py-16 md:py-24">
+      <section className="bg-[#134C28] text-white py-24 md:py-36">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -414,7 +419,7 @@ export function IHatchPage() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
             {programStructure.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -481,7 +486,7 @@ export function IHatchPage() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-white">
-              What You Gain
+              Program Benefits
             </h2>
           </motion.div>
 

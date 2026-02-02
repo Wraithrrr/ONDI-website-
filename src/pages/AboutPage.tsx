@@ -38,7 +38,7 @@ export function AboutPage() {
   ];
 
   return (
-    <main className="py-20 px-6 bg-[#F9FAFB] ">
+    <main className="pt-28 pb-20 px-6 bg-[#F9FAFB] ">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* PAGE HEADER */}
         <motion.section

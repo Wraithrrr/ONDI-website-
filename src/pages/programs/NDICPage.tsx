@@ -213,10 +213,7 @@ export function NDICPage() {
                       <h5 className="text-lg font-bold text-[#134C28] mb-1">{startup.name}</h5>
                       <p className="text-xs text-[#D4A74A] font-medium mb-2">{startup.industry}</p>
                       <p className="text-gray-600 text-sm mb-3">{startup.description}</p>
-                      <p className="text-xs text-gray-500 mb-4">{startup.fundingSecured} Funding Secured</p>
-                      <button className="px-4 py-2 bg-[#D4A74A] hover:bg-[#c49a3d] text-white text-sm font-medium rounded-lg transition-colors">
-                        View Details
-                      </button>
+                      <p className="text-xs text-gray-500">{startup.fundingSecured} Funding Secured</p>
                     </motion.div>
                   ))}
                 </div>
@@ -243,21 +240,6 @@ export function NDICPage() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-[#0d3a1e] py-8">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-              <button onClick={() => setShowPastCohorts(false)} className="text-white hover:text-[#D4A74A] transition-colors">About Challenge</button>
-              <span className="hidden md:inline text-gray-500">|</span>
-              <span className="text-[#D4A74A]">Past Cohorts</span>
-              <span className="hidden md:inline text-gray-500">|</span>
-              <a href="#/contact" className="text-white hover:text-[#D4A74A] transition-colors">Contact</a>
-            </div>
-            <p className="text-center text-gray-400 text-sm">
-              © 2024 NITDA. All rights reserved.
-            </p>
-          </div>
-        </footer>
       </main>
     );
   }
@@ -438,13 +420,9 @@ export function NDICPage() {
                 <div className="w-16 h-16 mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
                   <item.icon className="w-8 h-8 text-[#134C28]" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="text-lg font-bold text-gray-900">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">{item.description}</p>
-                <button className="px-4 py-2 bg-[#D4A74A] hover:bg-[#c49a3d] text-white text-sm font-medium rounded-lg transition-colors">
-                  View Details
-                </button>
               </motion.div>
             ))}
           </div>
