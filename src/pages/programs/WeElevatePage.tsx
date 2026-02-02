@@ -1,6 +1,6 @@
 // pages/programs/WeElevatePage.tsx
 import { motion } from 'motion/react';
-import { Check, Users, Rocket, Target, ClipboardList, GraduationCap, TrendingUp } from 'lucide-react';
+import { Check, Users, Rocket, Target, ClipboardList, GraduationCap, TrendingUp, Globe } from 'lucide-react';
 
 const aboutFeatures = [
   {
@@ -24,20 +24,26 @@ const howItWorks = [
   {
     icon: ClipboardList,
     step: '1',
-    title: 'Apply & Join',
-    description: 'Submit your application to kickstart your entrepreneurial journey.',
+    title: 'Digital Skill Training',
+    description: "Learn practical, hands-on digital tools, from social media marketing to online payments and e-commerce operations, so you can confidently run your business in today's digital first world",
   },
   {
-    icon: GraduationCap,
+    icon: Globe,
     step: '2',
-    title: 'Learn & Grow',
-    description: 'Participate in workshops, mentorship sessions, and peer networking.',
+    title: 'Global Market Access',
+    description: 'Go beyond local sales. Gain exposure to global e-commerce platforms that connect you with customers across Africa and beyond, opening doors to new markets and bigger opportunities.',
   },
   {
     icon: TrendingUp,
     step: '3',
-    title: 'Scale & Elevate',
-    description: 'Leverage resources and connections to scale your business successfully.',
+    title: 'Business Growth ',
+    description: 'Turn knowledge into results. Expand your customer base, build stronger revenue streams, and create sustainable jobs that impact your community while securing your financial independence.',
+  },
+  {
+    icon: GraduationCap,
+    step: '4',
+    title: 'Mentorship',
+    description: 'Get guidance from seasoned entrepreneurs, business experts and industry leaders who will share real-world insights to help you avoid mistakes and scale faster.',
   },
 ];
 
@@ -80,12 +86,7 @@ export function WeElevatePage() {
                 >
                   Apply for We-Elevate
                 </a>
-                <button
-                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="inline-flex items-center justify-center px-8 py-3 bg-[#1a3d20] hover:bg-[#0d2a14] text-white font-semibold rounded-full transition-colors border border-white/20"
-                >
-                  View Past Cohorts
-                </button>
+               
               </div>
             </motion.div>
 
@@ -162,7 +163,7 @@ export function WeElevatePage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
+      {/* Program Benefits Section */}
       <section id="how-it-works" className="py-16 md:py-20 bg-[#F5F5F5]">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
@@ -175,7 +176,7 @@ export function WeElevatePage() {
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="h-px w-16 bg-[#134C28]" />
               <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
-                How It Works
+                Program Benefits
               </h2>
               <div className="h-px w-16 bg-[#134C28]" />
             </div>
@@ -253,7 +254,7 @@ export function WeElevatePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to Elevate Your Startup?
+              Ready to Elevate Your Business?
             </h2>
             <p className="text-gray-200 mb-8">
               Apply now and join the We-Elevate program to grow and scale your business!
@@ -269,24 +270,6 @@ export function WeElevatePage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-[#0d3a1e] py-8">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">About</a>
-            <span className="hidden md:inline text-gray-500">|</span>
-            <a href="#how-it-works" className="text-white hover:text-[#D4A74A] transition-colors">Program</a>
-            <span className="hidden md:inline text-gray-500">|</span>
-            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">Cohorts</a>
-            <span className="hidden md:inline text-gray-500">|</span>
-            <a href="#/contact" className="text-white hover:text-[#D4A74A] transition-colors">Contact</a>
-          </div>
-          <p className="text-center text-gray-400 text-sm">
-            © 2024 We-Elevate. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </main>
   );
 }

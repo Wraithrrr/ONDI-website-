@@ -8,8 +8,8 @@ const cohorts = [
   {
     id: 3,
     name: 'Cohort 3',
-    year: 2022,
-    startups: 12,
+
+    startups: 43,
     fundingSecured: '$250K',
     marketReadyProducts: 4,
     jobsCreated: '20+',
@@ -31,8 +31,8 @@ const cohorts = [
   {
     id: 4,
     name: 'Cohort 4',
-    year: 2023,
-    startups: 15,
+
+    startups: 160,
     fundingSecured: '$350K',
     marketReadyProducts: 5,
     jobsCreated: '25+',
@@ -534,9 +534,7 @@ export function IHatchPage() {
                 className="bg-[#134C28] rounded-2xl p-6 text-center cursor-pointer hover:bg-[#1a5f33] transition-colors"
                 onClick={() => setSelectedCohort(cohort.id)}
               >
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {cohort.name} <span className="text-[#D4A74A]">({cohort.year})</span>
-                </h3>
+
                 <p className="text-[#D4A74A] font-semibold mb-4">
                   {cohort.startups} Startups Graduated
                 </p>

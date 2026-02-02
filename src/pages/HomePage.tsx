@@ -105,34 +105,7 @@ export function HomePage() {
           </div>
 
           {/* Image Carousel */}
-          <div className="max-w-6xl mx-auto">
-            <div className="overflow-hidden rounded-2xl shadow-2xl border-2 border-white/10">
-              <motion.div
-                className="flex gap-6"
-                animate={{
-                  x: [0, -1680]
-                }}
-                transition={{
-                  x: {
-                    repeat: Infinity,
-                    repeatType: 'loop',
-                    duration: 25,
-                    ease: 'linear'
-                  }
-                }}
-              >
-                {[...carouselImages, ...carouselImages].map((image, i) => (
-                  <div key={i} className="flex-shrink-0 w-96 h-56">
-                    <ImageWithFallback
-                      src={image}
-                      alt={`Innovation ${i + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -273,7 +246,7 @@ export function HomePage() {
                   Core Values
                 </p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed pl-4">
-                  Drive • InnOvation • Collaboration. • Support • Excellence.
+                  Drive • Innovation • Collaboration. • Support • Excellence.
                 </p>
               </div>
             </div>
@@ -391,7 +364,7 @@ export function HomePage() {
                 title: 'iHatch',
                 tag: 'Startup Incubation',
                 description:
-                  'A 5-month free intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models through coaching, mentorship, and networking.',
+                  'An intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models through coaching, mentorship, and networking.',
                 image: '/assets/hero-1.jpeg',
                 href: '#/ihatch'
               },

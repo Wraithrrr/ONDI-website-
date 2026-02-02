@@ -1,22 +1,27 @@
 // pages/programs/NDICPage.tsx
 import { motion } from 'motion/react';
-import { Search, Users, TrendingUp, Lightbulb, GraduationCap, Handshake, DollarSign, Award, Package, ArrowLeft } from 'lucide-react';
+import { Search, Users, TrendingUp, Lightbulb, GraduationCap, Handshake, DollarSign, Award, Package, ArrowLeft, Computer } from 'lucide-react';
 import { useState } from 'react';
 
 const aboutFeatures = [
   {
-    icon: Lightbulb,
-    title: 'Identify Scalable Solutions',
+    icon: Search,
+    title: 'Identify a core MSME pain point in your state',
     description: 'Discover high-impact digital solutions that address Nigeria\'s most pressing socio-economic challenges.',
   },
   {
-    icon: Users,
-    title: 'Support Tech Entrepreneurs',
+    icon: Lightbulb,
+    title: 'Build a simple tech-driven product idea',
     description: 'Provide startups with visibility, mentorship, and institutional backing to accelerate growth.',
   },
   {
-    icon: TrendingUp,
-    title: 'Drive Digital Transformation',
+    icon: Users,
+    title: 'Participate in a sprint with expert mentors',
+    description: 'Promote emerging technologies like AI, blockchain, and data analytics across key sectors.',
+  },
+  {
+    icon: Computer,
+    title: 'Present your solution to a panel of judges',
     description: 'Promote emerging technologies like AI, blockchain, and data analytics across key sectors.',
   },
 ];
@@ -43,17 +48,17 @@ const whatParticipantsGain = [
   {
     icon: DollarSign,
     title: 'Funding & Visibility',
-    description: 'National recognition and exposure to investors and ecosystem stakeholders.',
+    
   },
   {
     icon: GraduationCap,
     title: 'Mentorship & Training',
-    description: 'Access to expert feedback and guidance from industry leaders.',
+    
   },
   {
     icon: Handshake,
     title: 'Partnerships & Pilots',
-    description: 'Opportunities for pilot deployments with public and private institutions.',
+    
   },
 ];
 
@@ -378,7 +383,7 @@ export function NDICPage() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
-              Who Should Apply?
+              How the challenge works
             </h2>
           </motion.div>
 
@@ -471,21 +476,7 @@ export function NDICPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#0d3a1e] py-8">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">About Challenge</a>
-            <span className="hidden md:inline text-gray-500">|</span>
-            <button onClick={() => setShowPastCohorts(true)} className="text-white hover:text-[#D4A74A] transition-colors">Past Cohorts</button>
-            <span className="hidden md:inline text-gray-500">|</span>
-            <a href="#/contact" className="text-white hover:text-[#D4A74A] transition-colors">Contact</a>
-          </div>
-          <p className="text-center text-gray-400 text-sm">
-            © 2024 NITDA. All rights reserved.
-          </p>
-        </div>
-      </footer>
+  
     </main>
   );
 }

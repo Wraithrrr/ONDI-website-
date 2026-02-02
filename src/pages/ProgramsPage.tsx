@@ -17,7 +17,7 @@ const programs = [
     title: 'iHatch',
     tag: 'Startup Incubation',
     description:
-      'A 5-month free intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models through coaching, mentorship, and networking.',
+      'An intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models through coaching, mentorship, and networking.',
     image: '/assets/hero-1.jpeg',
     href: '#/ihatch',
     focus: ['Free training & coworking space', 'Mentorship from tech specialists', 'Access to funding opportunities'],
@@ -78,8 +78,8 @@ export function ProgramsPage() {
               <Users className="w-6 h-6 text-[#134C28]" />
             </div>
             <div>
-              <p className="font-bold text-lg text-gray-900">Founder-focused design</p>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-[#134C28] mb-3">Founder-focused design</p>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 Programs tailored to real startup needs: skills, networks, capital and policy support.
               </p>
             </div>
@@ -89,8 +89,8 @@ export function ProgramsPage() {
               <Calendar className="w-6 h-6 text-[#134C28]" />
             </div>
             <div>
-              <p className="font-bold text-lg text-gray-900">Cohorts &amp; open calls</p>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-[#134C28] mb-3">Cohorts &amp; open calls</p>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 Competitive selection through nationwide calls, ensuring transparent access to opportunity.
               </p>
             </div>

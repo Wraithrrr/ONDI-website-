@@ -119,7 +119,7 @@ export function AboutPage() {
               </p>
               <div>
                 <p className="text-sm md:text-base font-semibold" style={{ color: '#D4A520' }}>
-                  Fabunmi VICTORIA
+                  Victoria Fabunmi
                 </p>
                 <p className="text-xs md:text-sm" style={{ color: '#e4f2e9' }}>
                   National Coordinator, Office for Nigerian Digital Innovation (ONDI)
