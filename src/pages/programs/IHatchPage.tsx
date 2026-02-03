@@ -163,26 +163,7 @@ export function IHatchPage() {
   if (selectedCohort && currentCohort) {
     return (
       <main className="bg-white min-h-screen">
-        {/* Header */}
-        <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#134C28] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">iH</span>
-              </div>
-              <span className="font-bold text-[#134C28]">iHatch</span>
-            </div>
-
-            <a
-              href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors text-sm"
-            >
-              Apply Now
-            </a>
-          </div>
-        </header>
+       
 
         {/* Cohort Hero */}
         <section className="bg-[#134C28] text-white py-12 md:py-16">
@@ -393,23 +374,7 @@ export function IHatchPage() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-[#0d3a1e] py-8">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-              <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">About</a>
-              <span className="hidden md:inline text-gray-500">|</span>
-              <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">Program</a>
-              <span className="hidden md:inline text-gray-500">|</span>
-              <button onClick={() => setSelectedCohort(null)} className="text-white hover:text-[#D4A74A] transition-colors">Cohorts</button>
-              <span className="hidden md:inline text-gray-500">|</span>
-              <a href="#/contact" className="text-white hover:text-[#D4A74A] transition-colors">Contact</a>
-            </div>
-            <p className="text-center text-gray-400 text-sm">
-              © 2024 iHatch. All rights reserved.
-            </p>
-          </div>
-        </footer>
+       
       </main>
     );
   }

@@ -78,7 +78,7 @@ export function ImpactPage() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-3" style={{ color: "#284A26" }}>
-            Impact & Success Stories
+           Our Impact 
           </h2>
 
           <p className="max-w-3xl mx-auto text-lg" style={{ color: "#628B35" }}>

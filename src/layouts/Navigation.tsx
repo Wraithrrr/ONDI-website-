@@ -84,7 +84,7 @@ export function Navigation() {
                 {[
                   { label: 'More News', hash: '#/news' },
                   { label: 'Contact Us', hash: '#/contact' },
-                  { label: 'Impact & Success Stories', hash: '#/impact' },
+                  { label: 'Our Impact ', hash: '#/impact' },
                   { label: 'Resources', hash: '#/resources' },
                 ].map((item) => (
                   <button
