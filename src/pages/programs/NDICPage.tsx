@@ -6,6 +6,25 @@ import { useState } from 'react';
 const aboutFeatures = [
   {
     icon: Search,
+    title: 'National Innovation Focus',
+    description: 'Encouraging problem-driven innovation aligned with national priorities.',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Startup Support & Visibility ',
+    description: 'Supporting startups and innovators with visibility, mentorship, and institutional backing.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Emerging Tech Adoption',
+    description: 'Promoting the adoption of emerging technologies across key sectors.',
+  },
+];
+
+const whoShouldApply = [
+
+  {
+    icon: Search,
     title: 'Identify a core MSME pain point in your state',
     description: 'Discover high-impact digital solutions that address Nigeria\'s most pressing socio-economic challenges.',
   },
@@ -24,41 +43,24 @@ const aboutFeatures = [
     title: 'Present your solution to a panel of judges',
     description: 'Promote emerging technologies like AI, blockchain, and data analytics across key sectors.',
   },
-];
 
-const whoShouldApply = [
-  {
-    icon: Search,
-    title: 'Nigerian Startups',
-    description: 'Innovation-driven enterprises with technology-enabled solutions addressing real challenges.',
-  },
-  {
-    icon: GraduationCap,
-    title: 'Tech-Enabled Founders',
-    description: 'Teams building sector-focused innovations for public or private-sector challenges.',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Early to Growth-Stage Ventures',
-    description: 'Startups with deployable solutions ready for scaling and market access.',
-  },
 ];
 
 const whatParticipantsGain = [
   {
     icon: DollarSign,
     title: 'Funding & Visibility',
-    
+
   },
   {
     icon: GraduationCap,
     title: 'Mentorship & Training',
-    
+
   },
   {
     icon: Handshake,
     title: 'Partnerships & Pilots',
-    
+
   },
 ];
 
@@ -278,12 +280,7 @@ export function NDICPage() {
                 >
                   Apply Now
                 </a>
-                <button
-                  onClick={() => setShowPastCohorts(true)}
-                  className="inline-flex items-center justify-center px-8 py-3 bg-[#1a3d20] hover:bg-[#0d2a14] text-white font-semibold rounded-full transition-colors border border-white/20"
-                >
-                  View Past Cohorts
-                </button>
+
               </div>
             </motion.div>
 
@@ -454,7 +451,7 @@ export function NDICPage() {
         </div>
       </section>
 
-  
+
     </main>
   );
 }

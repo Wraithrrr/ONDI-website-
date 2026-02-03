@@ -1,6 +1,6 @@
 // pages/programs/IHatchPage.tsx
 import { motion } from 'motion/react';
-import { Check, Clock, ClipboardCheck, Handshake, Presentation, BookOpen, Users, Briefcase, ArrowLeft, DollarSign, Rocket, BriefcaseBusiness } from 'lucide-react';
+import { Check, Clock, ClipboardCheck, Handshake, Presentation, BookOpen, Users, Briefcase, ArrowLeft, DollarSign, Rocket, BriefcaseBusiness, MapPin, Building2 } from 'lucide-react';
 import { useState } from 'react';
 
 // Cohort data
@@ -8,44 +8,82 @@ const cohorts = [
   {
     id: 3,
     name: 'Cohort 3',
-
-    startups: 45,
-    fundingSecured: '$250K',
-    marketReadyProducts: 4,
+    startups: 39,
+    fundingSecured: '$37K',
+    marketReadyProducts: 3,
     jobsCreated: '20+',
-    description: 'Cohort 3 brought together 12 promising startups focusing on innovative solutions, resulting in 6 secured funding and 4 market-ready products.',
+    description: 'Cohort 3 brought together 39 promising startups across the six geo-political zones focusing on innovative solutions, resulting in funding for the top 3 startups.',
     startupsList: [
-      { name: 'Saft', description: 'Innovative fintech solutions for small businesses and entrepreneurs.', industry: 'Fintech' },
-      { name: 'Cassorn', description: 'Agricultural technology platform connecting farmers to markets.', industry: 'Agritech' },
-      { name: 'PIGO', description: 'Logistics and delivery optimization platform.', industry: 'Logistics' },
-      { name: 'Gccors', description: 'Healthcare management system for clinics and hospitals.', industry: 'Healthtech' },
-      { name: 'Oasis', description: 'EdTech platform for skill development and training.', industry: 'Edtech' },
-      { name: 'Morisan', description: 'E-commerce platform for local artisans and craftsmen.', industry: 'E-commerce' },
+      { name: 'Northino', industry: 'EdTech' },
+      { name: 'Connected', industry: 'AI & Machine Learning' },
+      { name: 'Dopals Technologies', industry: 'Mobility & Logistics' },
     ],
     testimonial: {
       quote: 'The iHatch program was instrumental in helping us refine our business model and connect with investors.',
       author: 'Michael Okonkwo',
-      role: 'CEO of Saft',
+      role: 'CEO of Northino',
     },
   },
   {
     id: 4,
     name: 'Cohort 4',
-
     startups: 160,
-    fundingSecured: '$350K',
+    fundingSecured: '$37K',
     marketReadyProducts: 5,
-    jobsCreated: '25+',
-    description: 'Cohort 4 brought together 15 promising startups focusing on innovative solutions, resulting in 8 secured funding and 5 market-ready products.',
+    jobsCreated: '500+',
+    description: "iHatch Cohort 4 was designed around a two-stage, ecosystem-strengthening approach that first built up innovation hubs and then supported the startups that operate through those hubs. At its core, the programme didn't just train founders — it trained and equipped the enablers around them",
     startupsList: [
-      { name: 'Easoon', description: 'Premium logistics services for e-commerce businesses scaling industrially.', industry: 'Logistics' },
-      { name: 'OxcelR', description: 'Innovative entrepreneurs stupidly for entrepreneurs keeping startups growing.', industry: 'Edtech' },
-      { name: 'Grocere', description: 'Grow for Netiers. Germtalanding hour iHatch validles and afise Iluess.', industry: 'E-commerce' },
-      { name: 'Yeb', description: 'Hating lavespeer innovations hiristng one esations, cencors.', industry: 'Fintech' },
-      { name: 'FVI', description: 'Entat-Media Startup. Yaorcn Haamp finding startly Jge wolialter estasovlers.', industry: 'Media' },
-      { name: 'Fuge', description: 'Eartch our resacries more chanquisi startuas fronises, Uius panise.', industry: 'Agritech' },
-      { name: 'Copear', description: 'Medtech.africa. Preemesthahes Cane gurices and premium.', industry: 'Healthtech' },
-      { name: 'Footech', description: 'Federal-Links. Firsat vases the ailedis cuastages, snepes innov rich.', industry: 'Govtech' },
+      { name: 'Eventro', industry: 'Outsourcing & IT Services' },
+      { name: 'Chapta', industry: 'EdTech' },
+      { name: 'Cohortly App', industry: 'EdTech' },
+      { name: 'Interface Innovations Ltd', industry: 'Fintech, CleanTech & EnergyTech' },
+      { name: 'Ahioma', industry: 'E-commerce, AgriTech' },
+      { name: 'Linia Finance', industry: 'FinTech' },
+      { name: 'Grabb 24/7', industry: 'AgriTech' },
+      { name: 'EasyBuy4me', industry: 'E-commerce, Logistics & Mobility' },
+      { name: 'Garden in a Box Africa', industry: 'AgriTech' },
+      { name: 'Softdrop', industry: 'Fintech, Logistics & Mobility' },
+      { name: 'PPTLinks', industry: 'EdTech' },
+      { name: 'Ficore Africa', industry: 'E-commerce, Fintech, EdTech' },
+    ],
+    hubsList: [
+      { name: 'RAD5 Tech Hub', location: 'Abia' },
+      { name: 'Rural Information Technology Hub (RITH3)', location: 'Adamawa' },
+      { name: 'FutureLabs', location: 'Akwa Ibom' },
+      { name: 'Innovation Growth Hub (IgHub) Onitsha', location: 'Anambra' },
+      { name: 'Uplift Hub', location: 'Bauchi' },
+      { name: 'BENSAN TECHNOLOGY', location: 'Bayelsa' },
+      { name: 'Zevsj Limited', location: 'Benue' },
+      { name: 'CIATECH Africa', location: 'Borno' },
+      { name: 'Guru Innovation Hub', location: 'Cross River' },
+      { name: 'Coriftech Solutions Hub', location: 'Delta' },
+      { name: 'AlphaZone Tech Hub Ltd', location: 'Ebonyi' },
+      { name: 'Center-ECD (African Center for Enterprise & Capacity Development)', location: 'Edo' },
+      { name: 'Insest Tech', location: 'Ekiti' },
+      { name: 'Sparks Ventures Hub', location: 'Enugu' },
+      { name: 'Moolu Venture Lab (Moolu Ventures Limited)', location: 'FCT Abuja' },
+      { name: 'Mindztech Hub', location: 'Gombe' },
+      { name: 'Codeant Technology Hub', location: 'Imo' },
+      { name: 'NorthDemy Limited', location: 'Jigawa' },
+      { name: 'IT Central Kaduna', location: 'Kaduna' },
+      { name: 'Startup Kano', location: 'Kano' },
+      { name: 'KIRKIRA INNOVATION HUB', location: 'Katsina' },
+      { name: 'Ikwaire Computing Services and Academy Limited', location: 'Kebbi' },
+      { name: 'AIKPEROKHA', location: 'Kogi' },
+      { name: 'Cypherdevs', location: 'Kwara' },
+      { name: 'Wennovation Hub', location: 'Lagos' },
+      { name: '02 INNOVATIONS LAB', location: 'Nasarawa' },
+      { name: 'Labspace By JD Lab', location: 'Niger' },
+      { name: 'Grazac Innovation Hub (Grazac Technologies)', location: 'Ogun' },
+      { name: 'Innovate Ondo', location: 'Ondo' },
+      { name: 'WeGoHostU ICT Hub', location: 'Osun' },
+      { name: 'Climate Emerge Innovation Development Hub (CEID Hub)', location: 'Oyo' },
+      { name: 'nHub', location: 'Plateau' },
+      { name: 'Olotu Square', location: 'Rivers' },
+      { name: 'Startup Sokoto', location: 'Sokoto' },
+      { name: 'Knots Technology Nig Ltd', location: 'Taraba' },
+      { name: 'AHLAM IT AND NETWORK SOLUTION', location: 'Yobe' },
+      { name: 'Startup Zamfara', location: 'Zamfara' },
     ],
     testimonial: {
       quote: 'The iHatch program was a game-changer for our startup. The mentorship and resources helped us secure funding and launch our product successfully!',
@@ -69,7 +107,7 @@ const programStructure = [
   {
     icon: Clock,
     title: '1 Year',
-    description: 'Hub and startup upskilling period',
+    description: 'Hub Upskilling and startup training period',
   },
   {
     icon: Handshake,
@@ -86,7 +124,7 @@ const programStructure = [
 const whoCanApply = [
   'Early-stage Startups',
   'Innovative Entrepreneurs',
-  'Committed Teams Ready to Scale',
+  'Hub Managers Ready to Upskill',
 ];
 
 const whatYouGain = [
@@ -134,12 +172,7 @@ export function IHatchPage() {
               </div>
               <span className="font-bold text-[#134C28]">iHatch</span>
             </div>
-            <nav className="hidden md:flex items-center gap-8">
-              <a href="#" className="text-gray-600 hover:text-[#134C28]">About</a>
-              <a href="#" className="text-gray-600 hover:text-[#134C28]">Program</a>
-              <a href="#" className="text-gray-600 hover:text-[#134C28]">Cohorts</a>
-              <a href="#/contact" className="text-gray-600 hover:text-[#134C28]">Contact</a>
-            </nav>
+
             <a
               href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
               target="_blank"
@@ -258,7 +291,7 @@ export function IHatchPage() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
               {filteredStartups.map((startup, index) => (
                 <motion.div
                   key={startup.name}
@@ -266,25 +299,60 @@ export function IHatchPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+                  className="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md transition-shadow"
                 >
-                  <div className="w-12 h-12 bg-[#134C28]/10 rounded-xl flex items-center justify-center mb-4">
-                    <span className="text-[#134C28] font-bold text-lg">{startup.name.charAt(0)}</span>
+                  <div className="w-10 h-10 bg-[#134C28]/10 rounded-lg flex items-center justify-center mb-3">
+                    <span className="text-[#134C28] font-bold">{startup.name.charAt(0)}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-[#134C28] mb-1">{startup.name}</h3>
-                  <p className="text-xs text-[#D4A74A] font-medium mb-2">{startup.industry}</p>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{startup.description}</p>
-                  <button className="px-4 py-2 bg-[#D4A74A] hover:bg-[#c49a3d] text-white text-sm font-medium rounded-lg transition-colors">
-                    View Details
-                  </button>
+                  <h3 className="text-sm font-bold text-[#134C28] mb-1">{startup.name}</h3>
+                  <p className="text-xs text-[#D4A74A] font-medium">{startup.industry}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* Hub Managers Section - Only for Cohort 4 */}
+        {currentCohort.id === 4 && 'hubsList' in currentCohort && (
+          <section className="py-12 bg-[#F5F5F5]">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                <div>
+                  <h2 className="text-2xl font-bold text-[#134C28] mb-2">
+                    Partner Innovation Hubs
+                  </h2>
+                  <p className="text-gray-600">37 Innovation Hubs across all 36 states and FCT</p>
+                </div>
+                <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-200">
+                  <Building2 className="w-5 h-5 text-[#134C28]" />
+                  <span className="text-[#134C28] font-semibold">37 Hubs</span>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {(currentCohort as typeof currentCohort & { hubsList: Array<{ name: string; location: string }> }).hubsList.map((hub, index) => (
+                  <motion.div
+                    key={hub.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.02 }}
+                    className="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md transition-shadow"
+                  >
+                    <h3 className="text-sm font-bold text-[#134C28] mb-2 line-clamp-2">{hub.name}</h3>
+                    <div className="flex items-center gap-1 text-gray-500">
+                      <MapPin className="w-3 h-3" />
+                      <span className="text-xs">{hub.location}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Testimonial */}
-        <section className="py-12 bg-[#F5F5F5]">
+        <section className="py-12 bg-white">
           <div className="max-w-5xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-1">
@@ -588,23 +656,7 @@ export function IHatchPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#0d3a1e] py-8">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">About</a>
-            <span className="hidden md:inline text-gray-500">|</span>
-            <a href="#" className="text-white hover:text-[#D4A74A] transition-colors">Program</a>
-            <span className="hidden md:inline text-gray-500">|</span>
-            <a href="#past-cohorts" className="text-white hover:text-[#D4A74A] transition-colors">Cohorts</a>
-            <span className="hidden md:inline text-gray-500">|</span>
-            <a href="#/contact" className="text-white hover:text-[#D4A74A] transition-colors">Contact</a>
-          </div>
-          <p className="text-center text-gray-400 text-sm">
-            © 2024 iHatch. All rights reserved.
-          </p>
-        </div>
-      </footer>
+
     </main>
   );
 }
