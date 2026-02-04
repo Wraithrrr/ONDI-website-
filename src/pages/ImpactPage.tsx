@@ -8,58 +8,72 @@ export function ImpactPage() {
   const caseStudies = [
     {
       id: 1,
-      company: "PayFlow Technologies",
-      founder: "Chinedu Okonkwo",
-      industry: "Fintech",
-      impact: "500K+ Active Users",
+      company: "Ficore Africa",
+      founder: "Hassan Ahmad",
       story:
-        "From a 3-person team in Lagos to serving over 500,000 users across 5 African countries. ONDI's accelerator program provided the mentorship and funding that accelerated our growth by 300%.",
+        "Through the iHatch program, I experienced a major shift in mindset—from pursuing a generic startup idea to tackling long-term, systemic problems within Nigeria’s informal economy. iHatch taught me to prioritize real user needs, focus on building trust and compliance, and value community-driven collaboration. The support and challenge from mentors and peers set me on a clear path toward making FICO Africa indispensable for the people we aim to serve.",
       image:
         "https://images.unsplash.com/photo-1599592187465-6dc742367282?q=80&w=1080",
-      metrics: [
-        { label: "Revenue Growth", value: "300%" },
-        { label: "Countries", value: "5" },
-        { label: "Team Size", value: "45" },
-      ],
+     
     },
     {
       id: 2,
-      company: "AgriConnect",
-      founder: "Fatima Bello",
-      industry: "AgriTech",
-      impact: "10K+ Farmers Empowered",
+      company: "Grab 247",
+      founder: "Aisha Riwanu Sidi",
       story:
-        "Our IoT solution connects smallholder farmers to markets and real-time pricing data. With ONDI's support, we've empowered over 10,000 farmers and increased their income by an average of 40%.",
+        "My journey with iHatch taught me the value of structure, discipline, and data-driven decision-making as I work to scale Grab Livestock Marketplace across northern Nigeria. The program’s mentorship and teamwork inspired me to refine my strategies for acquiring customers and vendors, optimize our operations, and build a transparent, AI-powered platform. Thanks to iHatch, I’m more confident in our path forward—creating impact through technology and continued learning",
       image:
         "https://images.unsplash.com/photo-1758691737138-7b9b1884b1db?q=80&w=1080",
-      metrics: [
-        { label: "Income Increase", value: "40%" },
-        { label: "Farmers", value: "10K+" },
-        { label: "States", value: "12" },
-      ],
+      
     },
+
+{
+      id: 3,
+      company: "Interface Innovations Ltd",
+      founder: "Al-amin  Idris",
+      story:
+        "From iHatch, I learned how vital it is to be market ready, product ready, and investment ready. The program showed me how to apply market assessments to design better products and growth strategies, and how to use resources effectively to train and onboard a large team. The lessons on dedication and consistently engaging with every session have given me the tools and mindset I need to push Interface Africa to new heights.",
+      image:
+        "https://images.unsplash.com/photo-1758691737138-7b9b1884b1db?q=80&w=1080",
+      
+     
+    },
+
+
+{
+      id: 4,
+      company: "EasyBuy4Me",
+      founder: "Amina Kwaplong",
+      story:
+        "iHatch became a turning point for me, providing the insights, mentorship, and community support necessary to reimagine my business. With what I learned, I’m now set on refining our strategy, reaching larger markets, and building up our team capabilities in the e-commerce and logistics space. iHatch reminded me to stay open to learning and see the program as a springboard for future growth and renewed ambition.",
+      image:
+        "https://images.unsplash.com/photo-1758691737138-7b9b1884b1db?q=80&w=1080",
+      
+    },
+
+
+
   ];
   const testimonials = [
     {
       id: 1,
-      name: 'Ahmed Musa',
-      role: 'Founder & CEO, EduTech Solutions',
+      name: 'Andrew Ndukwe',
+      role: 'Founder, AlphaZone Tech Hub Ltd',
       quote: 'ONDI didn\'t just provide funding - they provided a family. The mentorship, network, and resources transformed our startup from an idea into a thriving business serving 100,000+ students.',
-      avatar: 'https://images.unsplash.com/photo-1708195886023-3ecb00ac7a49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjIxMjc0ODl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
     },
     {
       id: 2,
-      name: 'Ngozi Okafor',
+      name: '',
       role: 'Co-founder, HealthBridge',
       quote: 'The regulatory guidance and partnership connections from ONDI were invaluable. We were able to navigate complex healthcare regulations and establish partnerships with major hospitals.',
-      avatar: 'https://images.unsplash.com/photo-1708195886023-3ecb00ac7a49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjIxMjc0ODl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    
     },
     {
       id: 3,
       name: 'Oluwaseun Adeyemi',
       role: 'Founder, LogisticsPro',
       quote: 'From day one, ONDI believed in our vision. Their accelerator program gave us the tools, connections, and confidence to scale rapidly. Today, we\'re operating in 15 states.',
-      avatar: 'https://images.unsplash.com/photo-1708195886023-3ecb00ac7a49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjIxMjc0ODl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      
     }
   ];
 
@@ -133,18 +147,7 @@ export function ImpactPage() {
                   </p>
 
                   {/* METRICS */}
-                  <div className="grid grid-cols-3 gap-6">
-                    {study.metrics.map((m) => (
-                      <div key={m.label}>
-                        <div className="text-3xl font-bold" style={{ color: "#e8b923" }}>
-                          {m.value}
-                        </div>
-                        <div className="text-sm" style={{ color: "ghostwhite" }}>
-                          {m.label}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  
                 </div>
               </div>
             </motion.div>

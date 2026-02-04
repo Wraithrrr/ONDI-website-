@@ -100,7 +100,7 @@ export function WeElevatePage() {
                 {/* Illustration placeholder - women working with growth chart */}
                 <div className="bg-gradient-to-br from-[#D4A74A]/20 to-transparent rounded-3xl p-8">
                   <img
-                    src="/assets/hero-2.jpeg"
+                    src="/assets/We-elevate.jpeg"
                     alt="Women entrepreneurs"
                     className="w-full h-64 object-cover rounded-2xl shadow-xl"
                   />

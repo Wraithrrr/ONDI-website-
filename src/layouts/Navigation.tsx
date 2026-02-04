@@ -139,13 +139,7 @@ export function Navigation() {
           >
             About
           </button>
-          <button
-            type="button"
-            onClick={() => goToHash('#/news')}
-            className="block w-full text-left py-2 text-[#284A26] hover:text-[#134C28]"
-          >
-            News
-          </button>
+          
           <button
             type="button"
             onClick={() => goToHash('#/impact')}

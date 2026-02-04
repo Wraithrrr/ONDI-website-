@@ -9,7 +9,7 @@ const programs = [
     tag: 'Women Empowerment',
     description:
       'A capacity-building programme equipping female entrepreneurs with digital, financial, and entrepreneurial skills to help women-led MSMEs transition from offline to online operations and scale globally.',
-    image: '/assets/hero-3.jpeg',
+    image: '/assets/We-elevate.jpeg',
     href: '#/we-elevate',
     focus: ['Digital & financial skills training', 'Global market access', 'Mentorship from industry leaders'],
   },
@@ -18,7 +18,7 @@ const programs = [
     tag: 'Startup Incubation',
     description:
       'An intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models through coaching, mentorship, and networking.',
-    image: '/assets/hero-1.jpeg',
+    image: '/assets/iHatch.jpeg',
     href: '#/ihatch',
     focus: ['Free training & coworking space', 'Mentorship from tech specialists', 'Access to funding opportunities'],
   },

@@ -18,11 +18,7 @@ const cohorts = [
       { name: 'Connected', industry: 'AI & Machine Learning' },
       { name: 'Dopals Technologies', industry: 'Mobility & Logistics' },
     ],
-    testimonial: {
-      quote: 'The iHatch program was instrumental in helping us refine our business model and connect with investors.',
-      author: 'Michael Okonkwo',
-      role: 'CEO of Northino',
-    },
+   
   },
   {
     id: 4,
@@ -85,11 +81,7 @@ const cohorts = [
       { name: 'AHLAM IT AND NETWORK SOLUTION', location: 'Yobe' },
       { name: 'Startup Zamfara', location: 'Zamfara' },
     ],
-    testimonial: {
-      quote: 'The iHatch program was a game-changer for our startup. The mentorship and resources helped us secure funding and launch our product successfully!',
-      author: 'Sarah Johnson',
-      role: 'CEO of Easoon',
-    },
+  
   },
 ];
 
@@ -332,27 +324,7 @@ export function IHatchPage() {
           </section>
         )}
 
-        {/* Testimonial */}
-        <section className="py-12 bg-white">
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-1">
-                <div className="text-5xl text-[#D4A74A] mb-4">"</div>
-                <p className="text-gray-700 text-lg mb-2">
-                  The <span className="font-semibold text-[#134C28]">iHatch</span> program was a game-changer for our startup.
-                </p>
-                <p className="text-gray-600 mb-6">
-                  {currentCohort.testimonial.quote}
-                </p>
-                <p className="font-bold text-[#134C28]">{currentCohort.testimonial.author}</p>
-                <p className="text-gray-500 text-sm">{currentCohort.testimonial.role}</p>
-              </div>
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-[#134C28]/20 flex items-center justify-center">
-                <Users className="w-16 h-16 text-[#134C28]" />
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         {/* CTA */}
         <section className="py-16 bg-[#134C28]">
