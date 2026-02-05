@@ -32,6 +32,15 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  // Always scroll to top when route (hash) changes
+  useEffect(() => {
+    try {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    } catch (e) {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
+
   // Decide which page to render
   const renderPage = () => {
     if (hash === '#/about') {

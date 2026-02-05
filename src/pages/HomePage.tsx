@@ -70,7 +70,7 @@ export function HomePage() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight text-white">
               Nigeria&apos;s Innovation
               <br />
               <AnimatePresence mode="wait">
@@ -87,12 +87,12 @@ export function HomePage() {
               </AnimatePresence>
             </h1>
 
-            <p className="text-xl md:text-2xl text-green-50/90 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg md:text-xl text-green-50/90 max-w-3xl mx-auto mb-10 leading-relaxed">
               Empowering Nigerian innovators to build, scale, and compete globally through strategic
               support, world-class resources, and sustainable partnerships
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
 
               {/* Explore Programs → scroll to programs section */}
               <a
@@ -114,13 +114,13 @@ export function HomePage() {
         id="about"
         className="py-24 px-6"
         style={{
-          background: 'linear-gradient(to bottom, #F5F1EA 0%, #FBF9F6 100%)'
+          background: '#FEFDFB'
         }}
       >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           {/* Left: NCAIR Image Card */}
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden bg-white border border-[#E5E7EB] shadow-[0_18px_45px_rgba(15,58,32,0.12)]">
+            <div className="rounded-2xl overflow-hidden bg-white border border-[#E6E9E6] shadow-sm">
               <img
                 src="https://media.licdn.com/dms/image/v2/D4D22AQHSp6FXAseL-Q/feedshare-shrink_800/B4DZm5fdDCJgAg-/0/1759753662865?e=2147483647&v=beta&t=-6Tl9DlFkjCHcN8vT3SjU_Jk_77SPhjE_U4WDbDwn-E"
                 alt="National Center for Artificial Intelligence and Robotics, Abuja"
@@ -140,7 +140,7 @@ export function HomePage() {
                   About ONDI
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight">
                 Driving Nigeria&apos;s Digital Innovation Agenda
               </h2>
             </div>
@@ -188,7 +188,7 @@ export function HomePage() {
         id="goals"
         className="py-24 px-6"
         style={{
-          background: 'linear-gradient(to bottom, #FBF9F6 0%, #F9FAFB 100%)'
+          background: 'linear-gradient(to bottom, #F7F8FC 0%, #F9FAFB 100%)'
         }}
       >
         <div className="max-w-7xl mx-auto">
@@ -212,7 +212,7 @@ export function HomePage() {
             {/* LEFT: Mission / Vision / Core Values */}
             <div className="space-y-6">
               {/* Mission */}
-              <div className="relative p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-[0_14px_35px_rgba(12,40,22,0.10)]">
+              <div className="relative p-6 rounded-2xl bg-white border border-[#E6E9E6] shadow-sm">
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#3EBF75] to-[#277D49] flex items-center justify-center shadow-lg">
                   <Target className="w-5 h-5 text-white" />
                 </div>
@@ -225,7 +225,7 @@ export function HomePage() {
               </div>
 
               {/* Vision */}
-              <div className="relative p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-[0_14px_35px_rgba(12,40,22,0.10)]">
+              <div className="relative p-6 rounded-2xl bg-white border border-[#E6E9E6] shadow-sm">
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#2F855A] to-[#134C28] flex items-center justify-center shadow-lg">
                   <Users className="w-5 h-5 text-white" />
                 </div>
@@ -238,7 +238,7 @@ export function HomePage() {
               </div>
 
               {/* Core Values */}
-              <div className="relative p-6 rounded-2xl bg-white border border-[#E5E7EB] shadow-[0_14px_35px_rgba(12,40,22,0.10)]">
+              <div className="relative p-6 rounded-2xl bg-white border border-[#E6E9E6] shadow-sm">
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#E8B923] to-[#CDA434] flex items-center justify-center shadow-lg">
                   <Award className="w-5 h-5 text-white" />
                 </div>
@@ -252,7 +252,7 @@ export function HomePage() {
             </div>
 
             {/* RIGHT: Milestone stats */}
-            <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-6">
               {[
                 {
                   label: 'Startups Supported',
@@ -281,7 +281,7 @@ export function HomePage() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="rounded-2xl bg-white border border-[#E5E7EB] hover:border-[#134C28] shadow-[0_16px_40px_rgba(12,40,22,0.10)] px-5 py-6 flex flex-col justify-between transition-all"
+                  className="rounded-2xl bg-white border border-[#E6E9E6] hover:border-[#134C28] shadow-sm px-5 py-6 flex flex-col justify-between transition-all"
                 >
                   <div className="mb-4">
                     <div
@@ -291,7 +291,7 @@ export function HomePage() {
                     </div>
                     <p className="text-sm font-medium text-gray-700">{item.label}</p>
                   </div>
-                  <p className="text-3xl md:text-4xl font-bold text-[#134C28]">{item.value}</p>
+                  <p className="text-2xl md:text-3xl font-semibold text-[#134C28]">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -330,7 +330,7 @@ export function HomePage() {
       </section>
 
       {/* Programs Section */}
-      <section id="programs" className="py-24 px-6 bg-[#F9FAFB]">
+      <section id="programs" className="py-24 px-6 bg-[#FEFCF9]">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
@@ -350,7 +350,7 @@ export function HomePage() {
           </div>
 
           {/* Program cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-10">
             {[
               {
                 title: 'We-Elevate',
@@ -379,9 +379,7 @@ export function HomePage() {
             ].map((program) => (
               <div
                 key={program.title}
-                className="group relative bg-white rounded-2xl overflow-hidden border border-[#E5E7EB]
-                hover:border-[#134C28] shadow-[0_18px_45px_rgba(15,58,32,0.12)]
-                hover:shadow-[0_22px_55px_rgba(15,58,32,0.18)] transition-all duration-300 flex flex-col"
+                className="group relative bg-white rounded-2xl overflow-hidden border border-[#E6E9E6] hover:border-[#134C28] shadow-sm transition-all duration-300 flex flex-col"
               >
                 {/* Images */}
                 <div className="relative h-56 overflow-hidden">
@@ -400,24 +398,21 @@ export function HomePage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-7 flex-1 flex flex-col">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
                     {program.title}
                   </h3>
-                  <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed flex-1">
+                  <p className="text-sm md:text-base text-gray-600 mb-5 leading-relaxed flex-1">
                     {program.description}
                   </p>
 
                   <div className="flex items-center justify-start">
                     <a
                       href={program.href}
-                      className="group/btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg
-                      bg-gradient-to-br from-[#F5F5F5] via-[#E5E5E5] to-[#D4D4D4]
-                      text-xs md:text-sm font-semibold text-[#134C28] shadow-sm hover:shadow-md
-                      hover:from-[#FFFFFF] hover:via-[#EDEDED] hover:to-[#D4D4D4] transition-all"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white border border-[#D6E3D4] text-sm font-semibold text-[#134C28] hover:bg-[#F4F6F4] transition"
                     >
                       Learn More
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 h-4 transition-transform" />
                     </a>
                   </div>
                 </div>
@@ -442,7 +437,8 @@ export function HomePage() {
       </section>
 
       {/* NEWS SECTION – Coming Soon */}
-      <section id="news" className="py-24 px-6 bg-white border-t border-gray-200">
+      <section id="news" className="py-24 px-6 bg-[#FAFBFC] border-t border-[#E8E9EB]">
+
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#134C28]/10 border border-[#134C28]/20 mb-3">

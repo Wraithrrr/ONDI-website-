@@ -9,33 +9,41 @@ import {
   Wrench,
   HelpCircle,
 } from "lucide-react";
+import { Search } from "lucide-react";
+import { resources, ResourceCategory } from "./resources.data";
+import { ResourceViewer } from "./ResourceViewer";
 
 export function ResourcesPage() {
+  // Calculate resource counts by category
+  const getCategoryCount = (filterKey: ResourceCategory) => {
+    return resources.filter((r) => r.category === filterKey).length;
+  };
+
   // Add a filterKey so we can map to resource categories
   const resourceCategories = [
     {
       icon: FileText,
       title: "Policy Documents",
       description: "Access official policies, frameworks, and regulatory guidelines",
-      count: 0,
+      count: getCategoryCount("Policy"),
       color: "#628B35",
-      filterKey: "Policy",
+      filterKey: "Policy" as const,
     },
     {
       icon: BookOpen,
       title: "Innovation Guides",
       description: "Comprehensive how-to manuals and best practices for startups",
-      count: 0,
+      count: getCategoryCount("Guide"),
       color: "#EC9A29",
-      filterKey: "Guide",
+      filterKey: "Guide" as const,
     },
     {
       icon: Wrench,
       title: "Toolkits & Templates",
       description: "Ready-to-use pitch decks, business plans, and proposal templates",
-      count: 0,
+      count: getCategoryCount("Toolkit"),
       color: "#284A26",
-      filterKey: "Toolkit",
+      filterKey: "Toolkit" as const,
     },/*
     {
       icon: HelpCircle,
@@ -73,10 +81,31 @@ export function ResourcesPage() {
   // --- STATE FOR FILTERING ---
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
+  // Search + pagination state
+  const [query, setQuery] = useState("");
+  const [displayedCount, setDisplayedCount] = useState(5);
+
   const handleCategoryClick = (filterKey: string) => {
     // If same category clicked again → clear filter
     setActiveCategory((prev) => (prev === filterKey ? null : filterKey));
   };
+
+  // Get filtered resources (by category)
+  const filteredResources = activeCategory
+    ? resources.filter((r) => r.category === activeCategory)
+    : resources;
+
+  // Apply search filter (title + description)
+  const normalizedQuery = query.trim().toLowerCase();
+  const searchedResources = normalizedQuery
+    ? filteredResources.filter((r) =>
+        (r.title + " " + r.description).toLowerCase().includes(normalizedQuery)
+      )
+    : filteredResources;
+
+  // Only show first 5 items unless user clicks "Show more" (5 more per click)
+  const VISIBLE_LIMIT = 5;
+  const displayedResources = searchedResources.slice(0, displayedCount);
 
   return (
     <section
@@ -178,6 +207,23 @@ export function ResourcesPage() {
           Featured Resources
         </h2>
 
+        {/* Search bar */}
+        <div className="max-w-3xl mx-auto mb-6">
+          <label className="relative block">
+            <span className="sr-only">Search resources</span>
+            <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+              <Search className="w-4 h-4" />
+            </span>
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="placeholder-gray-400 bg-white border border-gray-200 rounded-md py-3 pl-10 pr-4 w-full focus:outline-none focus:ring-1 focus:ring-[#628B35]"
+              placeholder="Search resources by title or description..."
+              aria-label="Search resources"
+            />
+          </label>
+        </div>
+
         {activeCategory && activeCategory !== "FAQ" && (
           <div className="max-w-3xl mx-auto mb-8 p-6 bg-[#FFF9E6] border-l-4 border-[#E8B923] rounded-lg">
             <p className="text-center text-sm text-[#134C28] leading-relaxed">
@@ -190,6 +236,57 @@ export function ResourcesPage() {
           <p className="text-center text-xs md:text-sm text-[#628B35] mb-8">
             Browse key documents, templates and guides from the ONDI ecosystem.
           </p>
+        )}
+
+        {/* Display Filtered + Searched Resources (paginated) */}
+        {searchedResources.length > 0 ? (
+          <div className="max-w-5xl mx-auto mb-6">
+            <div className="space-y-4">
+              {displayedResources.map((resource, i) => (
+                <motion.div
+                  key={resource.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.05 }}
+                  viewport={{ once: true }}
+                >
+                  <ResourceViewer
+                    title={resource.title}
+                    description={resource.description}
+                    fileId={resource.fileId}
+                  />
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Show more / show less */}
+            {searchedResources.length > VISIBLE_LIMIT && (
+              <div className="mt-6 flex justify-center">
+                <button
+                  onClick={() => {
+                    if (displayedCount >= searchedResources.length) {
+                      setDisplayedCount(VISIBLE_LIMIT);
+                    } else {
+                      setDisplayedCount((c) => Math.min(c + VISIBLE_LIMIT, searchedResources.length));
+                    }
+                  }}
+                  className="px-5 py-2 rounded-md bg-white border border-[#134C28] text-[#134C28] hover:bg-[#F4F8F1] transition"
+                >
+                  {displayedCount >= searchedResources.length
+                    ? "Show Less"
+                    : `Show More (${Math.min(VISIBLE_LIMIT, searchedResources.length - displayedCount)} more)`}
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="max-w-3xl mx-auto mb-20 p-6 bg-white border border-gray-200 rounded-lg text-center">
+            <p className="text-[#628B35]">
+              {activeCategory
+                ? "No resources available in this category yet."
+                : "No resources match your search."}
+            </p>
+          </div>
         )}
 
         {/* FAQ Section */}
