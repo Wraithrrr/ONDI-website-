@@ -147,13 +147,7 @@ export function Navigation() {
           >
             Impact
           </button>
-          <button
-            type="button"
-            onClick={() => goToHash('#/directory')}
-            className="block w-full text-left py-2 text-[#284A26] hover:text-[#134C28]"
-          >
-            Innovation Directory
-          </button>
+          
           <button
             type="button"
             onClick={() => goToHash('#/programs')}
