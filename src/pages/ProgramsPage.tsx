@@ -8,7 +8,7 @@ const programs = [
     title: 'We-Elevate',
     tag: 'Women Empowerment',
     description:
-      'A capacity-building programme equipping female entrepreneurs with digital, financial, and entrepreneurial skills to help women-led MSMEs transition from offline to online operations and scale globally.',
+      'A capacity-building programme designed to support and uplift women entrepreneurs by providing digital, financial, and entrepreneurial skills, mentorship, and community needed to scale their startups and transition from offline to online operations globally.',
     image: '/assets/We-elevate.jpeg',
     href: '#/we-elevate',
     focus: ['Digital & financial skills training', 'Global market access', 'Mentorship from industry leaders'],
@@ -17,7 +17,7 @@ const programs = [
     title: 'iHatch',
     tag: 'Startup Incubation',
     description:
-      'An intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models through coaching, mentorship, and networking.',
+      'A startup incubation program designed to support early-stage entrepreneurs with the tools, mentorship, and ecosystem connections they need to build, refine, and scale their ventures into viable, market-ready businesses.',
     image: '/assets/iHatch.jpeg',
     href: '#/ihatch',
     focus: ['Free training & coworking space', 'Mentorship from tech specialists', 'Access to funding opportunities'],
@@ -26,7 +26,7 @@ const programs = [
     title: 'NITDA Digital Innovation Challenge',
     tag: 'Innovation Challenge',
     description:
-      'A national competition inviting innovators to build bold, practical solutions that solve challenges for Nigeria\'s micro, small, and medium enterprises (MSMEs) using emerging technology.',
+      'A flagship national initiative designed to identify, nurture, and scale high-impact digital solutions that address Nigeria\'s most pressing socio-economic challenges through structured mentorship, funding, and institutional backing.',
     image: '/assets/ndic-1.jpeg',
     href: '#/ndic',
     focus: ['MSME-focused solutions', 'Expert mentorship sprints', 'Funding for winning teams'],
@@ -37,13 +37,13 @@ export function ProgramsPage() {
   return (
     <main className="min-h-screen bg-[#F9FAFB]">
       {/* HERO */}
-      <section className="relative pt-36 pb-20 px-6 bg-gradient-to-br from-[#081F11] via-[#0F3A20] to-[#134C28] overflow-hidden">
+      <section className="relative pt-36 pb-20 px-6 bg-gradient-to-br from-[#062A16] via-[#0E4D2E] to-[#1A7A45] overflow-hidden">
         <WaveBackground />
 
         {/* Soft glows */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 left-[-3rem] w-72 h-72 bg-[#32965B]/18 rounded-full blur-3xl" />
-          <div className="absolute bottom-[-3rem] right-[-2rem] w-96 h-96 bg-[#3EBF75]/18 rounded-full blur-3xl" />
+          <div className="absolute top-10 left-[-3rem] w-72 h-72 bg-[#1A9B54]/18 rounded-full blur-3xl" />
+          <div className="absolute bottom-[-3rem] right-[-2rem] w-96 h-96 bg-[#2DBF6E]/18 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -69,7 +69,7 @@ export function ProgramsPage() {
               How ONDI supports you
             </p>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Whether you&apos;re just starting, validating your product, or scaling across Nigeria,
+              Whether you are just starting, validating your product, or scaling across Nigeria,
               ONDI programs provide a clear pathway of support.
             </p>
           </div>

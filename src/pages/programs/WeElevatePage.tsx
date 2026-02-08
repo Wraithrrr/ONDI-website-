@@ -57,7 +57,7 @@ export function WeElevatePage() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#134C28] via-[#1a5f33] to-[#134C28] text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#062A16] via-[#0E4D2E] to-[#1A7A45] text-white overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-10 right-10 w-64 h-64 bg-[#D4A74A]/10 rounded-full blur-3xl" />
@@ -182,7 +182,7 @@ export function WeElevatePage() {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {howItWorks.map((item, index) => (
               <motion.div
                 key={item.title}

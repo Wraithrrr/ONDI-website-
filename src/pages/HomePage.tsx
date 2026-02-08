@@ -51,18 +51,38 @@ export function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-40 pb-28 px-6 bg-gradient-to-br from-[#081F11] via-[#0F3A20] to-[#134C28] overflow-hidden">
+      <section className="relative pt-28 pb-20 px-6 bg-gradient-to-br from-[#062A16] via-[#0E4D2E] to-[#1A7A45] overflow-hidden">
         {/* Abstract Wave Background */}
         <WaveBackground />
 
+        {/* Geometric hexagonal grid pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.04]">
+          <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="heroHexGrid" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+                <polygon points="30,2 54,15 54,37 30,50 6,37 6,15" fill="none" stroke="white" strokeWidth="0.8" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#heroHexGrid)" />
+          </svg>
+        </div>
+
+        {/* Faint ONDI watermark */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-white/[0.025] text-[18rem] font-black tracking-[0.15em] rotate-[-8deg]">
+            ONDI
+          </div>
+        </div>
+
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#32965B]/15 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#3EBF75]/15 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#1A9B54]/18 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#2DBF6E]/15 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#E8B923]/5 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
               <div className="w-2 h-2 rounded-full bg-[#E8B923] animate-pulse" />
               <span className="text-sm tracking-wide text-white/90">
@@ -122,13 +142,13 @@ export function HomePage() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden bg-white border border-[#E6E9E6] shadow-sm">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D22AQHSp6FXAseL-Q/feedshare-shrink_800/B4DZm5fdDCJgAg-/0/1759753662865?e=2147483647&v=beta&t=-6Tl9DlFkjCHcN8vT3SjU_Jk_77SPhjE_U4WDbDwn-E"
-                alt="National Center for Artificial Intelligence and Robotics, Abuja"
+                src="/assets/ONDI-About.jpeg"
+                alt="ONDI at Vivatech"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute bottom-4 left-4 px-4 py-2 rounded-full bg-white/95 shadow-md border border-[#E5E7EB] text-[11px] font-medium text-[#134C28]">
-              National Centre for Artificial Intelligence &amp; Robotics (NCAIR)
+              ONDI at Vivatech
             </div>
           </div>
 
@@ -199,10 +219,10 @@ export function HomePage() {
                 Goals &amp; Milestones
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
               Bringing innovative local content to your doorstep
             </h2>
-            <p className="text-sm md:text-base text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Our mission, vision and core values guide how ONDI grows Nigeria&apos;s digital
               innovation ecosystem and measures impact.
             </p>
@@ -216,10 +236,10 @@ export function HomePage() {
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#3EBF75] to-[#277D49] flex items-center justify-center shadow-lg">
                   <Target className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
+                <p className="text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
                   Mission
                 </p>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed text-justify pl-4">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify pl-4">
                   To integrate indigenous technology and innovations in all facets of Nigerian society.
                 </p>
               </div>
@@ -229,10 +249,10 @@ export function HomePage() {
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#2F855A] to-[#134C28] flex items-center justify-center shadow-lg">
                   <Users className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
+                <p className="text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
                   Vision
                 </p>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed text-justify pl-4">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify pl-4">
                   To make Nigeria the foremost technology and innovation ecosystem in Africa.
                 </p>
               </div>
@@ -242,10 +262,10 @@ export function HomePage() {
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#E8B923] to-[#CDA434] flex items-center justify-center shadow-lg">
                   <Award className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
+                <p className="text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
                   Core Values
                 </p>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed pl-4">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed pl-4">
                   Drive • Innovation • Collaboration. • Support • Excellence.
                 </p>
               </div>
@@ -255,7 +275,7 @@ export function HomePage() {
                 <div className="grid sm:grid-cols-2 gap-6">
               {[
                 {
-                  label: 'Startups Supported',
+                  label: 'Startups Engaged',
                   value: '1000+',
                   icon: Users,
                   accent: 'from-[#3EBF75] to-[#277D49]'
@@ -289,9 +309,9 @@ export function HomePage() {
                     >
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
-                    <p className="text-sm font-medium text-gray-700">{item.label}</p>
+                    <p className="text-base font-medium text-gray-700">{item.label}</p>
                   </div>
-                  <p className="text-2xl md:text-3xl font-semibold text-[#134C28]">{item.value}</p>
+                  <p className="text-3xl md:text-4xl font-semibold text-[#134C28]">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -356,7 +376,7 @@ export function HomePage() {
                 title: 'We-Elevate',
                 tag: 'Women Empowerment',
                 description:
-                  'A capacity-building programme equipping female entrepreneurs with digital, financial, and entrepreneurial skills to help women-led MSMEs transition from offline to online operations and scale globally.',
+                  'A capacity-building programme designed to support and uplift women entrepreneurs by providing digital, financial, and entrepreneurial skills, mentorship, and community needed to scale their startups and transition from offline to online operations globally.',
                 image: '/assets/We-elevate.jpeg',
                 href: '#/we-elevate'
               },
@@ -364,7 +384,7 @@ export function HomePage() {
                 title: 'iHatch',
                 tag: 'Startup Incubation',
                 description:
-                  'An intensive incubation program designed to help Nigerian entrepreneurs refine their business ideas into viable and scalable models through coaching, mentorship, and networking.',
+                  'A startup incubation program designed to support early-stage entrepreneurs with the tools, mentorship, and ecosystem connections they need to build, refine, and scale their ventures into viable, market-ready businesses.',
                 image: '/assets/iHatch.jpeg',
                 href: '#/ihatch'
               },
@@ -372,7 +392,7 @@ export function HomePage() {
                 title: 'NITDA Digital Innovation Challenge',
                 tag: 'Innovation Challenge',
                 description:
-                  'A national competition inviting innovators to build bold, practical solutions that solve challenges for Nigeria\'s micro, small, and medium enterprises (MSMEs) using emerging technology.',
+                  'A flagship national initiative designed to identify, nurture, and scale high-impact digital solutions that address Nigeria\'s most pressing socio-economic challenges through structured mentorship, funding, and institutional backing.',
                 image: '/assets/ndic-1.jpeg',
                 href: '#/ndic'
               }
@@ -475,14 +495,14 @@ export function HomePage() {
       {/* CTA & CONTACT SECTION */}
       <section
         id="contact-section"
-        className="relative py-24 px-6 bg-gradient-to-br from-[#081F11] via-[#0F3A20] to-[#134C28] overflow-hidden"
+        className="relative py-24 px-6 bg-gradient-to-br from-[#062A16] via-[#0E4D2E] to-[#1A7A45] overflow-hidden"
       >
         <WaveBackground />
 
         {/* Soft glows */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-[-4rem] w-80 h-80 bg-[#32965B]/25 rounded-full blur-3xl" />
-          <div className="absolute bottom-[-4rem] left-[-2rem] w-96 h-96 bg-[#3EBF75]/20 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-[-4rem] w-80 h-80 bg-[#1A9B54]/25 rounded-full blur-3xl" />
+          <div className="absolute bottom-[-4rem] left-[-2rem] w-96 h-96 bg-[#2DBF6E]/20 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-5xl mx-auto relative z-10">

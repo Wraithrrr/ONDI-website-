@@ -10,14 +10,14 @@ export function WaveBackground() {
         <defs>
           {/* Gradient for waves */}
           <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#6FD99C" stopOpacity="0.8" />
-            <stop offset="50%" stopColor="#3EBF75" stopOpacity="0.6" />
-            <stop offset="100%" stopColor="#32965B" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#5EE89E" stopOpacity="0.8" />
+            <stop offset="50%" stopColor="#2DBF6E" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#1A9B54" stopOpacity="0.4" />
           </linearGradient>
-          
+
           <linearGradient id="waveGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#3EBF75" stopOpacity="0.6" />
-            <stop offset="100%" stopColor="#277D49" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#2DBF6E" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#178A4A" stopOpacity="0.4" />
           </linearGradient>
 
           {/* Glow filter for luminous effect */}

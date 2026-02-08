@@ -47,7 +47,7 @@ export function Navigation() {
           </button>
 
           {/* Desktop Navigation (centered group) */}
-          <div className="hidden lg:flex flex-1 ml-auto items-center justify-center gap-10 text-base">
+          <div className="hidden lg:flex flex-1 ml-auto items-center justify-center gap-10 text-lg">
             <button
               type="button"
               onClick={() => goToHash('#/')}
@@ -91,7 +91,7 @@ export function Navigation() {
                     key={item.label}
                     type="button"
                     onClick={() => goToHash(item.hash)}
-                    className="w-full text-left block px-6 py-3 text-sm text-gray-700 cursor-pointer transition-colors hover:bg-[#FFF8E5] hover:text-[#134C28]"
+                    className="w-full text-left block px-6 py-3 text-base text-gray-700 cursor-pointer transition-colors hover:bg-[#FFF8E5] hover:text-[#134C28]"
                   >
                     {item.label}
                   </button>
@@ -124,7 +124,7 @@ export function Navigation() {
           mobileOpen ? 'max-h-[480px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
-        <div className="px-6 py-4 space-y-3 text-base">
+        <div className="px-6 py-4 space-y-3 text-lg">
           <button
             type="button"
             onClick={() => goToHash('#/')}

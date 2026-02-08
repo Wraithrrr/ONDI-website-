@@ -1,7 +1,7 @@
 // components/AboutPage.tsx
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Target,Rocket,Briefcase, Eye, Award, Users2, Lightbulb, TrendingUp } from 'lucide-react';
+import { Target, Rocket, Briefcase, Eye, Award, Users2, Lightbulb, TrendingUp } from 'lucide-react';
 
 export function AboutPage() {
   const focusAreas = [
@@ -18,7 +18,7 @@ export function AboutPage() {
     {
       icon: TrendingUp,
       title: 'Digital Industry Growth',
-      description: 'Ensure growth of the digital industry, aiming for strong GDP contribution.',
+      description: 'Drive the growth of the digital industry to significantly boost the national economy',
     },
     {
       icon: Users2,
@@ -62,7 +62,7 @@ export function AboutPage() {
         </motion.section>
 
         {/* NATIONAL COORDINATOR SECTION */}
-         <motion.section
+        <motion.section
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -202,7 +202,7 @@ export function AboutPage() {
                 Building a resilient, inclusive innovation ecosystem
               </h2>
             </div>
-         
+
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">

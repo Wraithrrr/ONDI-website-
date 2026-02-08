@@ -63,9 +63,9 @@ export function ImpactPage() {
     },
     {
       id: 2,
-      name: '',
-      role: 'Co-founder, HealthBridge',
-      quote: 'The regulatory guidance and partnership connections from ONDI were invaluable. We were able to navigate complex healthcare regulations and establish partnerships with major hospitals.',
+      name: 'Tasiu Kwaplong Saeed',
+      role: 'Founder, 02 INNOVATIONS LAB',
+      quote: 'The iHatch programme gave my hub visibility as a go-to place for startup support in Nasarawa state.',
     
     },
     {
