@@ -69,7 +69,7 @@ export function ProgramsPage() {
               How ONDI supports you
             </p>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Whether you&apos;re just starting, validating your product, or scaling across Nigeria,
+              Whether you are just starting, validating your product, or scaling across Nigeria,
               ONDI programs provide a clear pathway of support.
             </p>
           </div>

@@ -203,15 +203,20 @@ export function NDICPage() {
                   {cohort.highlights.map((startup, index) => (
                     <motion.div
                       key={startup.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                      whileHover={{ scale: 1.05, y: -5 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+                      className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#134C28] transition-all"
                     >
-                      <div className="w-12 h-12 bg-[#134C28]/10 rounded-xl flex items-center justify-center mb-4">
+                      <motion.div 
+                        className="w-12 h-12 bg-[#134C28]/10 rounded-xl flex items-center justify-center mb-4"
+                        animate={{ scale: [1, 1.1, 1] }}
+                        transition={{ duration: 2.5, repeat: Infinity }}
+                      >
                         <span className="text-[#134C28] font-bold text-lg">{startup.name.charAt(0)}</span>
-                      </div>
+                      </motion.div>
                       <h5 className="text-lg font-bold text-[#134C28] mb-1">{startup.name}</h5>
                       <p className="text-xs text-[#D4A74A] font-medium mb-2">{startup.industry}</p>
                       <p className="text-gray-600 text-sm mb-3">{startup.description}</p>
@@ -251,13 +256,39 @@ export function NDICPage() {
     <main className="bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#134C28] via-[#1a5f33] to-[#134C28] text-white overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-[#D4A74A]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-48 h-48 bg-white/5 rounded-full blur-2xl" />
+        {/* Animated floating innovation symbols */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <motion.div
+            animate={{ y: [0, -25, 0], rotate: [0, 360] }}
+            transition={{ duration: 6, repeat: Infinity }}
+            className="absolute top-20 left-10 text-5xl"
+          >
+            💡
+          </motion.div>
+          <motion.div
+            animate={{ y: [0, 25, 0], opacity: [0.3, 0.6, 0.3] }}
+            transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
+            className="absolute bottom-20 right-20 text-5xl"
+          >
+            🔧
+          </motion.div>
+          <motion.div
+            animate={{ x: [0, 20, 0], scale: [1, 1.2, 1] }}
+            transition={{ duration: 5.5, repeat: Infinity, delay: 1 }}
+            className="absolute top-1/3 right-10 text-4xl"
+          >
+            🎯
+          </motion.div>
+          <motion.div
+            animate={{ y: [0, -20, 0], opacity: [0.3, 0.7, 0.3] }}
+            transition={{ duration: 4.5, repeat: Infinity, delay: 1.5 }}
+            className="absolute bottom-1/3 left-1/4 text-4xl"
+          >
+            🚀
+          </motion.div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-20 z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -332,15 +363,20 @@ export function NDICPage() {
             {aboutFeatures.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+                className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-[#134C28] transition-all"
               >
-                <div className="w-16 h-16 mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
+                <motion.div 
+                  className="w-16 h-16 mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center"
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 4, repeat: Infinity, delay: index * 0.5 }}
+                >
                   <feature.icon className="w-8 h-8 text-[#134C28]" />
-                </div>
+                </motion.div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
@@ -370,15 +406,20 @@ export function NDICPage() {
             {whoShouldApply.map((item, index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                whileHover={{ scale: 1.05, y: -8 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start gap-4"
+                transition={{ duration: 0.5, delay: index * 0.12 }}
+                className="flex items-start gap-4 bg-white p-6 rounded-xl hover:shadow-lg transition-all"
               >
-                <div className="w-12 h-12 bg-[#134C28]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <motion.div 
+                  className="w-12 h-12 bg-[#134C28]/10 rounded-xl flex items-center justify-center flex-shrink-0"
+                  animate={{ scale: [1, 1.15, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
+                >
                   <item.icon className="w-6 h-6 text-[#134C28]" />
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.description}</p>
