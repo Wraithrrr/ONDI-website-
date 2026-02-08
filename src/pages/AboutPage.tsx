@@ -1,6 +1,5 @@
 // components/AboutPage.tsx
 import { motion } from 'motion/react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Target, Rocket, Briefcase, Eye, Award, Users2, Lightbulb, TrendingUp } from 'lucide-react';
 
 export function AboutPage() {
