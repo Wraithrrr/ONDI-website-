@@ -23,8 +23,31 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
+interface Startup {
+  name: string;
+  industry: string;
+  topPick?: boolean;
+}
+
+interface Hub {
+  name: string;
+  location: string;
+}
+
+interface Cohort {
+  id: number;
+  name: string;
+  startups: number;
+  fundingSecured: string;
+  marketReadyProducts: number;
+  jobsCreated: string;
+  description: string;
+  startupsList: Startup[];
+  hubsList?: Hub[];
+}
+
 // Cohort data with sorted startups and hubs
-const cohorts = [
+const cohorts: Cohort[] = [
   {
     id: 3,
     name: "Cohort 3",
@@ -154,18 +177,19 @@ const programStructure = [
     icon: Clock,
     title: "Startup Incubation",
     description:
-      "MVP developgit commit -m "Your descriptive commit message"
-ment legal incorporation, market validation and sector-specific training",
+      "MVP development, legal incorporation, market validation and sector-specific training",
   },
   {
     icon: Handshake,
     title: "Mentorship & Monitoring",
-    description: "Expert mentorship, hub coaching, real-time tracking and performance monitoring",
+    description:
+      "Expert mentorship, hub coaching, real-time tracking and performance monitoring",
   },
   {
     icon: Presentation,
     title: "Demo Day & Scale",
-    description: "Regional and national demo days,investor engagement and post-programme support",
+    description:
+      "Regional and national demo days,investor engagement and post-programme support",
   },
 ];
 
@@ -308,11 +332,11 @@ export function IHatchPage() {
   // Apply top pick filter
   if (startupFilter === "Top 3") {
     filteredStartups = filteredStartups
-      .filter((s) => (s as any).topPick)
+      .filter((s: Startup) => s.topPick)
       .slice(0, 3);
   } else if (startupFilter === "Top 12") {
     filteredStartups = filteredStartups
-      .filter((s) => (s as any).topPick)
+      .filter((s: Startup) => s.topPick)
       .slice(0, 12);
   }
 
@@ -424,7 +448,11 @@ export function IHatchPage() {
                 <span className="text-gray-600 text-sm">Filter:</span>
                 <select
                   value={startupFilter}
-                  onChange={(e) => setStartupFilter(e.target.value as any)}
+                  onChange={(e) =>
+                    setStartupFilter(
+                      e.target.value as "All" | "Top 3" | "Top 12",
+                    )
+                  }
                   className="px-4 py-2 border border-gray-300 rounded-lg bg-white text-[#134C28] font-medium focus:outline-none focus:ring-2 focus:ring-[#134C28]"
                 >
                   <option value="All">All Startups</option>
@@ -550,44 +578,184 @@ export function IHatchPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#134C28] via-[#1a5f33] to-[#134C28] text-white py-20 md:py-32 relative overflow-hidden">
         {/* Animated Background Design - Startup Ecosystem */}
-        <svg className="absolute inset-0 w-full h-full opacity-15 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 1200 800">
+        <svg
+          className="absolute inset-0 w-full h-full opacity-15 pointer-events-none"
+          preserveAspectRatio="none"
+          viewBox="0 0 1200 800"
+        >
           <defs>
-            <linearGradient id="growth-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{stopColor: "#D4A74A", stopOpacity: 0.3}} />
-              <stop offset="100%" style={{stopColor: "#ffffff", stopOpacity: 0.1}} />
+            <linearGradient
+              id="growth-gradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop
+                offset="0%"
+                style={{ stopColor: "#D4A74A", stopOpacity: 0.3 }}
+              />
+              <stop
+                offset="100%"
+                style={{ stopColor: "#ffffff", stopOpacity: 0.1 }}
+              />
             </linearGradient>
           </defs>
           {/* Interconnected nodes representing ecosystem */}
           <g opacity="0.4">
             {/* Node circles */}
-            <circle cx="150" cy="200" r="40" stroke="#D4A74A" strokeWidth="2" fill="none" />
-            <circle cx="400" cy="150" r="35" stroke="#ffffff" strokeWidth="2" fill="none" />
-            <circle cx="650" cy="250" r="38" stroke="#D4A74A" strokeWidth="2" fill="none" />
-            <circle cx="900" cy="180" r="36" stroke="#ffffff" strokeWidth="2" fill="none" />
-            <circle cx="1050" cy="350" r="32" stroke="#D4A74A" strokeWidth="2" fill="none" />
-            <circle cx="300" cy="500" r="40" stroke="#ffffff" strokeWidth="2" fill="none" />
-            <circle cx="750" cy="550" r="38" stroke="#D4A74A" strokeWidth="2" fill="none" />
-            
+            <circle
+              cx="150"
+              cy="200"
+              r="40"
+              stroke="#D4A74A"
+              strokeWidth="2"
+              fill="none"
+            />
+            <circle
+              cx="400"
+              cy="150"
+              r="35"
+              stroke="#ffffff"
+              strokeWidth="2"
+              fill="none"
+            />
+            <circle
+              cx="650"
+              cy="250"
+              r="38"
+              stroke="#D4A74A"
+              strokeWidth="2"
+              fill="none"
+            />
+            <circle
+              cx="900"
+              cy="180"
+              r="36"
+              stroke="#ffffff"
+              strokeWidth="2"
+              fill="none"
+            />
+            <circle
+              cx="1050"
+              cy="350"
+              r="32"
+              stroke="#D4A74A"
+              strokeWidth="2"
+              fill="none"
+            />
+            <circle
+              cx="300"
+              cy="500"
+              r="40"
+              stroke="#ffffff"
+              strokeWidth="2"
+              fill="none"
+            />
+            <circle
+              cx="750"
+              cy="550"
+              r="38"
+              stroke="#D4A74A"
+              strokeWidth="2"
+              fill="none"
+            />
+
             {/* Connection lines */}
-            <line x1="150" y1="200" x2="400" y2="150" stroke="#D4A74A" strokeWidth="1.5" opacity="0.5" />
-            <line x1="400" y1="150" x2="650" y2="250" stroke="#ffffff" strokeWidth="1.5" opacity="0.5" />
-            <line x1="650" y1="250" x2="900" y2="180" stroke="#D4A74A" strokeWidth="1.5" opacity="0.5" />
-            <line x1="900" y1="180" x2="1050" y2="350" stroke="#ffffff" strokeWidth="1.5" opacity="0.5" />
-            <line x1="650" y1="250" x2="300" y2="500" stroke="#D4A74A" strokeWidth="1.5" opacity="0.5" />
-            <line x1="650" y1="250" x2="750" y2="550" stroke="#ffffff" strokeWidth="1.5" opacity="0.5" />
-            <line x1="150" y1="200" x2="300" y2="500" stroke="#ffffff" strokeWidth="1.5" opacity="0.3" />
+            <line
+              x1="150"
+              y1="200"
+              x2="400"
+              y2="150"
+              stroke="#D4A74A"
+              strokeWidth="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="400"
+              y1="150"
+              x2="650"
+              y2="250"
+              stroke="#ffffff"
+              strokeWidth="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="650"
+              y1="250"
+              x2="900"
+              y2="180"
+              stroke="#D4A74A"
+              strokeWidth="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="900"
+              y1="180"
+              x2="1050"
+              y2="350"
+              stroke="#ffffff"
+              strokeWidth="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="650"
+              y1="250"
+              x2="300"
+              y2="500"
+              stroke="#D4A74A"
+              strokeWidth="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="650"
+              y1="250"
+              x2="750"
+              y2="550"
+              stroke="#ffffff"
+              strokeWidth="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="150"
+              y1="200"
+              x2="300"
+              y2="500"
+              stroke="#ffffff"
+              strokeWidth="1.5"
+              opacity="0.3"
+            />
           </g>
-          
+
           {/* Growth trajectory lines */}
           <g opacity="0.3">
-            <path d="M 100 700 Q 300 550 500 400 T 900 200" stroke="#D4A74A" strokeWidth="2" fill="none" strokeDasharray="5,5" />
-            <path d="M 200 650 Q 400 500 600 350 T 1000 150" stroke="#ffffff" strokeWidth="1.5" fill="none" strokeDasharray="5,5" />
+            <path
+              d="M 100 700 Q 300 550 500 400 T 900 200"
+              stroke="#D4A74A"
+              strokeWidth="2"
+              fill="none"
+              strokeDasharray="5,5"
+            />
+            <path
+              d="M 200 650 Q 400 500 600 350 T 1000 150"
+              stroke="#ffffff"
+              strokeWidth="1.5"
+              fill="none"
+              strokeDasharray="5,5"
+            />
           </g>
-          
+
           {/* Upward arrow shape representing growth */}
           <g opacity="0.2">
             <polygon points="600,750 550,650 650,650" fill="#D4A74A" />
-            <line x1="600" y1="750" x2="600" y2="550" stroke="#D4A74A" strokeWidth="2" />
+            <line
+              x1="600"
+              y1="750"
+              x2="600"
+              y2="550"
+              stroke="#D4A74A"
+              strokeWidth="2"
+            />
           </g>
         </svg>
 
@@ -599,13 +767,18 @@ export function IHatchPage() {
               transition={{ duration: 0.7 }}
             >
               <div className="mb-4 inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <span className="text-sm font-semibold text-[#D4A74A] uppercase tracking-wide">Nationwide Incubation</span>
+                <span className="text-sm font-semibold text-[#D4A74A] uppercase tracking-wide">
+                  Nationwide Incubation
+                </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Empower Startups, Build Ecosystems
               </h1>
               <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-                iHatch is Nigeria's first truly nationwide incubation programme, operating across all 36 states and the FCT. We support early-stage startups with mentorship, resources, and access to innovation hubs for sustainable growth.
+                iHatch is Nigeria's first truly nationwide incubation programme,
+                operating across all 36 states and the FCT. We support
+                early-stage startups with mentorship, resources, and access to
+                innovation hubs for sustainable growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -617,7 +790,11 @@ export function IHatchPage() {
                   Apply for iHatch
                 </a>
                 <button
-                  onClick={() => document.getElementById('past-cohorts')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() =>
+                    document
+                      .getElementById("past-cohorts")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
                 >
                   View Past Cohorts
@@ -632,43 +809,176 @@ export function IHatchPage() {
               className="hidden md:flex justify-center relative"
             >
               {/* Animated concept illustration */}
-              <svg width="100%" height="400" viewBox="0 0 400 400" className="drop-shadow-2xl">
+              <svg
+                width="100%"
+                height="400"
+                viewBox="0 0 400 400"
+                className="drop-shadow-2xl"
+              >
                 <defs>
-                  <linearGradient id="card-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{stopColor: "#D4A74A", stopOpacity: 0.2}} />
-                    <stop offset="100%" style={{stopColor: "#ffffff", stopOpacity: 0.1}} />
+                  <linearGradient
+                    id="card-gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      style={{ stopColor: "#D4A74A", stopOpacity: 0.2 }}
+                    />
+                    <stop
+                      offset="100%"
+                      style={{ stopColor: "#ffffff", stopOpacity: 0.1 }}
+                    />
                   </linearGradient>
                 </defs>
-                
+
                 {/* Central hub circle */}
-                <circle cx="200" cy="200" r="80" fill="#D4A74A" opacity="0.15" />
-                <circle cx="200" cy="200" r="70" fill="none" stroke="#D4A74A" strokeWidth="2" />
-                <text x="200" y="210" textAnchor="middle" className="text-lg font-bold fill-white">iHatch</text>
-                
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="80"
+                  fill="#D4A74A"
+                  opacity="0.15"
+                />
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="70"
+                  fill="none"
+                  stroke="#D4A74A"
+                  strokeWidth="2"
+                />
+                <text
+                  x="200"
+                  y="210"
+                  textAnchor="middle"
+                  className="text-lg font-bold fill-white"
+                >
+                  iHatch
+                </text>
+
                 {/* Surrounding startup nodes */}
                 <g opacity="0.8">
                   {/* Top startup */}
-                  <circle cx="200" cy="80" r="35" fill="#D4A74A" opacity="0.2" stroke="#D4A74A" strokeWidth="2" />
-                  <text x="200" y="90" textAnchor="middle" className="text-xs fill-white font-semibold">Startup</text>
-                  
+                  <circle
+                    cx="200"
+                    cy="80"
+                    r="35"
+                    fill="#D4A74A"
+                    opacity="0.2"
+                    stroke="#D4A74A"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="200"
+                    y="90"
+                    textAnchor="middle"
+                    className="text-xs fill-white font-semibold"
+                  >
+                    Startup
+                  </text>
+
                   {/* Right startup */}
-                  <circle cx="310" cy="200" r="35" fill="#D4A74A" opacity="0.2" stroke="#D4A74A" strokeWidth="2" />
-                  <text x="310" y="210" textAnchor="middle" className="text-xs fill-white font-semibold">Startup</text>
-                  
+                  <circle
+                    cx="310"
+                    cy="200"
+                    r="35"
+                    fill="#D4A74A"
+                    opacity="0.2"
+                    stroke="#D4A74A"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="310"
+                    y="210"
+                    textAnchor="middle"
+                    className="text-xs fill-white font-semibold"
+                  >
+                    Startup
+                  </text>
+
                   {/* Bottom startup */}
-                  <circle cx="200" cy="320" r="35" fill="#D4A74A" opacity="0.2" stroke="#D4A74A" strokeWidth="2" />
-                  <text x="200" y="330" textAnchor="middle" className="text-xs fill-white font-semibold">Startup</text>
-                  
+                  <circle
+                    cx="200"
+                    cy="320"
+                    r="35"
+                    fill="#D4A74A"
+                    opacity="0.2"
+                    stroke="#D4A74A"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="200"
+                    y="330"
+                    textAnchor="middle"
+                    className="text-xs fill-white font-semibold"
+                  >
+                    Startup
+                  </text>
+
                   {/* Left startup */}
-                  <circle cx="90" cy="200" r="35" fill="#D4A74A" opacity="0.2" stroke="#D4A74A" strokeWidth="2" />
-                  <text x="90" y="210" textAnchor="middle" className="text-xs fill-white font-semibold">Startup</text>
+                  <circle
+                    cx="90"
+                    cy="200"
+                    r="35"
+                    fill="#D4A74A"
+                    opacity="0.2"
+                    stroke="#D4A74A"
+                    strokeWidth="2"
+                  />
+                  <text
+                    x="90"
+                    y="210"
+                    textAnchor="middle"
+                    className="text-xs fill-white font-semibold"
+                  >
+                    Startup
+                  </text>
                 </g>
-                
+
                 {/* Connection lines */}
-                <line x1="200" y1="150" x2="200" y2="115" stroke="#ffffff" strokeWidth="1.5" opacity="0.5" strokeDasharray="3,3" />
-                <line x1="265" y1="235" x2="305" y2="215" stroke="#ffffff" strokeWidth="1.5" opacity="0.5" strokeDasharray="3,3" />
-                <line x1="200" y1="270" x2="200" y2="305" stroke="#ffffff" strokeWidth="1.5" opacity="0.5" strokeDasharray="3,3" />
-                <line x1="135" y1="165" x2="95" y2="185" stroke="#ffffff" strokeWidth="1.5" opacity="0.5" strokeDasharray="3,3" />
+                <line
+                  x1="200"
+                  y1="150"
+                  x2="200"
+                  y2="115"
+                  stroke="#ffffff"
+                  strokeWidth="1.5"
+                  opacity="0.5"
+                  strokeDasharray="3,3"
+                />
+                <line
+                  x1="265"
+                  y1="235"
+                  x2="305"
+                  y2="215"
+                  stroke="#ffffff"
+                  strokeWidth="1.5"
+                  opacity="0.5"
+                  strokeDasharray="3,3"
+                />
+                <line
+                  x1="200"
+                  y1="270"
+                  x2="200"
+                  y2="305"
+                  stroke="#ffffff"
+                  strokeWidth="1.5"
+                  opacity="0.5"
+                  strokeDasharray="3,3"
+                />
+                <line
+                  x1="135"
+                  y1="165"
+                  x2="95"
+                  y2="185"
+                  stroke="#ffffff"
+                  strokeWidth="1.5"
+                  opacity="0.5"
+                  strokeDasharray="3,3"
+                />
               </svg>
             </motion.div>
           </div>
@@ -715,7 +1025,8 @@ export function IHatchPage() {
               Program Structure & Duration
             </h2>
             <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto">
-              A dual-track incubation programme delivered through certified innovation hubs nationwide.
+              A dual-track incubation programme delivered through certified
+              innovation hubs nationwide.
             </p>
           </motion.div>
 
@@ -723,9 +1034,19 @@ export function IHatchPage() {
           <div className="relative">
             {/* Connecting dotted line */}
             <div className="hidden md:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#D4A74A] to-transparent opacity-40" />
-            <svg className="hidden md:block absolute top-20 left-0 right-0 w-full h-12 pointer-events-none" preserveAspectRatio="none">
+            <svg
+              className="hidden md:block absolute top-20 left-0 right-0 w-full h-12 pointer-events-none"
+              preserveAspectRatio="none"
+            >
               <defs>
-                <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <pattern
+                  id="dots"
+                  x="0"
+                  y="0"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
                   <circle cx="10" cy="10" r="2" fill="#D4A74A" opacity="0.5" />
                 </pattern>
               </defs>

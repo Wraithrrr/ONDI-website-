@@ -1,39 +1,53 @@
 // components/AboutPage.tsx
-import { motion } from 'motion/react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Target,Rocket,Briefcase, Eye, Award, Users2, Lightbulb, TrendingUp } from 'lucide-react';
+import { motion } from "motion/react";
+import {
+  Target,
+  Rocket,
+  Briefcase,
+  Eye,
+  Award,
+  Users2,
+  Lightbulb,
+  TrendingUp,
+} from "lucide-react";
 
 export function AboutPage() {
   const focusAreas = [
     {
       icon: Award,
-      title: 'Digital Innovation & Indigenous Content',
-      description: 'Drive programs and policies that support digital innovation and indigenous content.',
+      title: "Digital Innovation & Indigenous Content",
+      description:
+        "Drive programs and policies that support digital innovation and indigenous content.",
     },
     {
       icon: Briefcase,
-      title: 'Indigenous IDE Expansion',
-      description: 'Increase the number of indigenous innovation-driven enterprises (IDEs).',
+      title: "Indigenous IDE Expansion",
+      description:
+        "Increase the number of indigenous innovation-driven enterprises (IDEs).",
     },
     {
       icon: TrendingUp,
-      title: 'Digital Industry Growth',
-      description: 'Ensure growth of the digital industry, aiming for strong GDP contribution.',
+      title: "Digital Industry Growth",
+      description:
+        "Ensure growth of the digital industry, aiming for strong GDP contribution.",
     },
     {
       icon: Users2,
-      title: 'Startup & Innovation Promotion',
-      description: 'Facilitate the emergence of market-creating innovations and start-ups.',
+      title: "Startup & Innovation Promotion",
+      description:
+        "Facilitate the emergence of market-creating innovations and start-ups.",
     },
     {
       icon: Rocket,
-      title: 'Market Access for Tech Companies',
-      description: 'Expand market opportunities for Nigerian digital and technology companies.',
+      title: "Market Access for Tech Companies",
+      description:
+        "Expand market opportunities for Nigerian digital and technology companies.",
     },
     {
       icon: Lightbulb,
-      title: 'Innovation Hubs & VC Support',
-      description: 'Support innovation hubs, technology parks, and venture capital initiatives.',
+      title: "Innovation Hubs & VC Support",
+      description:
+        "Support innovation hubs, technology parks, and venture capital initiatives.",
     },
   ];
 
@@ -56,13 +70,14 @@ export function AboutPage() {
             Driving Nigeria&apos;s Digital Innovation Agenda
           </h1>
           <p className="text-sm md:text-base text-[#628B35] max-w-3xl mx-auto leading-relaxed">
-            The Office for Nigerian Digital Innovation (ONDI) coordinates and drives Nigeria&apos;s
-            digital transformation through innovation, collaboration and strategic ecosystem support.
+            The Office for Nigerian Digital Innovation (ONDI) coordinates and
+            drives Nigeria&apos;s digital transformation through innovation,
+            collaboration and strategic ecosystem support.
           </p>
         </motion.section>
 
         {/* NATIONAL COORDINATOR SECTION */}
-         <motion.section
+        <motion.section
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -86,44 +101,60 @@ export function AboutPage() {
             {/* Text */}
             <div
               className="p-8 md:p-10 flex flex-col justify-center"
-              style={{ backgroundColor: '#134c28' }}
+              style={{ backgroundColor: "#134c28" }}
             >
               <p
                 className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase mb-3"
-                style={{ color: '#E8B923' }}
+                style={{ color: "#E8B923" }}
               >
                 Message from the National Coordinator
               </p>
               <h2
                 className="text-2xl md:text-3xl font-bold mb-5"
-                style={{ color: '#f0eee1' }}
+                style={{ color: "#f0eee1" }}
               >
                 Driving Innovation for National Development
               </h2>
               <p
                 className="text-sm md:text-base leading-relaxed mb-3 text-justify"
-                style={{ color: '#e4f2e9' }}
+                style={{ color: "#e4f2e9" }}
               >
-                &quot;At the Office for Nigerian Digital Innovation (ONDI), we believe innovation is central to Nigeria’s digital and economic future. Our mandate is to enable Nigerian startups and innovators to access the support, partnerships, and platforms needed to build and scale globally competitive solutions. We coordinate across government, industry, academia, and global partners to align policy with the realities of entrepreneurship.&quot;
+                &quot;At the Office for Nigerian Digital Innovation (ONDI), we
+                believe innovation is central to Nigeria’s digital and economic
+                future. Our mandate is to enable Nigerian startups and
+                innovators to access the support, partnerships, and platforms
+                needed to build and scale globally competitive solutions. We
+                coordinate across government, industry, academia, and global
+                partners to align policy with the realities of
+                entrepreneurship.&quot;
               </p>
               <p
                 className="text-sm md:text-base leading-relaxed mb-5 text-justify"
-                style={{ color: '#e4f2e9' }}
+                style={{ color: "#e4f2e9" }}
               >
-                &quot;Beyond individual startups, ONDI focuses on strengthening Nigeria’s innovation ecosystem as a whole. Through public-private collaboration, international partnerships, and the implementation of the Nigeria Startup Act, we are institutionalising innovation as a driver of inclusive growth. We are shaping a nation of innovators and positioning Nigeria to lead Africa’s digital transformation.&quot;
+                &quot;Beyond individual startups, ONDI focuses on strengthening
+                Nigeria’s innovation ecosystem as a whole. Through
+                public-private collaboration, international partnerships, and
+                the implementation of the Nigeria Startup Act, we are
+                institutionalising innovation as a driver of inclusive growth.
+                We are shaping a nation of innovators and positioning Nigeria to
+                lead Africa’s digital transformation.&quot;
               </p>
               <div>
-                <p className="text-sm md:text-base font-semibold" style={{ color: '#D4A520' }}>
+                <p
+                  className="text-sm md:text-base font-semibold"
+                  style={{ color: "#D4A520" }}
+                >
                   Victoria Fabunmi
                 </p>
-                <p className="text-xs md:text-sm" style={{ color: '#e4f2e9' }}>
-                  National Coordinator, Office for Nigerian Digital Innovation (ONDI)
+                <p className="text-xs md:text-sm" style={{ color: "#e4f2e9" }}>
+                  National Coordinator, Office for Nigerian Digital Innovation
+                  (ONDI)
                 </p>
               </div>
             </div>
           </div>
         </motion.section>
-
 
         {/* GOAL/ VISION / MISSION */}
         <section className="grid md:grid-cols-3 gap-8">
@@ -142,7 +173,8 @@ export function AboutPage() {
               Our Goal
             </p>
             <p className="text-sm md:text-base text-black leading-relaxed">
-              To coordinate and drive digital innovation initiatives across Nigeria.
+              To coordinate and drive digital innovation initiatives across
+              Nigeria.
             </p>
           </motion.div>
 
@@ -161,7 +193,8 @@ export function AboutPage() {
               Our Vision
             </p>
             <p className="text-sm md:text-base text-black leading-relaxed">
-              To make Nigeria the foremost technology and innovation ecosystem in Africa.
+              To make Nigeria the foremost technology and innovation ecosystem
+              in Africa.
             </p>
           </motion.div>
 
@@ -180,7 +213,8 @@ export function AboutPage() {
               Our Mission
             </p>
             <p className="text-sm md:text-base text-black leading-relaxed">
-              To integrate indigenous technology and innovations in all facets of Nigerian society.
+              To integrate indigenous technology and innovations in all facets
+              of Nigerian society.
             </p>
           </motion.div>
         </section>
@@ -202,7 +236,6 @@ export function AboutPage() {
                 Building a resilient, inclusive innovation ecosystem
               </h2>
             </div>
-         
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
