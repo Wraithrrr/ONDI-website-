@@ -154,7 +154,8 @@ const programStructure = [
     icon: Clock,
     title: "Startup Incubation",
     description:
-      "MVP development legal incorporation, market validation and sector-specific training",
+      "MVP developgit commit -m "Your descriptive commit message"
+ment legal incorporation, market validation and sector-specific training",
   },
   {
     icon: Handshake,
