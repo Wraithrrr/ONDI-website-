@@ -199,7 +199,7 @@ export function NDICPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`bg-white rounded-2xl p-6 text-center shadow-lg ${index >= 3 ? 'md:col-span-1' : ''}`}
+                className="bg-white rounded-2xl p-6 text-center shadow-lg"
               >
                 <div className="w-14 h-14 mx-auto mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
                   <item.icon className="w-7 h-7 text-[#134C28]" />
