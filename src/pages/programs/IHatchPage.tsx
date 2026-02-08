@@ -1,6 +1,6 @@
 // pages/programs/IHatchPage.tsx
 import { motion } from 'motion/react';
-import { Check, Clock, ClipboardCheck, Handshake, Presentation, BookOpen, Users, Briefcase, ArrowLeft, DollarSign, Rocket, BriefcaseBusiness, MapPin, Building2, Trophy } from 'lucide-react';
+import { Check, Clock, ClipboardCheck, Handshake, Presentation, BookOpen, Users, Briefcase, ArrowLeft, DollarSign, Rocket, BriefcaseBusiness, MapPin, Building2, Trophy, Globe, Leaf, Heart, Shield, GraduationCap, Truck } from 'lucide-react';
 import { useState } from 'react';
 
 // Cohort data
@@ -58,8 +58,8 @@ const cohorts = [
       { name: 'Grazac Innovation Hub (Grazac Technologies)', location: 'Ogun' },
       { name: 'Guru Innovation Hub', location: 'Cross River' },
       { name: 'Ikwaire Computing Services and Academy Limited', location: 'Kebbi' },
-      { name: 'Innovation Growth Hub (IgHub) Onitsha', location: 'Anambra' },
       { name: 'Innovate Ondo', location: 'Ondo' },
+      { name: 'Innovation Growth Hub (IgHub) Onitsha', location: 'Anambra' },
       { name: 'Insest Tech', location: 'Ekiti' },
       { name: 'IT Central Kaduna', location: 'Kaduna' },
       { name: 'KIRKIRA INNOVATION HUB', location: 'Katsina' },
@@ -111,6 +111,31 @@ const programStructure = [
     title: 'Demo Day',
     description: 'Pitch to Investors',
   },
+];
+
+const focusAreas = [
+  { icon: DollarSign, title: 'FinTech' },
+  { icon: Leaf, title: 'AgriTech' },
+  { icon: Heart, title: 'HealthTech' },
+  { icon: GraduationCap, title: 'EdTech' },
+  { icon: Globe, title: 'CleanTech' },
+  { icon: Truck, title: 'Logistics' },
+  { icon: Shield, title: 'Security' },
+  { icon: Users, title: 'Civic Technology' },
+];
+
+const nationwideImpactStats = [
+  { value: '240+', label: 'Startups Supported', icon: Rocket },
+  { value: '37', label: 'Innovation Hubs Trained', icon: Building2 },
+  { value: '1,000+', label: 'Direct Jobs Created', icon: BriefcaseBusiness },
+  { value: '5+', label: 'Cohorts Delivered', icon: Trophy },
+];
+
+const sustainableEcosystem = [
+  'Strengthens regional innovation capacity',
+  'Promotes inclusive participation across underserved areas',
+  'Encourages collaboration between startups, hubs, government, investors, and development partners',
+  'Lays the foundation for long-term ecosystem sustainability beyond the programme cycle',
 ];
 
 const whoCanApply = [
@@ -407,7 +432,7 @@ export function IHatchPage() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="bg-[#006B2D] text-white py-16 md:py-28 lg:py-36">
+      <section className="bg-gradient-to-br from-[#021A0B] via-[#0B6637] to-[#17944D] text-white py-16 md:py-28 lg:py-36">
         <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -418,8 +443,7 @@ export function IHatchPage() {
               Empowering Startups to Succeed
             </h1>
             <p className="text-sm md:text-lg text-gray-200 mb-6 md:mb-8 max-w-2xl mx-auto">
-              iHatch is a startup incubation program designed to support early-stage entrepreneurs
-              with the tools and mentorship they need to thrive.
+              Nigeria's first truly nationwide incubation programme, operating across all 36 states and the FCT through a decentralised, hub-first model.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <a
@@ -443,19 +467,29 @@ export function IHatchPage() {
 
       {/* About Section */}
       <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-5xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-[#006B2D] mb-6">
-              About the iHatch Program
-            </h2>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-              iHatch is designed to nurture innovative startups through mentorship, training,
-              and access to a thriving entrepreneurial ecosystem.
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-[#006B2D]" />
+              <h2 className="text-2xl md:text-3xl font-bold text-[#006B2D]">
+                About iHatch
+              </h2>
+              <div className="h-px w-16 bg-[#006B2D]" />
+            </div>
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 max-w-4xl mx-auto">
+              iHatch is Nigeria's first truly nationwide incubation programme, operating across all 36 states and the FCT through a decentralised, hub-first model.
+            </p>
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 max-w-4xl mx-auto">
+              Rather than focusing only on startups, iHatch strengthens the ecosystems around founders—training innovation hubs to become long-term engines of startup growth within their regions.
+            </p>
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
+              This dual-track approach ensures that startups receive ongoing support during and after the programme.
             </p>
           </motion.div>
         </div>
@@ -499,6 +533,166 @@ export function IHatchPage() {
         </div>
       </section>
 
+      {/* Nationwide Impact Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-[#006B2D]" />
+              <h2 className="text-2xl md:text-3xl font-bold text-[#006B2D]">
+                Nationwide Impact
+              </h2>
+              <div className="h-px w-16 bg-[#006B2D]" />
+            </div>
+            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Since inception, iHatch has supported over 240 startups across multiple cohorts and trained 37 innovation hubs nationwide.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+            {nationwideImpactStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-[#006B2D] rounded-2xl p-5 md:p-6 text-center"
+              >
+                <div className="w-12 h-12 mx-auto mb-3 bg-white/10 rounded-xl flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-[#D4A74A]" />
+                </div>
+                <p className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</p>
+                <p className="text-gray-300 text-xs md:text-sm">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h3 className="text-lg md:text-xl font-bold text-[#006B2D] mb-4 text-center">
+              The programme has contributed to:
+            </h3>
+            <div className="grid md:grid-cols-2 gap-3">
+              {[
+                'The development of market-ready MVPs',
+                'Access to equity-free grants and investment opportunities',
+                'Local and international market exposure',
+                'Over 1,000 direct jobs and thousands of indirect jobs created',
+              ].map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  className="flex items-start gap-3 bg-[#F9FAFB] rounded-xl p-4 border border-gray-100"
+                >
+                  <div className="w-6 h-6 rounded-full bg-[#006B2D] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-gray-700 text-sm md:text-base font-medium">{item}</span>
+                </motion.div>
+              ))}
+            </div>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed mt-6 text-center max-w-3xl mx-auto">
+              Cohort 5 builds on these results with stronger monitoring, improved coordination, and sector-focused support to deliver deeper, measurable impact.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Focus Areas Section */}
+      <section className="py-16 md:py-20 bg-[#F5F5F5]">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-[#006B2D]" />
+              <h2 className="text-2xl md:text-3xl font-bold text-[#006B2D]">
+                Focus Areas
+              </h2>
+              <div className="h-px w-16 bg-[#006B2D]" />
+            </div>
+            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              iHatch supports startups building solutions with strong local relevance and global potential, particularly in priority sectors such as:
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 max-w-4xl mx-auto">
+            {focusAreas.map((area, index) => (
+              <motion.div
+                key={area.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="bg-white rounded-xl p-5 text-center border border-gray-200 hover:shadow-md hover:border-[#006B2D] transition-all"
+              >
+                <div className="w-12 h-12 mx-auto mb-3 bg-[#006B2D]/10 rounded-xl flex items-center justify-center">
+                  <area.icon className="w-6 h-6 text-[#006B2D]" />
+                </div>
+                <h3 className="text-sm md:text-base font-bold text-[#006B2D]">{area.title}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Building Sustainable Ecosystems Section */}
+      <section className="py-16 md:py-20 bg-[#006B2D]">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Building Sustainable Ecosystems
+            </h2>
+            <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Through its hub-first approach, iHatch:
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {sustainableEcosystem.map((item, index) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-5 flex items-start gap-4 border border-white/10"
+              >
+                <div className="w-8 h-8 bg-[#D4A74A] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Check className="w-5 h-5 text-white" />
+                </div>
+                <p className="text-white text-sm md:text-base font-medium leading-relaxed">{item}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Who Can Apply Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -533,7 +727,7 @@ export function IHatchPage() {
       </section>
 
       {/* What You Gain Section */}
-      <section className="py-16 md:py-20 bg-[#006B2D]">
+      <section className="py-16 md:py-20 bg-[#F5F5F5]">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -542,9 +736,13 @@ export function IHatchPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-white">
-              Program Benefits
-            </h2>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-[#006B2D]" />
+              <h2 className="text-2xl md:text-3xl font-bold text-[#006B2D]">
+                Program Benefits
+              </h2>
+              <div className="h-px w-16 bg-[#006B2D]" />
+            </div>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -555,7 +753,7 @@ export function IHatchPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-lg"
+                className="bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-200"
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-[#006B2D]/10 rounded-xl flex items-center justify-center">
                   <item.icon className="w-8 h-8 text-[#006B2D]" />

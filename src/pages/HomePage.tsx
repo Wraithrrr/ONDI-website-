@@ -51,7 +51,7 @@ export function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-28 pb-20 px-6 bg-gradient-to-br from-[#062A16] via-[#0E4D2E] to-[#1A7A45] overflow-hidden">
+      <section className="relative pt-28 pb-20 md:pt-32 md:pb-24 lg:pt-36 lg:pb-28 px-6 bg-gradient-to-br from-[#021A0B] via-[#0B6637] to-[#17944D] overflow-hidden">
         {/* Abstract Wave Background */}
         <WaveBackground />
 
@@ -90,7 +90,7 @@ export function HomePage() {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight text-white">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               Nigeria&apos;s Innovation
               <br />
               <AnimatePresence mode="wait">
@@ -222,7 +222,7 @@ export function HomePage() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
               Bringing innovative local content to your doorstep
             </h2>
-            <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Our mission, vision and core values guide how ONDI grows Nigeria&apos;s digital
               innovation ecosystem and measures impact.
             </p>
@@ -236,10 +236,10 @@ export function HomePage() {
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#3EBF75] to-[#277D49] flex items-center justify-center shadow-lg">
                   <Target className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
+                <p className="text-base font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
                   Mission
                 </p>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify pl-4">
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-justify pl-4">
                   To integrate indigenous technology and innovations in all facets of Nigerian society.
                 </p>
               </div>
@@ -249,10 +249,10 @@ export function HomePage() {
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#2F855A] to-[#134C28] flex items-center justify-center shadow-lg">
                   <Users className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
+                <p className="text-base font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
                   Vision
                 </p>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify pl-4">
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-justify pl-4">
                   To make Nigeria the foremost technology and innovation ecosystem in Africa.
                 </p>
               </div>
@@ -262,11 +262,11 @@ export function HomePage() {
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#E8B923] to-[#CDA434] flex items-center justify-center shadow-lg">
                   <Award className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
+                <p className="text-base font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
                   Core Values
                 </p>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed pl-4">
-                  Drive • Innovation • Collaboration. • Support • Excellence.
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed pl-4">
+                  Drive • Innovation • Collaboration • Support • Excellence
                 </p>
               </div>
             </div>
@@ -309,9 +309,9 @@ export function HomePage() {
                     >
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
-                    <p className="text-base font-medium text-gray-700">{item.label}</p>
+                    <p className="text-lg font-medium text-gray-700">{item.label}</p>
                   </div>
-                  <p className="text-3xl md:text-4xl font-semibold text-[#134C28]">{item.value}</p>
+                  <p className="text-4xl md:text-5xl font-bold text-[#134C28]">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -320,10 +320,10 @@ export function HomePage() {
           {/* FOCUS AREAS */}
           <div className="mt-12 pt-8 border-t border-[#E2E4DD]">
             <div className="text-center mb-4">
-              <p className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2">
+              <p className="text-sm md:text-base font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2">
                 Focus Areas
               </p>
-              <p className="text-sm md:text-base text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
                 ONDI drives impact across key pillars of Nigeria&apos;s digital innovation ecosystem.
               </p>
             </div>
@@ -339,7 +339,7 @@ export function HomePage() {
               ].map((area) => (
                 <span
                   key={area}
-                  className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-[#D6E3D4] text-sm text-[#134C28] shadow-sm"
+                  className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-[#D6E3D4] text-base text-[#134C28] shadow-sm"
                 >
                   {area}
                 </span>
@@ -376,7 +376,7 @@ export function HomePage() {
                 title: 'We-Elevate',
                 tag: 'Women Empowerment',
                 description:
-                  'A capacity-building programme designed to support and uplift women entrepreneurs by providing digital, financial, and entrepreneurial skills, mentorship, and community needed to scale their startups and transition from offline to online operations globally.',
+                  'The WE-Elevate Nigeria Program, led by the Digital Cooperation Organization (DCO) in partnership with NITDA/ONDI, is a transformative initiative designed to empower Female-owned micro, small, and medium enterprises (W-MSMEs) by integrating them into Nigeria\'s fast-growing digital economy.',
                 image: '/assets/We-elevate.jpeg',
                 href: '#/we-elevate'
               },
@@ -384,7 +384,7 @@ export function HomePage() {
                 title: 'iHatch',
                 tag: 'Startup Incubation',
                 description:
-                  'A startup incubation program designed to support early-stage entrepreneurs with the tools, mentorship, and ecosystem connections they need to build, refine, and scale their ventures into viable, market-ready businesses.',
+                  'Nigeria\'s first truly nationwide incubation programme, operating across all 36 states and the FCT through a decentralised, hub-first model that strengthens the ecosystems around founders.',
                 image: '/assets/iHatch.jpeg',
                 href: '#/ihatch'
               },
@@ -495,7 +495,7 @@ export function HomePage() {
       {/* CTA & CONTACT SECTION */}
       <section
         id="contact-section"
-        className="relative py-24 px-6 bg-gradient-to-br from-[#062A16] via-[#0E4D2E] to-[#1A7A45] overflow-hidden"
+        className="relative py-24 px-6 bg-gradient-to-br from-[#021A0B] via-[#0B6637] to-[#17944D] overflow-hidden"
       >
         <WaveBackground />
 

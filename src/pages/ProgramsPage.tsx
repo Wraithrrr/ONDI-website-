@@ -8,19 +8,19 @@ const programs = [
     title: 'We-Elevate',
     tag: 'Women Empowerment',
     description:
-      'A capacity-building programme designed to support and uplift women entrepreneurs by providing digital, financial, and entrepreneurial skills, mentorship, and community needed to scale their startups and transition from offline to online operations globally.',
+      'The WE-Elevate Nigeria Program, led by the Digital Cooperation Organization (DCO) in partnership with NITDA/ONDI, is a transformative initiative designed to empower Female-owned micro, small, and medium enterprises (W-MSMEs) by integrating them into Nigeria\'s fast-growing digital economy.',
     image: '/assets/We-elevate.jpeg',
     href: '#/we-elevate',
-    focus: ['Digital & financial skills training', 'Global market access', 'Mentorship from industry leaders'],
+    focus: ['Digital literacy & skills development', 'E-commerce & market access', 'Financial inclusion & mentorship'],
   },
   {
     title: 'iHatch',
     tag: 'Startup Incubation',
     description:
-      'A startup incubation program designed to support early-stage entrepreneurs with the tools, mentorship, and ecosystem connections they need to build, refine, and scale their ventures into viable, market-ready businesses.',
+      'Nigeria\'s first truly nationwide incubation programme, operating across all 36 states and the FCT through a decentralised, hub-first model that strengthens the ecosystems around founders.',
     image: '/assets/iHatch.jpeg',
     href: '#/ihatch',
-    focus: ['Free training & coworking space', 'Mentorship from tech specialists', 'Access to funding opportunities'],
+    focus: ['240+ startups supported across multiple cohorts', '37 innovation hubs trained nationwide', 'Equity-free grants & market exposure'],
   },
   {
     title: 'NITDA Digital Innovation Challenge',
@@ -37,7 +37,7 @@ export function ProgramsPage() {
   return (
     <main className="min-h-screen bg-[#F9FAFB]">
       {/* HERO */}
-      <section className="relative pt-36 pb-20 px-6 bg-gradient-to-br from-[#062A16] via-[#0E4D2E] to-[#1A7A45] overflow-hidden">
+      <section className="relative pt-36 pb-20 px-6 bg-gradient-to-br from-[#021A0B] via-[#0B6637] to-[#17944D] overflow-hidden">
         <WaveBackground />
 
         {/* Soft glows */}
