@@ -20,7 +20,7 @@ const programs = [
       'Nigeria\'s first truly nationwide incubation programme, operating across all 36 states and the FCT through a decentralised, hub-first model that strengthens the ecosystems around founders.',
     image: '/assets/iHatch.jpeg',
     href: '#/ihatch',
-    focus: ['240+ startups supported across multiple cohorts', '37 innovation hubs trained nationwide', 'Equity-free grants & market exposure'],
+    focus: ['200+ startups supported across multiple cohorts', '37 innovation hubs trained nationwide', 'Equity-free grants & market exposure'],
   },
   {
     title: 'NITDA Digital Innovation Challenge',

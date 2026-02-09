@@ -2,23 +2,7 @@
 import { motion } from 'motion/react';
 import { Check, Users, Rocket, Target, ClipboardList, GraduationCap, TrendingUp, Globe } from 'lucide-react';
 
-const aboutFeatures = [
-  {
-    icon: Target,
-    title: 'Equip & Empower',
-    description: 'Submit your application to kickstart your entrepreneurial journey.',
-  },
-  {
-    icon: Users,
-    title: 'Create Community',
-    description: 'Participate in workshops, mentorship sessions and peer networking.',
-  },
-  {
-    icon: Rocket,
-    title: 'Scale Startups',
-    description: 'Leverage resources and connections to scale your business successfully.',
-  },
-];
+
 
 const programObjectives = [
   'Equip W-MSMEs with digital skills to grow online.',
@@ -90,10 +74,10 @@ export function WeElevatePage() {
               transition={{ duration: 0.7 }}
             >
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                Empowering Women Entrepreneurs to Soar
+                Empowering Female Entrepreneurs to Soar
               </h1>
               <p className="text-gray-200 text-base md:text-lg mb-8 leading-relaxed">
-                We-Elevate is designed to support and uplift women entrepreneurs by providing the resources, mentorship, and community needed to scale their startups and turn their visions into growth-focused businesses.
+                We-Elevate is designed to support and uplift Female entrepreneurs by providing the resources, mentorship, and community needed to scale their startups and turn their visions into growth-focused businesses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -148,33 +132,13 @@ export function WeElevatePage() {
               <div className="h-px w-16 bg-[#134C28]" />
             </div>
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-              Nurturing the Next Wave of Women Leaders
+              Nurturing the Next Wave of Female Entrepreneurs
             </h3>
             <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
               The WE-Elevate Nigeria Program, led by the Digital Cooperation Organization (DCO) in partnership with NITDA/ONDI, is a transformative initiative designed to empower Female-owned micro, small, and medium enterprises (W-MSMEs). By integrating Female entrepreneurs into Nigeria's fast-growing digital economy, the program helps them harness the power of e-commerce, digital literacy, and financial technologies to expand their businesses and thrive in the digital age.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {aboutFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
-                  <feature.icon className="w-8 h-8 text-[#134C28]" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
