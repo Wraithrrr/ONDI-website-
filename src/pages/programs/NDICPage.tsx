@@ -191,7 +191,7 @@ export function NDICPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {objectives.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -199,7 +199,7 @@ export function NDICPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-lg"
+                className="bg-white rounded-2xl p-6 text-center shadow-lg w-full md:w-[calc(33.333%-1rem)]"
               >
                 <div className="w-14 h-14 mx-auto mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
                   <item.icon className="w-7 h-7 text-[#134C28]" />
@@ -314,7 +314,7 @@ export function NDICPage() {
             </div>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-5 max-w-4xl mx-auto">
             {participantGains.map((item, index) => (
               <motion.div
                 key={item.text}
@@ -322,7 +322,7 @@ export function NDICPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="bg-white rounded-xl p-5 flex items-start gap-4 border border-gray-200 hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl p-5 flex items-start gap-4 border border-gray-200 hover:shadow-md transition-shadow w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.875rem)]"
               >
                 <div className="w-10 h-10 bg-[#134C28]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-5 h-5 text-[#134C28]" />
