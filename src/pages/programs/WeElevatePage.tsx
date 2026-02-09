@@ -11,26 +11,8 @@ import {
   Globe,
 } from "lucide-react";
 
-const aboutFeatures = [
-  {
-    icon: Target,
-    title: "Equip & Empower",
-    description:
-      "Submit your application to kickstart your entrepreneurial journey.",
-  },
-  {
-    icon: Users,
-    title: "Create Community",
-    description:
-      "Participate in workshops, mentorship sessions and peer networking.",
-  },
-  {
-    icon: Rocket,
-    title: "Scale Startups",
-    description:
-      "Leverage resources and connections to scale your business successfully.",
-  },
-];
+
+
 
 const howItWorks = [
   {
@@ -229,27 +211,7 @@ export function WeElevatePage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {aboutFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ y: -5 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl hover:border-[#134C28] transition-all"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-[#134C28]/10 rounded-xl flex items-center justify-center">
-                  <feature.icon className="w-8 h-8 text-[#134C28]" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
+        
         </div>
       </section>
 
@@ -315,7 +277,7 @@ export function WeElevatePage() {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {howItWorks.map((item, index) => (
               <motion.div
                 key={item.title}
