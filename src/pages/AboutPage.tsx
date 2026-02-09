@@ -72,13 +72,12 @@ export function AboutPage() {
             {/* Image */}
             <div className="relative h-80 md:h-full">
               <img
-                src="/assets/ONDI-About.jpeg"
-                alt="ONDI at VivaTech"
+                src="/assets/nc-picture.jpeg"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/25 to-transparent" />
               <div className="absolute bottom-5 left-5 bg-white/90 px-4 py-2 rounded-full text-xs font-medium text-[#134C28] border border-[#E5DED0]">
-                ONDI at VivaTech
+                Natiional Coordinator
               </div>
             </div>
 

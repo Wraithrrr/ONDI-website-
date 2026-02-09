@@ -51,46 +51,26 @@ export function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-28 pb-20 md:pt-32 md:pb-24 lg:pt-36 lg:pb-28 px-6 bg-gradient-to-br from-[#021A0B] via-[#0B6637] to-[#17944D] overflow-hidden">
+      <section className="relative pt-40 pb-30 px-6 bg-gradient-to-br from-[#081F11] via-[#0F3A20] to-[#134C28] overflow-hidden">
         {/* Abstract Wave Background */}
         <WaveBackground />
 
-        {/* Geometric hexagonal grid pattern */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-[0.04]">
-          <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="heroHexGrid" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
-                <polygon points="30,2 54,15 54,37 30,50 6,37 6,15" fill="none" stroke="white" strokeWidth="0.8" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#heroHexGrid)" />
-          </svg>
-        </div>
-
-        {/* Faint ONDI watermark */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-white/[0.025] text-[18rem] font-black tracking-[0.15em] rotate-[-8deg]">
-            ONDI
-          </div>
-        </div>
-
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#1A9B54]/18 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#2DBF6E]/15 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#E8B923]/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#10B981]/15 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#34D399]/15 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-10">
               <div className="w-2 h-2 rounded-full bg-[#E8B923] animate-pulse" />
               <span className="text-sm tracking-wide text-white/90">
                 Office for Nigerian Digital Innovation
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight text-white">
               Nigeria&apos;s Innovation
               <br />
               <AnimatePresence mode="wait">
@@ -107,17 +87,17 @@ export function HomePage() {
               </AnimatePresence>
             </h1>
 
-            <p className="text-lg md:text-xl text-green-50/90 max-w-3xl mx-auto mb-10 leading-relaxed">
+            <p className="text-xl md:text-2xl text-green-50/90 max-w-3xl mx-auto mb-12 leading-relaxed">
               Empowering Nigerian innovators to build, scale, and compete globally through strategic
               support, world-class resources, and sustainable partnerships
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
+            <div className="flex flex-wrap items-center justify-center gap-5 mb-16">
 
               {/* Explore Programs → scroll to programs section */}
               <a
                 href="#programs"
-                className="px-10 py-4 rounded-lg bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 transition-all font-semibold"
+                className=" px-12 py-5 rounded-lg bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 transition-all font-bold text-lg"
               >
                 Explore Programs
               </a>
@@ -160,7 +140,7 @@ export function HomePage() {
                   About ONDI
                 </span>
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 Driving Nigeria&apos;s Digital Innovation Agenda
               </h2>
             </div>
@@ -213,13 +193,13 @@ export function HomePage() {
       >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#134C28]/10 border border-[#134C28]/20 mb-3">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#134C28]/10 border border-[#134C28]/20 mb-4">
               <span className="text-xs font-semibold tracking-[0.22em] uppercase text-[#134C28]">
                 Goals &amp; Milestones
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Bringing innovative local content to your doorstep
             </h2>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -236,10 +216,10 @@ export function HomePage() {
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#3EBF75] to-[#277D49] flex items-center justify-center shadow-lg">
                   <Target className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-base font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
+                <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
                   Mission
                 </p>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-justify pl-4">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify pl-4">
                   To integrate indigenous technology and innovations in all facets of Nigerian society.
                 </p>
               </div>
@@ -249,10 +229,10 @@ export function HomePage() {
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#2F855A] to-[#134C28] flex items-center justify-center shadow-lg">
                   <Users className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-base font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
+                <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
                   Vision
                 </p>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-justify pl-4">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify pl-4">
                   To make Nigeria the foremost technology and innovation ecosystem in Africa.
                 </p>
               </div>
@@ -262,11 +242,11 @@ export function HomePage() {
                 <div className="absolute -left-4 top-6 w-10 h-10 rounded-full bg-gradient-to-br from-[#E8B923] to-[#CDA434] flex items-center justify-center shadow-lg">
                   <Award className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-base font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
+                <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2 pl-4">
                   Core Values
                 </p>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed pl-4">
-                  Drive • Innovation • Collaboration • Support • Excellence
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed pl-4">
+                  Drive • Innovation • Collaboration. • Support • Excellence.
                 </p>
               </div>
             </div>
@@ -309,21 +289,21 @@ export function HomePage() {
                     >
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
-                    <p className="text-lg font-medium text-gray-700">{item.label}</p>
+                    <p className="text-base font-semibold text-gray-700">{item.label}</p>
                   </div>
-                  <p className="text-4xl md:text-5xl font-bold text-[#134C28]">{item.value}</p>
+                  <p className="text-3xl md:text-4xl font-bold text-[#134C28]">{item.value}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* FOCUS AREAS */}
-          <div className="mt-12 pt-8 border-t border-[#E2E4DD]">
-            <div className="text-center mb-4">
-              <p className="text-sm md:text-base font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2">
+          <div className="mt-14 pt-10 border-t border-[#E2E4DD]">
+            <div className="text-center mb-6">
+              <p className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2">
                 Focus Areas
               </p>
-              <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
                 ONDI drives impact across key pillars of Nigeria&apos;s digital innovation ecosystem.
               </p>
             </div>
@@ -339,7 +319,7 @@ export function HomePage() {
               ].map((area) => (
                 <span
                   key={area}
-                  className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-[#D6E3D4] text-base text-[#134C28] shadow-sm"
+                  className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-[#D6E3D4] text-sm text-[#134C28] shadow-sm"
                 >
                   {area}
                 </span>
@@ -495,28 +475,28 @@ export function HomePage() {
       {/* CTA & CONTACT SECTION */}
       <section
         id="contact-section"
-        className="relative py-24 px-6 bg-gradient-to-br from-[#021A0B] via-[#0B6637] to-[#17944D] overflow-hidden"
+        className="relative py-24 px-6 bg-gradient-to-br from-[#081F11] via-[#0F3A20] to-[#134C28] overflow-hidden"
       >
         <WaveBackground />
 
         {/* Soft glows */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-[-4rem] w-80 h-80 bg-[#1A9B54]/25 rounded-full blur-3xl" />
-          <div className="absolute bottom-[-4rem] left-[-2rem] w-96 h-96 bg-[#2DBF6E]/20 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-[-4rem] w-80 h-80 bg-[#32965B]/25 rounded-full blur-3xl" />
+          <div className="absolute bottom-[-4rem] left-[-2rem] w-96 h-96 bg-[#3EBF75]/20 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Section intro */}
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg.white/10 border border-white/25 mb-3">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg.white/10 border border-white/25 mb-4">
               <span className="text-xs font-semibold tracking-[0.22em] uppercase text-green-50">
                 Contact &amp; Partnerships
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Join Nigeria&apos;s Innovation Movement
             </h2>
-            <p className="text-lg md:text-xl text-green-50 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-green-50 max-w-3xl mx-auto leading-relaxed">
               Partner with ONDI to support the next generation of Nigerian innovators. Together,
               we&apos;re building Africa&apos;s digital future.
             </p>
@@ -536,11 +516,11 @@ export function HomePage() {
                     <p className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-[#134C28] mb-2">
 
                     </p>
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#081F11]">
+                    <h3 className="text-3xl md:text-4xl font-bold text-[#081F11]">
                       Contact Us.
                     </h3>
                   </div>
-                  <p className="text-xs md:text-sm text-gray-600 max-w-sm">
+                  <p className="text-sm md:text-base text-gray-600 max-w-sm">
                     Reach out to ONDI for partnerships, program enquiries, and ecosystem collaborations.
                   </p>
                 </div>
@@ -661,13 +641,13 @@ export function HomePage() {
                 {/* Card footer CTAs */}
                 <div className="mt-6 flex flex-wrap gap-3 justify-start">
                   <button
-                    className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#E8B923] to-[#D4A520] text-white text-sm font-semibold hover:from-[#F5C842] hover:to-[#E8B923] transition-all"
+                    className="group inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-[#E8B923] to-[#D4A520] text-white text-base font-bold hover:from-[#F5C842] hover:to-[#E8B923] transition-all"
                     onClick={() => {
                       window.location.hash = '#/contact';
                     }}
                   >
                     Contact Us
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                   {/* Learn More button removed as requested */}
                 </div>

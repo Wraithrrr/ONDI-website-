@@ -67,7 +67,7 @@ export function Navigation() {
               onClick={() => goToHash('#/programs')}
               className="relative text-[#284A26] hover:text-[#134C28] font-medium transition-colors"
             >
-              Our Programs
+            Programs
             </button>
              
             {/* More dropdown */}
