@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const ONDI_LOGO_SRC =
-  'https://ondi.nitda.gov.ng/wp-content/uploads/2015/12/cropped-ONDI-favicon-1.jpg';
+const ONDI_LOGO_SRC = '/f6991c91763ebb8cb799949ee0cb356bdb7928ad.png';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,11 +36,11 @@ export function Navigation() {
             onClick={() => goToHash('#/')}
             className="flex items-center gap-3"
           >
-            <div className="h-12 w-12 md:h-14 md:w-14 rounded-xl overflow-hidden border border-[#E2E5E0] bg-white shadow-sm flex items-center justify-center">
+            <div className="h-10 md:h-12 flex items-center justify-center">
               <img
                 src={ONDI_LOGO_SRC}
                 alt="ONDI Logo"
-                className="h-full w-full object-cover"
+                className="h-full w-auto object-contain"
               />
             </div>
           </button>
