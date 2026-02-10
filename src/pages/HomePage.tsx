@@ -55,7 +55,7 @@ export function HomePage() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <img src="/assets/ONDI-hero.jpeg" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#081F11]/80 via-[#0F3A20]/70 to-[#134C28]/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#081F11]/40 via-[#0F3A20]/30 to-[#134C28]/50" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
