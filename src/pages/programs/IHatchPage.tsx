@@ -1470,6 +1470,9 @@ export function IHatchPage() {
                 className="bg-[#134C28] rounded-2xl p-6 text-center cursor-pointer hover:bg-[#1a5f33] transition-all shadow-lg hover:shadow-2xl"
                 onClick={() => setSelectedCohort(cohort.id)}
               >
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {cohort.name}
+                </h3>
                 <p className="text-[#D4A74A] font-semibold mb-4">
                   {cohort.startups} Startups Graduated
                 </p>
