@@ -58,13 +58,45 @@ const cohorts: Cohort[] = [
     description:
       "Cohort 3 brought together 39 promising startups across the six geo-political zones focusing on innovative solutions, resulting in funding for the top 3 startups.",
     startupsList: [
-      { name: "Connected", industry: "AI & Machine Learning", topPick: true },
-      {
-        name: "Dopals Technologies",
-        industry: "Mobility & Logistics",
-        topPick: true,
-      },
-      { name: "Northino", industry: "EdTech", topPick: true },
+      { name: "AEJAY'S Styles/Book Bay", industry: "Lagos" },
+      { name: "Al-Ihsan Digital Pharmaceuticals Limited", industry: "Gombe" },
+      { name: "Ashroon Enterprise", industry: "Gombe" },
+      { name: "Auto Mech Drop", industry: "FCT" },
+      { name: "Axiomata Tech", industry: "FCT" },
+      { name: "Biolex LTD", industry: "Rivers" },
+      { name: "Business Hub Africa", industry: "Lagos" },
+      { name: "Centra", industry: "Rivers" },
+      { name: "City Explorer", industry: "Gombe" },
+      { name: "Connected", industry: "FCT", topPick: true },
+      { name: "Coursemate", industry: "Rivers" },
+      { name: "Dash Express", industry: "Kano" },
+      { name: "Dawn Agro Ventures Farms", industry: "Kano" },
+      { name: "Dopals Technologies", industry: "Gombe", topPick: true },
+      { name: "Elfagom Nig LTD", industry: "Rivers" },
+      { name: "Elka Tech", industry: "Bauchi" },
+      { name: "Farm More", industry: "Abia" },
+      { name: "Farmers Mart", industry: "Lagos" },
+      { name: "Fingertipps", industry: "Nasarawa" },
+      { name: "Innovastra", industry: "FCT" },
+      { name: "Innovation Combination", industry: "Lagos" },
+      { name: "Jak Consulting", industry: "FCT" },
+      { name: "Kasuwar Duniya", industry: "Kano" },
+      { name: "Lawindeafrique LTD", industry: "Rivers" },
+      { name: "Luzoma Microsystems Services", industry: "Rivers" },
+      { name: "Max Agro Tech", industry: "Gombe" },
+      { name: "MBA_Synergy", industry: "Lagos" },
+      { name: "My Shop Padi", industry: "FCT" },
+      { name: "Northino", industry: "Kano", topPick: true },
+      { name: "Oasis Agro Rice Enterprise", industry: "Kaduna" },
+      { name: "Paysals (Topupmate)", industry: "Kogi" },
+      { name: "RESAVATION", industry: "Rivers" },
+      { name: "Sailway Global", industry: "Rivers" },
+      { name: "Saw T Concept", industry: "FCT" },
+      { name: "Shamsudeen Agritech and Automobile/SY Agritech", industry: "Kano" },
+      { name: "Stem Innovation Hub", industry: "Kano" },
+      { name: "Ubene Globals LTD", industry: "Rivers" },
+      { name: "Umahso Academy", industry: "Rivers" },
+      { name: "Zannest", industry: "Kano" },
     ],
   },
   {
@@ -1069,7 +1101,7 @@ export function IHatchPage() {
                   <h3 className="text-base md:text-lg font-bold text-[#D4A74A] mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                  <p className="text-xs md:text-sm text-black leading-relaxed">
                     {item.description}
                   </p>
                 </motion.div>
@@ -1084,11 +1116,11 @@ export function IHatchPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-12 md:mt-16 mx-auto max-w-md"
             >
-              <div className="bg-white rounded-full px-8 py-5 shadow-lg text-center border-2 border-[#D4A74A]">
-                <p className="text-lg md:text-xl font-bold text-[#134C28] mb-1">
+              <div className=" rounded-full px-8 py-5 shadow-lg text-center ">
+                <p className="text-lg md:text-xl font-bold text-[#FFFFFF] mb-1">
                   Total Programme Duration: 10 Months
                 </p>
-                <p className="text-sm md:text-base text-gray-600">
+                <p className="text-sm md:text-base text-white">
                   (5 months hub training + 5 months startup incubation)
                 </p>
               </div>
