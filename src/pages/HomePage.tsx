@@ -51,14 +51,11 @@ export function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-40 pb-30 px-6 bg-gradient-to-br from-[#081F11] via-[#0F3A20] to-[#134C28] overflow-hidden">
-        {/* Abstract Wave Background */}
-        <WaveBackground />
-
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#10B981]/15 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#34D399]/15 rounded-full blur-3xl" />
+      <section className="relative pt-40 pb-30 px-6 overflow-hidden">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0">
+          <img src="/assets/ONDI-hero.jpeg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#081F11]/80 via-[#0F3A20]/70 to-[#134C28]/85" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -117,10 +114,12 @@ export function HomePage() {
           background: '#FEFDFB'
         }}
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
           {/* Left: NCAIR Image Card */}
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden bg-white border border-[#E6E9E6] shadow-sm">
+          <div className="relative flex flex-col">
+            {/* Spacer to align image top with the heading "Driving..." */}
+            <div className="hidden md:block h-[52px]" />
+            <div className="rounded-2xl overflow-hidden bg-white border border-[#E6E9E6] shadow-sm flex-1">
               <img
                 src="/assets/ONDI-About.jpeg"
                 alt="ONDI at Vivatech"
@@ -133,7 +132,7 @@ export function HomePage() {
           </div>
 
           {/* Right: Text Content */}
-          <div>
+          <div className="flex flex-col">
             <div className="mb-4">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#134C28]/10 border border-[#134C28]/20 mb-3">
                 <span className="text-xs font-semibold tracking-[0.22em] uppercase text-[#134C28]">
@@ -145,21 +144,23 @@ export function HomePage() {
               </h2>
             </div>
 
-            <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 text-justify">
-              The Office for Nigerian Digital Innovation (ONDI) is Nigeria&apos;s dedicated hub for
-              digital transformation, innovation policy, and ecosystem support. We work with founders,
-              investors, partners, and government institutions to unlock the country&apos;s full
-              innovation potential.
-            </p>
-            <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 text-justify">
-              Through strategic programs, regulatory support, and access to world-class infrastructure
-              like the National Centre for Artificial Intelligence and Robotics, we help innovators
-              build scalable solutions that can compete globally.
-            </p>
-            <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-6 text-justify">
-              Our mandate is to catalyse a vibrant digital economy by enabling startups, creators, and
-              enterprises to grow, export, and create jobs at scale.
-            </p>
+            <div className="flex-1">
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 text-justify">
+                The Office for Nigerian Digital Innovation (ONDI) is Nigeria&apos;s dedicated hub for
+                digital transformation, innovation policy, and ecosystem support. We work with founders,
+                investors, partners, and government institutions to unlock the country&apos;s full
+                innovation potential.
+              </p>
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 text-justify">
+                Through strategic programs, regulatory support, and access to world-class infrastructure
+                like the National Centre for Artificial Intelligence and Robotics, we help innovators
+                build scalable solutions that can compete globally.
+              </p>
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-6 text-justify">
+                Our mandate is to catalyse a vibrant digital economy by enabling startups, creators, and
+                enterprises to grow, export, and create jobs at scale.
+              </p>
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
