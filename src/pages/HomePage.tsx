@@ -51,15 +51,15 @@ export function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-40 pb-30 px-6 overflow-hidden">
+      <section className="relative pt-40 pb-20 md:pb-28 px-6 overflow-hidden">
         {/* Hero Background Image */}
         <div className="absolute inset-0">
-          <img src="/assets/ONDI-hero.jpeg" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#081F11]/40 via-[#0F3A20]/30 to-[#134C28]/50" />
+          <img src="/assets/ONDI-hero.jpeg" alt="" className="w-full h-full object-cover object-[70%_center] md:object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#081F11]/70 via-[#0F3A20]/30 to-[#134C28]/50" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-24">
+          <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-10">
               <div className="w-2 h-2 rounded-full bg-[#E8B923] animate-pulse" />
               <span className="text-sm tracking-wide text-white/90">
