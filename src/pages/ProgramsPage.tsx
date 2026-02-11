@@ -1,6 +1,6 @@
 // src/components/ProgramsPage.tsx
 import { WaveBackground } from '../components/WaveBackground';
-import { ArrowRight, Users, Calendar } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const programs = [
@@ -15,7 +15,7 @@ const programs = [
   },
   {
     title: 'iHatch',
-    tag: 'Startup Incubation',
+    tag: 'Capacity ',
     description:
       'Nigeria\'s first truly nationwide incubation programme, operating across all 36 states and the FCT through a decentralised, hub-first model that strengthens the ecosystems around founders.',
     image: '/assets/iHatch.jpeg',
@@ -63,7 +63,7 @@ export function ProgramsPage() {
 
       {/* OVERVIEW STRIP */}
       <section className="bg-white border-b border-[#E5E7EB] py-10 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-start">
           <div>
             <p className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-[#134C28] mb-3">
               How ONDI supports you
@@ -73,27 +73,17 @@ export function ProgramsPage() {
               ONDI programs provide a clear pathway of support.
             </p>
           </div>
-          <div className="flex items-center gap-4 text-base text-gray-700">
-            <div className="w-12 h-12 rounded-xl bg-[#134C28]/8 flex items-center justify-center">
-              <Users className="w-6 h-6 text-[#134C28]" />
-            </div>
-            <div>
-              <p className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-[#134C28] mb-3">Founder-focused design</p>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Programs tailored to real startup needs: skills, networks, capital and policy support.
-              </p>
-            </div>
+          <div>
+            <p className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-[#134C28] mb-3">Founder-focused design</p>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              Programs tailored to real startup needs: skills, networks, capital and policy support.
+            </p>
           </div>
-          <div className="flex items-center gap-4 text-base text-gray-700">
-            <div className="w-12 h-12 rounded-xl bg-[#134C28]/8 flex items-center justify-center">
-              <Calendar className="w-6 h-6 text-[#134C28]" />
-            </div>
-            <div>
-              <p className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-[#134C28] mb-3">Cohorts &amp; open calls</p>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Competitive selection through nationwide calls, ensuring transparent access to opportunity.
-              </p>
-            </div>
+          <div>
+            <p className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-[#134C28] mb-3">Cohorts &amp; open calls</p>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              Competitive selection through nationwide calls, ensuring transparent access to opportunity.
+            </p>
           </div>
         </div>
       </section>
