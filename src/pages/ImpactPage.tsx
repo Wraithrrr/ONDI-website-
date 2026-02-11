@@ -11,44 +11,40 @@ export function ImpactPage() {
       company: "Ficore Africa",
       founder: "Hassan Ahmad",
       story:
-        "Through the iHatch program, I experienced a major shift in mindset—from pursuing a generic startup idea to tackling long-term, systemic problems within Nigeria’s informal economy. iHatch taught me to prioritize real user needs, focus on building trust and compliance, and value community-driven collaboration. The support and challenge from mentors and peers set me on a clear path toward making FICO Africa indispensable for the people we aim to serve.",
-      image:
-        "https://images.unsplash.com/photo-1599592187465-6dc742367282?q=80&w=1080",
-     
+        "Through the iHatch program, I experienced a major shift in mindset—from pursuing a generic startup idea to tackling long-term, systemic problems within Nigeria's informal economy. iHatch taught me to prioritize real user needs, focus on building trust and compliance, and value community-driven collaboration. The support and challenge from mentors and peers set me on a clear path toward making FICO Africa indispensable for the people we aim to serve.",
+      image: "/assets/Ficore Africa.jpeg",
+
     },
     {
       id: 2,
-      company: "Grab 247",
+      company: "Grabb 247",
       founder: "Aisha Riwanu Sidi",
       story:
-        "My journey with iHatch taught me the value of structure, discipline, and data-driven decision-making as I work to scale Grab Livestock Marketplace across northern Nigeria. The program’s mentorship and teamwork inspired me to refine my strategies for acquiring customers and vendors, optimize our operations, and build a transparent, AI-powered platform. Thanks to iHatch, I’m more confident in our path forward—creating impact through technology and continued learning",
-      image:
-        "https://images.unsplash.com/photo-1758691737138-7b9b1884b1db?q=80&w=1080",
-      
+        "My journey with iHatch taught me the value of structure, discipline, and data-driven decision-making as I work to scale Grab Livestock Marketplace across northern Nigeria. The program's mentorship and teamwork inspired me to refine my strategies for acquiring customers and vendors, optimize our operations, and build a transparent, AI-powered platform. Thanks to iHatch, I'm more confident in our path forward—creating impact through technology and continued learning",
+      image: "/assets/Grab247.jpeg",
+
     },
 
-{
+    {
       id: 3,
       company: "Interface Innovations Ltd",
       founder: "Al-amin  Idris",
       story:
         "From iHatch, I learned how vital it is to be market ready, product ready, and investment ready. The program showed me how to apply market assessments to design better products and growth strategies, and how to use resources effectively to train and onboard a large team. The lessons on dedication and consistently engaging with every session have given me the tools and mindset I need to push Interface Africa to new heights.",
-      image:
-        "https://images.unsplash.com/photo-1758691737138-7b9b1884b1db?q=80&w=1080",
-      
-     
+      image: "/assets/Interface Africa.jpeg",
+
+
     },
 
 
-{
+    {
       id: 4,
       company: "EasyBuy4Me",
       founder: "Amina Kwaplong",
       story:
-        "iHatch became a turning point for me, providing the insights, mentorship, and community support necessary to reimagine my business. With what I learned, I’m now set on refining our strategy, reaching larger markets, and building up our team capabilities in the e-commerce and logistics space. iHatch reminded me to stay open to learning and see the program as a springboard for future growth and renewed ambition.",
-      image:
-        "https://images.unsplash.com/photo-1758691737138-7b9b1884b1db?q=80&w=1080",
-      
+        "iHatch became a turning point for me, providing the insights, mentorship, and community support necessary to reimagine my business. With what I learned, I'm now set on refining our strategy, reaching larger markets, and building up our team capabilities in the e-commerce and logistics space. iHatch reminded me to stay open to learning and see the program as a springboard for future growth and renewed ambition.",
+      image: "/assets/Easybuy4me.jpeg",
+
     },
 
 
@@ -66,18 +62,18 @@ export function ImpactPage() {
       name: 'Tasiu Kwaplong Saeed',
       role: 'Founder, 02 INNOVATIONS LAB',
       quote: 'The iHatch programme gave my hub visibility as a go-to place for startup support in Nasarawa state.',
-    
+
     },
     {
       id: 3,
-      name: 'Oluwaseun Adeyemi',
-      role: 'Founder, LogisticsPro',
-      quote: 'From day one, ONDI believed in our vision. Their accelerator program gave us the tools, connections, and confidence to scale rapidly. Today, we\'re operating in 15 states.',
-      
+      name: 'Otuonye Chinyere',
+      role: 'Founder,Sparks Ventures Hub',
+      quote: 'The iHatch initiative came at the perfect time as I was about to launch an incubation program at my hub. The training corrected my earlier misconceptions and gave me practical guidance, which was a very valuable experience.',
+
     }
   ];
 
-  
+
 
   return (
     <div className="pt-24 pb-24 px-6" style={{ backgroundColor: "white" }}>
@@ -92,7 +88,7 @@ export function ImpactPage() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-3" style={{ color: "#284A26" }}>
-           Our Impact 
+            Our Impact
           </h2>
 
           <p className="max-w-3xl mx-auto text-lg" style={{ color: "#628B35" }}>
@@ -113,11 +109,11 @@ export function ImpactPage() {
             >
               <div className="grid md:grid-cols-2">
                 {/* IMAGE */}
-                <div className="relative h-80 md:h-auto">
+                <div className="relative h-80 md:h-auto min-h-[320px]">
                   <ImageWithFallback
                     src={study.image}
                     alt={study.company}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute bottom-5 left-6 flex items-center gap-2">
@@ -147,53 +143,53 @@ export function ImpactPage() {
                   </p>
 
                   {/* METRICS */}
-                  
+
                 </div>
               </div>
             </motion.div>
-      
+
           ))}
 
           <div>
-          <h3 className="text-center mb-12" style={{ color: '#284A26' }}>
-            What Founders Say
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="p-8 h-full border-0" style={{ backgroundColor: '#FFFFFC' }}>
-                  <Quote className="w-10 h-10 mb-6" style={{ color: '#D4A520' }} />
-                  <p className="mb-6" style={{ color: 'black' }}>
-                    "{testimonial.quote}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden">
-                      <ImageWithFallback
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <div style={{ color: '#284A26' }}>
-                        {testimonial.name}
+            <h3 className="text-center mb-12" style={{ color: '#284A26' }}>
+              What Founders Say
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={testimonial.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <Card className="p-8 h-full border-0" style={{ backgroundColor: '#FFFFFC' }}>
+                    <Quote className="w-10 h-10 mb-6" style={{ color: '#D4A520' }} />
+                    <p className="mb-6" style={{ color: 'black' }}>
+                      "{testimonial.quote}"
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full overflow-hidden">
+                        <ImageWithFallback
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <div className="text-sm" style={{ color: '#628B35' }}>
-                        {testimonial.role}
+                      <div>
+                        <div style={{ color: '#284A26' }}>
+                          {testimonial.name}
+                        </div>
+                        <div className="text-sm" style={{ color: '#628B35' }}>
+                          {testimonial.role}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
