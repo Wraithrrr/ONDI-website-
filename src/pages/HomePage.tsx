@@ -54,8 +54,9 @@ export function HomePage() {
       <section className="relative pt-40 pb-20 md:pb-28 px-6 overflow-hidden">
         {/* Hero Background Image */}
         <div className="absolute inset-0">
-          <img src="/assets/ONDI-hero.jpeg" alt="" className="w-full h-full object-cover object-[70%_center] md:object-center" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#081F11]/70 via-[#0F3A20]/30 to-[#134C28]/50" />
+          <img src="/assets/hero-innovation.jpeg" alt="" className="w-full h-full object-cover object-center" />
+          {/* Dimmed overlay - slightly darkened */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#081F11]/60 via-[#0F3A20]/50 to-[#134C28]/60" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">

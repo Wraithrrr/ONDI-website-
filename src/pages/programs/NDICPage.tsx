@@ -14,6 +14,7 @@ import {
   Check,
   Megaphone,
   BrainCircuit,
+  ArrowLeft,
 } from 'lucide-react';
 
 const objectives = [
@@ -88,6 +89,14 @@ export function NDICPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-24">
+          {/* Back Button */}
+          <a
+            href="#/programs"
+            className="inline-flex items-center gap-2 text-white hover:text-[#D4A74A] transition-colors mb-5"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span className="font-medium">Back to Programs</span>
+          </a>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}

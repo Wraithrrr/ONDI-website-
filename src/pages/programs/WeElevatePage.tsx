@@ -6,6 +6,7 @@ import {
   GraduationCap,
   TrendingUp,
   Globe,
+  ArrowLeft,
 } from "lucide-react";
 
 
@@ -142,6 +143,14 @@ export function WeElevatePage() {
         </svg>
 
         <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-20 z-10">
+          {/* Back Button */}
+          <a
+            href="#/programs"
+            className="inline-flex items-center gap-2 text-white hover:text-[#D4A74A] transition-colors mt-5 mb-3"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            <span className="font-medium">Back to Programs</span>
+          </a>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}

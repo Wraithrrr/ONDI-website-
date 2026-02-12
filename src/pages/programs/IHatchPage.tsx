@@ -594,9 +594,9 @@ export function IHatchPage() {
               href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
             >
-              Apply for iHatch
+              Apply as a Hub
             </a>
           </div>
         </section>
@@ -792,6 +792,14 @@ export function IHatchPage() {
         </svg>
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
+          {/* Back Button */}
+          <a
+            href="#/programs"
+            className="inline-flex items-center gap-2 text-white hover:text-[#D4A74A] transition-colors mb-5"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            <span className="font-medium">Back to Programs</span>
+          </a>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -819,7 +827,7 @@ export function IHatchPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
                 >
-                  Apply for iHatch
+                  Apply as a Hub
                 </a>
                 <button
                   onClick={() =>
@@ -829,7 +837,7 @@ export function IHatchPage() {
                   }
                   className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
                 >
-                  View Past Cohorts
+                  Apply as a Startup
                 </button>
               </div>
             </motion.div>
