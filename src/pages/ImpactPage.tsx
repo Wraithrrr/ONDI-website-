@@ -170,11 +170,7 @@ export function ImpactPage() {
                     </p>
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-full overflow-hidden">
-                        <ImageWithFallback
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          className="w-full h-full object-cover"
-                        />
+                       
                       </div>
                       <div>
                         <div style={{ color: '#284A26' }}>

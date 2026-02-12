@@ -2,9 +2,6 @@
 import { motion } from "motion/react";
 import {
   Check,
-  Users,
-  Rocket,
-  Target,
   ClipboardList,
   GraduationCap,
   TrendingUp,
@@ -54,12 +51,30 @@ const programObjectives = [
 ];
 
 const partners = [
-  "Federal Ministry of Communications, Innovation, and Digital Economy (FMCIDE)",
-  "NITDA/ONDI",
-  "Federal Ministry of Female Affairs (FMWA)",
-  "Federal Ministry of Industry, Trade, and Investment (FMITI)",
-  "Small and Medium Enterprises Development Agency of Nigeria (SMEDAN)",
-  "Digital Cooperation Organisation (DCO)",
+  {
+    name: "Federal Ministry of Communications, Innovation, and Digital Economy (FMCIDE)",
+    logo: "/assets/MDA logos/FMCIDE.jpeg",
+  },
+  {
+    name: "NITDA/ONDI",
+    logos: ["/assets/MDA logos/NITDA.jpeg", "/assets/MDA logos/ONDI.jpeg"],
+  },
+  {
+    name: "Federal Ministry of Women Affairs (FMWA)",
+    logo: "/assets/MDA logos/FMWA.jpeg",
+  },
+  {
+    name: "Federal Ministry of Industry, Trade, and Investment (FMITI)",
+    logo: "/assets/MDA logos/FMITI.jpeg",
+  },
+  {
+    name: "Small and Medium Enterprises Development Agency of Nigeria (SMEDAN)",
+    logo: "/assets/MDA logos/SMEDAN.jpeg",
+  },
+  {
+    name: "Digital Cooperation Organisation (DCO)",
+    logo: "/assets/MDA logos/DCO.jpeg",
+  },
 ];
 
 const whoShouldApply = [
@@ -323,22 +338,37 @@ export function WeElevatePage() {
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {partners.map((partner, index) => (
                 <motion.div
-                  key={partner}
+                  key={partner.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="bg-white p-4 rounded-xl border border-gray-200 flex items-start gap-3"
+                  className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col items-center text-center hover:shadow-lg hover:border-[#134C28]/30 transition-all"
                 >
-                  <div className="w-6 h-6 rounded-full bg-[#D4A74A] flex items-center justify-center flex-shrink-0 mt-1">
-                    <Users className="w-4 h-4 text-white" />
+                  <div className="flex items-center justify-center gap-2 mb-4 h-16">
+                    {"logos" in partner && partner.logos ? (
+                      partner.logos.map((logo) => (
+                        <img
+                          key={logo}
+                          src={logo}
+                          alt={partner.name}
+                          className="h-14 w-14 object-contain rounded-lg"
+                        />
+                      ))
+                    ) : (
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        className="h-16 w-16 object-contain rounded-lg"
+                      />
+                    )}
                   </div>
-                  <span className="text-gray-700 text-base font-medium">
-                    {partner}
+                  <span className="text-gray-700 text-sm font-medium leading-snug">
+                    {partner.name}
                   </span>
                 </motion.div>
               ))}
@@ -366,7 +396,7 @@ export function WeElevatePage() {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {whoShouldApply.map((item, index) => (
               <motion.div
                 key={item}

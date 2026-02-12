@@ -32,7 +32,7 @@ export function ResourcesPage() {
     {
       icon: BookOpen,
       title: "Innovation Guides",
-      description: "Comprehensive how-to manuals and best practices for startups",
+      description: "Comprehensive how-to manuals and best practices for the innoviation ecosystem",
       count: getCategoryCount("Guide"),
       color: "#EC9A29",
       filterKey: "Guide" as const,
@@ -59,22 +59,18 @@ export function ResourcesPage() {
     {
       question: "How do I apply for ONDI programs?",
       answer:
-        'Applications are submitted through our online portal. Visit the Opportunities section and click "Apply Now" on your desired program.',
+        'Visit the programs page, click “Learn More” on your desired program and then proceed to apply.',
     },
     {
       question: "What are the eligibility criteria for funding?",
       answer:
         "Eligibility varies by program, but generally includes being a registered Nigerian entity, having a working prototype, and demonstrating market potential.",
     },
-    {
-      question: "How long does the accelerator program last?",
-      answer:
-        "Our flagship accelerator program runs for 12 weeks, with additional 6-month post-program support.",
-    },
+   
     {
       question: "Is there a fee to join ONDI programs?",
       answer:
-        "No, all ONDI programs are free to participants. We do not charge any fees for application or participation.",
+        "No, all ONDI programs are free to participants. We do not charge any fees for application or participation. However, certain programs have specific terms and conditions.",
     },
   ];
 

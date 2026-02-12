@@ -267,12 +267,12 @@ export function HomePage() {
                   icon: Briefcase,
                   accent: 'from-[#F59E0B] to-[#E08A00]'
                 },
-                /*{
-                  label: 'Funding Facilitated',
-                  value: '₦2.5B',
+                {
+                  label: 'Number of Countries Engaged',
+                  value: '10+',
                   icon: TrendingUp,
                   accent: 'from-[#2563EB] to-[#1D4ED8]'
-                },*/
+                },
                 {
                   label: 'SCF Members Onboarded',
                   value: '200+',
@@ -298,35 +298,7 @@ export function HomePage() {
             </div>
           </div>
 
-          {/* FOCUS AREAS */}
-          <div className="mt-14 pt-10 border-t border-[#E2E4DD]">
-            <div className="text-center mb-6">
-              <p className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-gray-500 mb-2">
-                Focus Areas
-              </p>
-              <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                ONDI drives impact across key pillars of Nigeria&apos;s digital innovation ecosystem.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-3 justify-center">
-              {[
-                'Strategic human capacity development',
-                'Funding & ecosystem support',
-                'Research & insight',
-                'Monitoring & compliance',
-                'Partnerships',
-                'Innovation policy & guidelines'
-              ].map((area) => (
-                <span
-                  key={area}
-                  className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-[#D6E3D4] text-sm text-[#134C28] shadow-sm"
-                >
-                  {area}
-                </span>
-              ))}
-            </div>
-          </div>
+         
         </div>
       </section>
 
