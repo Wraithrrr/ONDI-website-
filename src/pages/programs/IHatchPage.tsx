@@ -21,7 +21,7 @@ import {
   TrendingUp,
   Network,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Startup {
   name: string;
@@ -347,6 +347,16 @@ export function IHatchPage() {
     "All" | "Top 3" | "Top 12"
   >("All");
 
+  // Scroll to top when cohort is selected
+  useEffect(() => {
+    if (selectedCohort !== null) {
+      // Use setTimeout to ensure DOM is ready before scrolling
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 0);
+    }
+  }, [selectedCohort]);
+
   const currentCohort = cohorts.find((c) => c.id === selectedCohort);
 
   // Get unique industries for filter
@@ -381,7 +391,7 @@ export function IHatchPage() {
           <div className="max-w-7xl mx-auto px-6">
             <button
               onClick={() => setSelectedCohort(null)}
-              className="flex items-center gap-2 text-gray-300 hover:text-white mb-6 transition-colors"
+              className="flex items-center gap-2 text-gray-300 hover:text-white mt-8 mb-4 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to All Cohorts
@@ -1309,7 +1319,13 @@ export function IHatchPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-[#134C28] rounded-2xl p-6 text-center cursor-pointer hover:bg-[#1a5f33] transition-all shadow-lg hover:shadow-2xl"
-                onClick={() => setSelectedCohort(cohort.id)}
+                onClick={() => {
+                  setSelectedCohort(cohort.id);
+                  // Scroll to top immediately
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }, 100);
+                }}
               >
                 <h3 className="text-xl font-bold text-white mb-2">
                   {cohort.name}
