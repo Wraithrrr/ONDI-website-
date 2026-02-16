@@ -601,7 +601,7 @@ export function IHatchPage() {
               Apply now and take your startup to the next level!
             </p>
             <a
-              href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
+              href="https://app.innox.africa/applicant/ihatch-cohort-5"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
@@ -832,7 +832,7 @@ export function IHatchPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
+                  href="https://app.innox.africa/applicant/ihatch-cohort-5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
@@ -1368,7 +1368,7 @@ export function IHatchPage() {
               Apply now and join the iHatch program today!
             </p>
             <a
-              href="https://ihatch.spurt.tools/job/ihatch-cohort-4-startup-support-programme"
+              href="https://app.innox.africa/applicant/ihatch-cohort-5"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"

@@ -410,41 +410,6 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* NEWS SECTION – Coming Soon */}
-      <section id="news" className="py-24 px-6 bg-[#FAFBFC] border-t border-[#E8E9EB]">
-
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#134C28]/10 border border-[#134C28]/20 mb-3">
-              <span className="text-xs font-semibold tracking-[0.22em] uppercase text-[#134C28]">
-                News &amp; Updates
-              </span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
-              Latest from the ONDI ecosystem
-            </h2>
-            <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto leading-relaxed">
-              Headlines from programs, policy and ecosystem activity across Nigeria&apos;s digital
-              innovation landscape.
-            </p>
-          </div>
-
-          {/* Coming Soon Placeholder */}
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl p-12 text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[#134C28]/10 flex items-center justify-center">
-                <Sparkles className="w-8 h-8 text-[#134C28]" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-[#111827] mb-3">
-                Coming Soon
-              </h3>
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                We&apos;re working on bringing you the latest news and updates from Nigeria&apos;s digital innovation ecosystem. Check back soon for exciting announcements, program updates, and success stories.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA & CONTACT SECTION */}
       <section

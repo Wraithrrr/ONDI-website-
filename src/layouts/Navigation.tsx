@@ -81,7 +81,6 @@ export function Navigation() {
               </button>
               <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-200 absolute top-full right-0 mt-2 w-72 rounded-lg shadow-xl py-3 bg-white border border-gray-100 z-50">
                 {[
-                  { label: 'More News', hash: '#/news' },
                   { label: 'Contact Us', hash: '#/contact' },
                   { label: 'Our Impact ', hash: '#/impact' },
                   { label: 'Resources', hash: '#/resources' },

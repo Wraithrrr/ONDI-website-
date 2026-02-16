@@ -6,7 +6,7 @@ import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { ImpactPage } from './pages/ImpactPage';
 import { InnovationDirectory } from './pages/InnovationDirectory';
-import { NewsPage } from './pages/NewsPage';
+
 import { OpportunitiesPage } from './pages/OpportunitiesPage';
 import { ProgramsPage } from './pages/ProgramsPage';
 import { ResourcesPage } from './pages/ResourcesPage';
@@ -55,10 +55,7 @@ export default function App() {
     if (hash === '#/directory') {
     return <InnovationDirectory />;
     }
-    if (hash === '#/news') {
-    return <NewsPage />;  
-    }
-    if (hash === '#/opportunities') {
+if (hash === '#/opportunities') {
     return <OpportunitiesPage />;  
     }
     if (hash === '#/programs') {
