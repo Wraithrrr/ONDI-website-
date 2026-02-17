@@ -4,7 +4,8 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(copy \"C:\\\\Users\\\\faruk\\\\Downloads\\\\NC picture.jpeg\" \"c:\\\\Users\\\\faruk\\\\Projects\\\\ONDI website\\\\public\\\\assets\\\\nc-picture.jpeg\")",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git pull:*)"
     ],
     "additionalDirectories": [
       "C:\\Users\\faruk\\Downloads"

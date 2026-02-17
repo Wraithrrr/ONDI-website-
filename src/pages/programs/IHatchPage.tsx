@@ -839,16 +839,7 @@ export function IHatchPage() {
                 >
                   Apply as a Hub
                 </a>
-                <button
-                  onClick={() =>
-                    document
-                      .getElementById("past-cohorts")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
-                >
-                  Apply as a Startup
-                </button>
+
               </div>
             </motion.div>
 
@@ -1349,33 +1340,6 @@ export function IHatchPage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-[#134C28]">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to Launch Your Startup Journey?
-            </h2>
-            <p className="text-gray-200 mb-8">
-              Apply now and join the iHatch program today!
-            </p>
-            <a
-              href="https://app.innox.africa/applicant/ihatch-cohort-5"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
-            >
-              Apply Now
-            </a>
-          </motion.div>
         </div>
       </section>
     </main>
