@@ -55,7 +55,7 @@ export function ImpactPage() {
       id: 1,
       name: 'Andrew Ndukwe',
       role: 'Founder, AlphaZone Tech Hub Ltd',
-      quote: 'ONDI didn\'t just provide funding - they provided a family. The mentorship, network, and resources transformed our startup from an idea into a thriving business serving 100,000+ students.',
+      quote: 'iHatch arrived at the right time, bringing clarity, resources, mentorship, and alignment. It strengthened our hub’s capacity to implement programs and connect Ebonyi startups to the national stage.',
     },
     {
       id: 2,
