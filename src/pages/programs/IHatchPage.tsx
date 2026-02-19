@@ -328,7 +328,7 @@ const partners = [
     name: "Japan International Cooperation Agency (JICA)",
     logo: "/assets/MDA logos/JICA Logo.png",
   },
-  
+
 ];
 
 // Ecosystem Building Pillars
@@ -841,13 +841,13 @@ export function IHatchPage() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Empower Hubs, Grow Startups 
+                Empower Hubs, Grow Startups
               </h1>
               <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
                 iHatch is Nigeria’s first truly nationwide incubation programme, operating across all 36 states and the FCT through a decentralised, hub-first model. We empower innovation hubs to become long-term engines of growth, which in turn train and support early-stage startups with mentorship, resources, and sustainable development opportunities.
               </p>
               <div>
-              <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">Hub Call for Applications: 17th February - 9th March</p>
+                <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">Hub Call for Applications: 23rd February - 16th March</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -1103,56 +1103,65 @@ export function IHatchPage() {
         </div>
       </section>
       {/* Partners & Stakeholders Section */}
-            <section className="py-16 md:py-20 bg-[#F5F5F5]">
-              <div className="max-w-6xl mx-auto px-6">
+      <section className="py-16 md:py-20 bg-[#F5F5F5]">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-[#134C28]" />
+              <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
+                Partners & Stakeholders
+              </h2>
+              <div className="h-px w-16 bg-[#134C28]" />
+            </div>
+            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+              The program is implemented in collaboration with:
+            </p>
+          </motion.div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              {partners.map((partner, index) => (
                 <motion.div
+                  key={partner.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="text-center mb-12"
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col items-center text-center hover:shadow-lg hover:border-[#134C28]/30 transition-all"
                 >
-                  <div className="flex items-center justify-center gap-4 mb-6">
-                    <div className="h-px w-16 bg-[#134C28]" />
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#134C28]">
-                      Partners & Stakeholders
-                    </h2>
-                    <div className="h-px w-16 bg-[#134C28]" />
+                  <div className="flex items-center justify-center gap-2 mb-4 h-16">
+                    {"logos" in partner && partner.logos ? (
+                      partner.logos.map((logo) => (
+                        <img
+                          key={logo}
+                          src={logo}
+                          alt={partner.name}
+                          className="h-14 w-14 object-contain rounded-lg"
+                        />
+                      ))
+                    ) : (
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        className="h-16 w-16 object-contain rounded-lg"
+                      />
+                    )}
                   </div>
-                  <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-                    The program is implemented in collaboration with:
-                  </p>
+                  <span className="text-gray-700 text-sm font-medium leading-snug">
+                    {partner.name}
+                  </span>
                 </motion.div>
-      
-                <div className="max-w-5xl mx-auto">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {partners.map((partner, index) => (
-                      <motion.div
-                        key={partner.name}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: index * 0.08 }}
-                        className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col items-center text-center hover:shadow-lg hover:border-[#134C28]/30 transition-all"
-                      >
-                        <div className="flex items-center justify-center gap-2 mb-4 h-16">
-                          
-                            <img
-                              src={partner.logo}
-                              alt={partner.name}
-                              className="h-16 w-16 object-contain rounded-lg"
-                            />
-                          
-                        </div>
-                        <span className="text-gray-700 text-sm font-medium leading-snug">
-                          {partner.name}
-                        </span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </section>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Who Can Apply Section */}
       <section className="py-16 md:py-20 bg-white">
