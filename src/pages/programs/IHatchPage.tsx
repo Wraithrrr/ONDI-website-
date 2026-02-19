@@ -837,7 +837,7 @@ export function IHatchPage() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Empower Startups, Grow Startups 
+                Empower Hubs, Grow Startups 
               </h1>
               <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
                 iHatch is Nigeria’s first truly nationwide incubation programme, operating across all 36 states and the FCT through a decentralised, hub-first model. We empower innovation hubs to become long-term engines of growth, which in turn train and support early-stage startups with mentorship, resources, and sustainable development opportunities.
@@ -847,7 +847,7 @@ export function IHatchPage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://app.innox.africa/applicant/ihatch-cohort-5"
+                  href="https://ihatch5.innox.africa/applicant/ihatch-cohort-5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
