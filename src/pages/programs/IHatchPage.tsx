@@ -317,8 +317,12 @@ const partners = [
     logo: "/assets/MDA logos/FMCIDE.jpeg",
   },
   {
-    name: "NITDA/ONDI",
-    logos: ["/assets/MDA logos/NITDA.jpeg", "/assets/MDA logos/ONDI.jpeg"],
+    name: "National Information Technology Development Agency (NITDA)",
+    logo: "/assets/MDA logos/NITDA.jpeg",
+  },
+  {
+    name: "Office for National Digital Innovation (ONDI)",
+    logo: "/assets/MDA logos/ONDI.jpeg",
   },
   {
     name: "Japan International Cooperation Agency (JICA)",
@@ -1121,7 +1125,7 @@ export function IHatchPage() {
                 </motion.div>
       
                 <div className="max-w-5xl mx-auto">
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {partners.map((partner, index) => (
                       <motion.div
                         key={partner.name}
@@ -1132,22 +1136,13 @@ export function IHatchPage() {
                         className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col items-center text-center hover:shadow-lg hover:border-[#134C28]/30 transition-all"
                       >
                         <div className="flex items-center justify-center gap-2 mb-4 h-16">
-                          {"logos" in partner && partner.logos ? (
-                            partner.logos.map((logo) => (
-                              <img
-                                key={logo}
-                                src={logo}
-                                alt={partner.name}
-                                className="h-14 w-14 object-contain rounded-lg"
-                              />
-                            ))
-                          ) : (
+                          
                             <img
                               src={partner.logo}
                               alt={partner.name}
                               className="h-16 w-16 object-contain rounded-lg"
                             />
-                          )}
+                          
                         </div>
                         <span className="text-gray-700 text-sm font-medium leading-snug">
                           {partner.name}
