@@ -254,3 +254,5 @@ The original Figma design is available at:
 ## License
 
 Private - All rights reserved
+
+This code was fully constructed by Lukman Mohammed Abdullahi-the main designer and template creator of this website- and Farouk Mahmoud Abdullahi -a special contributor. No other individual is responsible for the construction of this code

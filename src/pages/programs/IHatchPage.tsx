@@ -822,14 +822,14 @@ export function IHatchPage() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Empower Startups, Build Ecosystems
+                Empower Startups, Grow Startups 
               </h1>
               <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-                iHatch is Nigeria's first truly nationwide incubation programme,
-                operating across all 36 states and the FCT. We support
-                early-stage startups with mentorship, resources, and access to
-                innovation hubs for sustainable growth.
+                iHatch is Nigeria’s first truly nationwide incubation programme, operating across all 36 states and the FCT through a decentralised, hub-first model. We empower innovation hubs to become long-term engines of growth, which in turn train and support early-stage startups with mentorship, resources, and sustainable development opportunities.
               </p>
+              <div>
+              <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">Hub Call for Applications: 17th February - 9th March</p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="https://app.innox.africa/applicant/ihatch-cohort-5"
