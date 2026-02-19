@@ -1125,7 +1125,7 @@ export function IHatchPage() {
           </motion.div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {partners.map((partner, index) => (
                 <motion.div
                   key={partner.name}
