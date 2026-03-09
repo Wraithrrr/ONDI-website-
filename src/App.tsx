@@ -12,6 +12,7 @@ import { ProgramsPage } from './pages/ProgramsPage';
 import { ResourcesPage } from './pages/ResourcesPage';
 import { IHatchPage } from './pages/programs/IHatchPage';
 import { NDICPage } from './pages/programs/NDICPage';
+import { NigeriaStartupActPage } from './pages/programs/NigeriaStartupActPage';
 import { WeElevatePage } from './pages/programs/WeElevatePage';
 
 
@@ -36,7 +37,7 @@ export default function App() {
   useEffect(() => {
     try {
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-    } catch (e) {
+    } catch {
       window.scrollTo(0, 0);
     }
   }, [hash]);
@@ -72,6 +73,9 @@ if (hash === '#/opportunities') {
     }
     if (hash === '#/we-elevate') {
     return <WeElevatePage />;
+    }
+    if (hash === '#/nigeria-startup-act') {
+    return <NigeriaStartupActPage />;
     }
     // Default → home
     return <HomePage />;

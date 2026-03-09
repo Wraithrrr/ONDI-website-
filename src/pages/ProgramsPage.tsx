@@ -31,6 +31,19 @@ const programs = [
     href: '#/ndic',
     focus: ['MSME-focused solutions', 'Expert mentorship sprints', 'Funding for winning teams'],
   },
+  {
+    title: 'Nigeria Startup Act – Startup Labelling',
+    tag: 'Policy & Startup Labelling',
+    description:
+      "A national policy framework that strengthens Nigeria's startup ecosystem by creating an enabling environment for innovation-driven enterprises through the Nigeria Startup Act.",
+    image: '/assets/ndic-1.jpeg',
+    href: '#/nigeria-startup-act',
+    focus: [
+      'Access to government support and incentives',
+      'Regulatory support and simplified processes',
+      'Investment opportunities and ecosystem visibility',
+    ],
+  },
 ];
 
 export function ProgramsPage() {
