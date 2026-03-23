@@ -84,7 +84,9 @@ export function NigeriaStartupActPage() {
                 ecosystem by creating an enabling environment for innovation-driven enterprises.
               </p>
               <a
-                href="#apply"
+                href="https://startup.gov.ng"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
               >
                 Explore Labelling
@@ -100,7 +102,7 @@ export function NigeriaStartupActPage() {
               <div className="relative w-full max-w-md">
                 <div className="bg-gradient-to-br from-[#D4A74A]/20 to-transparent rounded-3xl p-8">
                   <img
-                    src="/assets/ndic-1.jpeg"
+                    src="/assets/nigeria-startup-act.jpg"
                     alt="Nigeria Startup Act"
                     className="w-full h-64 object-cover rounded-2xl shadow-xl"
                   />
@@ -314,7 +316,9 @@ export function NigeriaStartupActPage() {
               Labelling.
             </p>
             <a
-              href="#"
+              href="https://startup.gov.ng"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 bg-[#D4A74A] hover:bg-[#c49a3d] text-white font-semibold rounded-full transition-colors"
             >
               Apply for Labelling

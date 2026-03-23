@@ -36,7 +36,7 @@ const programs = [
     tag: 'Policy & Startup Labelling',
     description:
       "A national policy framework that strengthens Nigeria's startup ecosystem by creating an enabling environment for innovation-driven enterprises through the Nigeria Startup Act.",
-    image: '/assets/ndic-1.jpeg',
+    image: '/assets/nigeria-startup-act.jpg',
     href: '#/nigeria-startup-act',
     focus: [
       'Access to government support and incentives',
